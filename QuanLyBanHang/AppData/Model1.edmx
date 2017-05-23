@@ -1,0 +1,1354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CASH_METHOD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CASH_TERM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CURRENCY">
+          <Key>
+            <PropertyRef Name="Currency_ID" />
+          </Key>
+          <Property Name="Currency_ID" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="CurrencyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Exchange" Type="money" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Customer_Type_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Customer_Group_ID" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tel" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_GROUP">
+          <Key>
+            <PropertyRef Name="Customer_Group_ID" />
+          </Key>
+          <Property Name="Customer_Group_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Customer_Group_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_TYPE">
+          <Key>
+            <PropertyRef Name="Customer_Type_ID" />
+          </Key>
+          <Property Name="Customer_Type_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Customer_Type_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="DEPARTMENT">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmployeeAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tel" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="20" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="Department_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Manager_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="INVENTORY_ACTION">
+          <Key>
+            <PropertyRef Name="Action_ID" />
+          </Key>
+          <Property Name="Action_ID" Type="int" Nullable="false" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="MESSAGE">
+          <Key>
+            <PropertyRef Name="Message_ID" />
+          </Key>
+          <Property Name="Message_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Caption" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+          </Key>
+          <Property Name="Product_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Product_Type_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Product_Group_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Prorvider_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Unit" Type="varchar" MaxLength="20" />
+          <Property Name="Org_Price" Type="money" />
+          <Property Name="Sale_Price" Type="money" />
+          <Property Name="Retail_Price" Type="money" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="MinStock" Type="int" />
+          <Property Name="MaxStock" Type="int" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="Currency_ID" Type="varchar" MaxLength="3" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="Stock_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="PRODUCT_GROUP">
+          <Key>
+            <PropertyRef Name="Product_Group_ID" />
+          </Key>
+          <Property Name="Product_Group_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Product_Group_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="PROVIDER">
+          <Key>
+            <PropertyRef Name="Provider_ID" />
+          </Key>
+          <Property Name="Provider_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProviderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Customer_Group_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProviderAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tel" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="REPORT">
+          <Key>
+            <PropertyRef Name="Report_ID" />
+          </Key>
+          <Property Name="Report_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ReportName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="Parent_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="STOCK">
+          <Key>
+            <PropertyRef Name="Stock_ID" />
+          </Key>
+          <Property Name="Stock_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="StockName" Type="nvarchar" MaxLength="255" />
+          <Property Name="StockAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_COMPANY">
+          <Key>
+            <PropertyRef Name="Company_ID" />
+          </Key>
+          <Property Name="Company_ID" Type="int" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tel" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Photo" Type="image" />
+        </EntityType>
+        <EntityType Name="SYS_GROUP">
+          <Key>
+            <PropertyRef Name="Group_ID" />
+          </Key>
+          <Property Name="Group_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_LOG">
+          <Key>
+            <PropertyRef Name="Log_ID" />
+          </Key>
+          <Property Name="Log_ID" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" MaxLength="20" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Module" Type="nvarchar" MaxLength="255" />
+          <Property Name="Action_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_OBJECT">
+          <Key>
+            <PropertyRef Name="Object_ID" />
+          </Key>
+          <Property Name="Object_ID" Type="int" Nullable="false" />
+          <Property Name="ObjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Parent_ID" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_RULE">
+          <Key>
+            <PropertyRef Name="Rule_ID" />
+          </Key>
+          <Property Name="Rule_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RuleName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Descrition" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_USER">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group_ID" Type="varchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_USER_RULE">
+          <Key>
+            <PropertyRef Name="Group_ID" />
+            <PropertyRef Name="Object_ID" />
+          </Key>
+          <Property Name="Group_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Object_ID" Type="int" Nullable="false" />
+          <Property Name="Rule_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="AllowAdd" Type="bit" />
+          <Property Name="AllowDelete" Type="bit" />
+          <Property Name="AllowEdit" Type="bit" />
+          <Property Name="AllowAccess" Type="bit" />
+          <Property Name="AllowPrint" Type="bit" />
+          <Property Name="AllowExport" Type="bit" />
+          <Property Name="AllowImport" Type="bit" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="UNIT">
+          <Key>
+            <PropertyRef Name="Unit_ID" />
+          </Key>
+          <Property Name="Unit_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <Association Name="FK_CUSTOMER_CUSTOMER_GROUP">
+          <End Role="CUSTOMER_GROUP" Type="Self.CUSTOMER_GROUP" Multiplicity="0..1" />
+          <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_GROUP">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMER">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUSTOMER_CUSTOMER_TYPE">
+          <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
+          <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_TYPE">
+              <PropertyRef Name="Customer_Type_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMER">
+              <PropertyRef Name="Customer_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLOYEE_DEPARTMENT">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="EMPLOYEE">
+              <PropertyRef Name="Department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLOYEE_EMPLOYEE">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+          <End Role="EMPLOYEE1" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="EMPLOYEE1">
+              <PropertyRef Name="Manager_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_CURRENCY">
+          <End Role="CURRENCY" Type="Self.CURRENCY" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURRENCY">
+              <PropertyRef Name="Currency_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Currency_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_PRODUCT_GROUP">
+          <End Role="PRODUCT_GROUP" Type="Self.PRODUCT_GROUP" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT_GROUP">
+              <PropertyRef Name="Product_Group_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Product_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_PROVIDER">
+          <End Role="PROVIDER" Type="Self.PROVIDER" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROVIDER">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Prorvider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_SYS_USER">
+          <End Role="SYS_USER" Type="Self.SYS_USER" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_USER">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_UNIT">
+          <End Role="UNIT" Type="Self.UNIT" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIT">
+              <PropertyRef Name="Unit_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Unit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROVIDER_CUSTOMER_GROUP">
+          <End Role="CUSTOMER_GROUP" Type="Self.CUSTOMER_GROUP" Multiplicity="1" />
+          <End Role="PROVIDER" Type="Self.PROVIDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_GROUP">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Principal>
+            <Dependent Role="PROVIDER">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_RULE_SYS_GROUP">
+          <End Role="SYS_GROUP" Type="Self.SYS_GROUP" Multiplicity="1" />
+          <End Role="SYS_USER_RULE" Type="Self.SYS_USER_RULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_GROUP">
+              <PropertyRef Name="Group_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER_RULE">
+              <PropertyRef Name="Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_RULE_SYS_OBJECT">
+          <End Role="SYS_OBJECT" Type="Self.SYS_OBJECT" Multiplicity="1" />
+          <End Role="SYS_USER_RULE" Type="Self.SYS_USER_RULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_OBJECT">
+              <PropertyRef Name="Object_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER_RULE">
+              <PropertyRef Name="Object_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_SYS_GROUP">
+          <End Role="SYS_GROUP" Type="Self.SYS_GROUP" Multiplicity="0..1" />
+          <End Role="SYS_USER" Type="Self.SYS_USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_GROUP">
+              <PropertyRef Name="Group_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER">
+              <PropertyRef Name="Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyBanHangModelStoreContainer">
+          <EntitySet Name="CASH_METHOD" EntityType="Self.CASH_METHOD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CASH_TERM" EntityType="Self.CASH_TERM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CURRENCY" EntityType="Self.CURRENCY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMER_GROUP" EntityType="Self.CUSTOMER_GROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMER_TYPE" EntityType="Self.CUSTOMER_TYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INVENTORY_ACTION" EntityType="Self.INVENTORY_ACTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MESSAGE" EntityType="Self.MESSAGE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUCT_GROUP" EntityType="Self.PRODUCT_GROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROVIDER" EntityType="Self.PROVIDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REPORT" EntityType="Self.REPORT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STOCK" EntityType="Self.STOCK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_COMPANY" EntityType="Self.SYS_COMPANY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_GROUP" EntityType="Self.SYS_GROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_LOG" EntityType="Self.SYS_LOG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_OBJECT" EntityType="Self.SYS_OBJECT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_RULE" EntityType="Self.SYS_RULE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_USER" EntityType="Self.SYS_USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_USER_RULE" EntityType="Self.SYS_USER_RULE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UNIT" EntityType="Self.UNIT" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CUSTOMER_CUSTOMER_GROUP" Association="Self.FK_CUSTOMER_CUSTOMER_GROUP">
+            <End Role="CUSTOMER_GROUP" EntitySet="CUSTOMER_GROUP" />
+            <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUSTOMER_CUSTOMER_TYPE" Association="Self.FK_CUSTOMER_CUSTOMER_TYPE">
+            <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
+            <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLOYEE_DEPARTMENT" Association="Self.FK_EMPLOYEE_DEPARTMENT">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLOYEE_EMPLOYEE" Association="Self.FK_EMPLOYEE_EMPLOYEE">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+            <End Role="EMPLOYEE1" EntitySet="EMPLOYEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_CURRENCY" Association="Self.FK_PRODUCT_CURRENCY">
+            <End Role="CURRENCY" EntitySet="CURRENCY" />
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_PRODUCT_GROUP" Association="Self.FK_PRODUCT_PRODUCT_GROUP">
+            <End Role="PRODUCT_GROUP" EntitySet="PRODUCT_GROUP" />
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_PROVIDER" Association="Self.FK_PRODUCT_PROVIDER">
+            <End Role="PROVIDER" EntitySet="PROVIDER" />
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_SYS_USER" Association="Self.FK_PRODUCT_SYS_USER">
+            <End Role="SYS_USER" EntitySet="SYS_USER" />
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_UNIT" Association="Self.FK_PRODUCT_UNIT">
+            <End Role="UNIT" EntitySet="UNIT" />
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROVIDER_CUSTOMER_GROUP" Association="Self.FK_PROVIDER_CUSTOMER_GROUP">
+            <End Role="CUSTOMER_GROUP" EntitySet="CUSTOMER_GROUP" />
+            <End Role="PROVIDER" EntitySet="PROVIDER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_RULE_SYS_GROUP" Association="Self.FK_SYS_USER_RULE_SYS_GROUP">
+            <End Role="SYS_GROUP" EntitySet="SYS_GROUP" />
+            <End Role="SYS_USER_RULE" EntitySet="SYS_USER_RULE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_RULE_SYS_OBJECT" Association="Self.FK_SYS_USER_RULE_SYS_OBJECT">
+            <End Role="SYS_OBJECT" EntitySet="SYS_OBJECT" />
+            <End Role="SYS_USER_RULE" EntitySet="SYS_USER_RULE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_SYS_GROUP" Association="Self.FK_SYS_USER_SYS_GROUP">
+            <End Role="SYS_GROUP" EntitySet="SYS_GROUP" />
+            <End Role="SYS_USER" EntitySet="SYS_USER" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CASH_METHOD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CASH_TERM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CURRENCY">
+          <Key>
+            <PropertyRef Name="Currency_ID" />
+          </Key>
+          <Property Name="Currency_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CurrencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Exchange" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="PRODUCTs" Relationship="Self.FK_PRODUCT_CURRENCY" FromRole="CURRENCY" ToRole="PRODUCT" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Type_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="CUSTOMER_GROUP" Relationship="Self.FK_CUSTOMER_CUSTOMER_GROUP" FromRole="CUSTOMER" ToRole="CUSTOMER_GROUP" />
+          <NavigationProperty Name="CUSTOMER_TYPE" Relationship="Self.FK_CUSTOMER_CUSTOMER_TYPE" FromRole="CUSTOMER" ToRole="CUSTOMER_TYPE" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_GROUP">
+          <Key>
+            <PropertyRef Name="Customer_Group_ID" />
+          </Key>
+          <Property Name="Customer_Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Customer_Group_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="CUSTOMERs" Relationship="Self.FK_CUSTOMER_CUSTOMER_GROUP" FromRole="CUSTOMER_GROUP" ToRole="CUSTOMER" />
+          <NavigationProperty Name="PROVIDERs" Relationship="Self.FK_PROVIDER_CUSTOMER_GROUP" FromRole="CUSTOMER_GROUP" ToRole="PROVIDER" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_TYPE">
+          <Key>
+            <PropertyRef Name="Customer_Type_ID" />
+          </Key>
+          <Property Name="Customer_Type_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Customer_Type_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="CUSTOMERs" Relationship="Self.FK_CUSTOMER_CUSTOMER_TYPE" FromRole="CUSTOMER_TYPE" ToRole="CUSTOMER" />
+        </EntityType>
+        <EntityType Name="DEPARTMENT">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEEs" Relationship="Self.FK_EMPLOYEE_DEPARTMENT" FromRole="DEPARTMENT" ToRole="EMPLOYEE" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Department_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Manager_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="DEPARTMENT" Relationship="Self.FK_EMPLOYEE_DEPARTMENT" FromRole="EMPLOYEE" ToRole="DEPARTMENT" />
+          <NavigationProperty Name="EMPLOYEE1" Relationship="Self.FK_EMPLOYEE_EMPLOYEE" FromRole="EMPLOYEE" ToRole="EMPLOYEE1" />
+          <NavigationProperty Name="EMPLOYEE2" Relationship="Self.FK_EMPLOYEE_EMPLOYEE" FromRole="EMPLOYEE1" ToRole="EMPLOYEE" />
+        </EntityType>
+        <EntityType Name="INVENTORY_ACTION">
+          <Key>
+            <PropertyRef Name="Action_ID" />
+          </Key>
+          <Property Name="Action_ID" Type="Int32" Nullable="false" />
+          <Property Name="ActionName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MESSAGE">
+          <Key>
+            <PropertyRef Name="Message_ID" />
+          </Key>
+          <Property Name="Message_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Caption" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+          </Key>
+          <Property Name="Product_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Type_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Product_Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Prorvider_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Unit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Org_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Sale_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Retail_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="MinStock" Type="Int32" />
+          <Property Name="MaxStock" Type="Int32" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Currency_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="Stock_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="CURRENCY" Relationship="Self.FK_PRODUCT_CURRENCY" FromRole="PRODUCT" ToRole="CURRENCY" />
+          <NavigationProperty Name="PRODUCT_GROUP" Relationship="Self.FK_PRODUCT_PRODUCT_GROUP" FromRole="PRODUCT" ToRole="PRODUCT_GROUP" />
+          <NavigationProperty Name="PROVIDER" Relationship="Self.FK_PRODUCT_PROVIDER" FromRole="PRODUCT" ToRole="PROVIDER" />
+          <NavigationProperty Name="SYS_USER" Relationship="Self.FK_PRODUCT_SYS_USER" FromRole="PRODUCT" ToRole="SYS_USER" />
+          <NavigationProperty Name="UNIT1" Relationship="Self.FK_PRODUCT_UNIT" FromRole="PRODUCT" ToRole="UNIT" />
+        </EntityType>
+        <EntityType Name="PRODUCT_GROUP">
+          <Key>
+            <PropertyRef Name="Product_Group_ID" />
+          </Key>
+          <Property Name="Product_Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Product_Group_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="PRODUCTs" Relationship="Self.FK_PRODUCT_PRODUCT_GROUP" FromRole="PRODUCT_GROUP" ToRole="PRODUCT" />
+        </EntityType>
+        <EntityType Name="PROVIDER">
+          <Key>
+            <PropertyRef Name="Provider_ID" />
+          </Key>
+          <Property Name="Provider_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProviderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProviderAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="CUSTOMER_GROUP" Relationship="Self.FK_PROVIDER_CUSTOMER_GROUP" FromRole="PROVIDER" ToRole="CUSTOMER_GROUP" />
+          <NavigationProperty Name="PRODUCTs" Relationship="Self.FK_PRODUCT_PROVIDER" FromRole="PROVIDER" ToRole="PRODUCT" />
+        </EntityType>
+        <EntityType Name="REPORT">
+          <Key>
+            <PropertyRef Name="Report_ID" />
+          </Key>
+          <Property Name="Report_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ReportName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Parent_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="STOCK">
+          <Key>
+            <PropertyRef Name="Stock_ID" />
+          </Key>
+          <Property Name="Stock_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StockName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="StockAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SYS_COMPANY">
+          <Key>
+            <PropertyRef Name="Company_ID" />
+          </Key>
+          <Property Name="Company_ID" Type="Int32" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_GROUP">
+          <Key>
+            <PropertyRef Name="Group_ID" />
+          </Key>
+          <Property Name="Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="SYS_USER_RULE" Relationship="Self.FK_SYS_USER_RULE_SYS_GROUP" FromRole="SYS_GROUP" ToRole="SYS_USER_RULE" />
+          <NavigationProperty Name="SYS_USER" Relationship="Self.FK_SYS_USER_SYS_GROUP" FromRole="SYS_GROUP" ToRole="SYS_USER" />
+        </EntityType>
+        <EntityType Name="SYS_LOG">
+          <Key>
+            <PropertyRef Name="Log_ID" />
+          </Key>
+          <Property Name="Log_ID" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Module" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Action_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SYS_OBJECT">
+          <Key>
+            <PropertyRef Name="Object_ID" />
+          </Key>
+          <Property Name="Object_ID" Type="Int32" Nullable="false" />
+          <Property Name="ObjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Parent_ID" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="SYS_USER_RULE" Relationship="Self.FK_SYS_USER_RULE_SYS_OBJECT" FromRole="SYS_OBJECT" ToRole="SYS_USER_RULE" />
+        </EntityType>
+        <EntityType Name="SYS_RULE">
+          <Key>
+            <PropertyRef Name="Rule_ID" />
+          </Key>
+          <Property Name="Rule_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RuleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Descrition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SYS_USER">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="PRODUCTs" Relationship="Self.FK_PRODUCT_SYS_USER" FromRole="SYS_USER" ToRole="PRODUCT" />
+          <NavigationProperty Name="SYS_GROUP" Relationship="Self.FK_SYS_USER_SYS_GROUP" FromRole="SYS_USER" ToRole="SYS_GROUP" />
+        </EntityType>
+        <EntityType Name="SYS_USER_RULE">
+          <Key>
+            <PropertyRef Name="Group_ID" />
+            <PropertyRef Name="Object_ID" />
+          </Key>
+          <Property Name="Group_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Object_ID" Type="Int32" Nullable="false" />
+          <Property Name="Rule_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AllowAdd" Type="Boolean" />
+          <Property Name="AllowDelete" Type="Boolean" />
+          <Property Name="AllowEdit" Type="Boolean" />
+          <Property Name="AllowAccess" Type="Boolean" />
+          <Property Name="AllowPrint" Type="Boolean" />
+          <Property Name="AllowExport" Type="Boolean" />
+          <Property Name="AllowImport" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="SYS_GROUP" Relationship="Self.FK_SYS_USER_RULE_SYS_GROUP" FromRole="SYS_USER_RULE" ToRole="SYS_GROUP" />
+          <NavigationProperty Name="SYS_OBJECT" Relationship="Self.FK_SYS_USER_RULE_SYS_OBJECT" FromRole="SYS_USER_RULE" ToRole="SYS_OBJECT" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UNIT">
+          <Key>
+            <PropertyRef Name="Unit_ID" />
+          </Key>
+          <Property Name="Unit_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="PRODUCTs" Relationship="Self.FK_PRODUCT_UNIT" FromRole="UNIT" ToRole="PRODUCT" />
+        </EntityType>
+        <Association Name="FK_PRODUCT_CURRENCY">
+          <End Role="CURRENCY" Type="Self.CURRENCY" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURRENCY">
+              <PropertyRef Name="Currency_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Currency_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUSTOMER_CUSTOMER_GROUP">
+          <End Role="CUSTOMER_GROUP" Type="Self.CUSTOMER_GROUP" Multiplicity="0..1" />
+          <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_GROUP">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMER">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUSTOMER_CUSTOMER_TYPE">
+          <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
+          <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_TYPE">
+              <PropertyRef Name="Customer_Type_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMER">
+              <PropertyRef Name="Customer_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROVIDER_CUSTOMER_GROUP">
+          <End Role="CUSTOMER_GROUP" Type="Self.CUSTOMER_GROUP" Multiplicity="1" />
+          <End Role="PROVIDER" Type="Self.PROVIDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_GROUP">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Principal>
+            <Dependent Role="PROVIDER">
+              <PropertyRef Name="Customer_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLOYEE_DEPARTMENT">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="EMPLOYEE">
+              <PropertyRef Name="Department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLOYEE_EMPLOYEE">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+          <End Role="EMPLOYEE1" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="EMPLOYEE1">
+              <PropertyRef Name="Manager_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_PRODUCT_GROUP">
+          <End Role="PRODUCT_GROUP" Type="Self.PRODUCT_GROUP" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT_GROUP">
+              <PropertyRef Name="Product_Group_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Product_Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_PROVIDER">
+          <End Role="PROVIDER" Type="Self.PROVIDER" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROVIDER">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Prorvider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_SYS_USER">
+          <End Role="SYS_USER" Type="Self.SYS_USER" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_USER">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCT_UNIT">
+          <End Role="UNIT" Type="Self.UNIT" Multiplicity="0..1" />
+          <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIT">
+              <PropertyRef Name="Unit_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT">
+              <PropertyRef Name="Unit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_RULE_SYS_GROUP">
+          <End Role="SYS_GROUP" Type="Self.SYS_GROUP" Multiplicity="1" />
+          <End Role="SYS_USER_RULE" Type="Self.SYS_USER_RULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_GROUP">
+              <PropertyRef Name="Group_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER_RULE">
+              <PropertyRef Name="Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_SYS_GROUP">
+          <End Role="SYS_GROUP" Type="Self.SYS_GROUP" Multiplicity="0..1" />
+          <End Role="SYS_USER" Type="Self.SYS_USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_GROUP">
+              <PropertyRef Name="Group_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER">
+              <PropertyRef Name="Group_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_USER_RULE_SYS_OBJECT">
+          <End Role="SYS_OBJECT" Type="Self.SYS_OBJECT" Multiplicity="1" />
+          <End Role="SYS_USER_RULE" Type="Self.SYS_USER_RULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_OBJECT">
+              <PropertyRef Name="Object_ID" />
+            </Principal>
+            <Dependent Role="SYS_USER_RULE">
+              <PropertyRef Name="Object_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyBanHangEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CASH_METHOD" EntityType="Self.CASH_METHOD" />
+          <EntitySet Name="CASH_TERM" EntityType="Self.CASH_TERM" />
+          <EntitySet Name="CURRENCies" EntityType="Self.CURRENCY" />
+          <EntitySet Name="CUSTOMERs" EntityType="Self.CUSTOMER" />
+          <EntitySet Name="CUSTOMER_GROUP" EntityType="Self.CUSTOMER_GROUP" />
+          <EntitySet Name="CUSTOMER_TYPE" EntityType="Self.CUSTOMER_TYPE" />
+          <EntitySet Name="DEPARTMENTs" EntityType="Self.DEPARTMENT" />
+          <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+          <EntitySet Name="INVENTORY_ACTION" EntityType="Self.INVENTORY_ACTION" />
+          <EntitySet Name="MESSAGEs" EntityType="Self.MESSAGE" />
+          <EntitySet Name="PRODUCTs" EntityType="Self.PRODUCT" />
+          <EntitySet Name="PRODUCT_GROUP" EntityType="Self.PRODUCT_GROUP" />
+          <EntitySet Name="PROVIDERs" EntityType="Self.PROVIDER" />
+          <EntitySet Name="REPORTs" EntityType="Self.REPORT" />
+          <EntitySet Name="STOCKs" EntityType="Self.STOCK" />
+          <EntitySet Name="SYS_COMPANY" EntityType="Self.SYS_COMPANY" />
+          <EntitySet Name="SYS_GROUP" EntityType="Self.SYS_GROUP" />
+          <EntitySet Name="SYS_LOG" EntityType="Self.SYS_LOG" />
+          <EntitySet Name="SYS_OBJECT" EntityType="Self.SYS_OBJECT" />
+          <EntitySet Name="SYS_RULE" EntityType="Self.SYS_RULE" />
+          <EntitySet Name="SYS_USER" EntityType="Self.SYS_USER" />
+          <EntitySet Name="SYS_USER_RULE" EntityType="Self.SYS_USER_RULE" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="UNITs" EntityType="Self.UNIT" />
+          <AssociationSet Name="FK_PRODUCT_CURRENCY" Association="Self.FK_PRODUCT_CURRENCY">
+            <End Role="CURRENCY" EntitySet="CURRENCies" />
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUSTOMER_CUSTOMER_GROUP" Association="Self.FK_CUSTOMER_CUSTOMER_GROUP">
+            <End Role="CUSTOMER_GROUP" EntitySet="CUSTOMER_GROUP" />
+            <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUSTOMER_CUSTOMER_TYPE" Association="Self.FK_CUSTOMER_CUSTOMER_TYPE">
+            <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
+            <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROVIDER_CUSTOMER_GROUP" Association="Self.FK_PROVIDER_CUSTOMER_GROUP">
+            <End Role="CUSTOMER_GROUP" EntitySet="CUSTOMER_GROUP" />
+            <End Role="PROVIDER" EntitySet="PROVIDERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLOYEE_DEPARTMENT" Association="Self.FK_EMPLOYEE_DEPARTMENT">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENTs" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLOYEE_EMPLOYEE" Association="Self.FK_EMPLOYEE_EMPLOYEE">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+            <End Role="EMPLOYEE1" EntitySet="EMPLOYEEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_PRODUCT_GROUP" Association="Self.FK_PRODUCT_PRODUCT_GROUP">
+            <End Role="PRODUCT_GROUP" EntitySet="PRODUCT_GROUP" />
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_PROVIDER" Association="Self.FK_PRODUCT_PROVIDER">
+            <End Role="PROVIDER" EntitySet="PROVIDERs" />
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_SYS_USER" Association="Self.FK_PRODUCT_SYS_USER">
+            <End Role="SYS_USER" EntitySet="SYS_USER" />
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCT_UNIT" Association="Self.FK_PRODUCT_UNIT">
+            <End Role="UNIT" EntitySet="UNITs" />
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_RULE_SYS_GROUP" Association="Self.FK_SYS_USER_RULE_SYS_GROUP">
+            <End Role="SYS_GROUP" EntitySet="SYS_GROUP" />
+            <End Role="SYS_USER_RULE" EntitySet="SYS_USER_RULE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_SYS_GROUP" Association="Self.FK_SYS_USER_SYS_GROUP">
+            <End Role="SYS_GROUP" EntitySet="SYS_GROUP" />
+            <End Role="SYS_USER" EntitySet="SYS_USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_USER_RULE_SYS_OBJECT" Association="Self.FK_SYS_USER_RULE_SYS_OBJECT">
+            <End Role="SYS_OBJECT" EntitySet="SYS_OBJECT" />
+            <End Role="SYS_USER_RULE" EntitySet="SYS_USER_RULE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities">
+          <EntitySetMapping Name="CASH_METHOD">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CASH_METHOD">
+              <MappingFragment StoreEntitySet="CASH_METHOD">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CASH_TERM">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CASH_TERM">
+              <MappingFragment StoreEntitySet="CASH_TERM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CURRENCies">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CURRENCY">
+              <MappingFragment StoreEntitySet="CURRENCY">
+                <ScalarProperty Name="Currency_ID" ColumnName="Currency_ID" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CUSTOMER">
+              <MappingFragment StoreEntitySet="CUSTOMER">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Customer_Type_ID" ColumnName="Customer_Type_ID" />
+                <ScalarProperty Name="Customer_Group_ID" ColumnName="Customer_Group_ID" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER_GROUP">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CUSTOMER_GROUP">
+              <MappingFragment StoreEntitySet="CUSTOMER_GROUP">
+                <ScalarProperty Name="Customer_Group_ID" ColumnName="Customer_Group_ID" />
+                <ScalarProperty Name="Customer_Group_Name" ColumnName="Customer_Group_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER_TYPE">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.CUSTOMER_TYPE">
+              <MappingFragment StoreEntitySet="CUSTOMER_TYPE">
+                <ScalarProperty Name="Customer_Type_ID" ColumnName="Customer_Type_ID" />
+                <ScalarProperty Name="Customer_Type_Name" ColumnName="Customer_Type_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEPARTMENTs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.DEPARTMENT">
+              <MappingFragment StoreEntitySet="DEPARTMENT">
+                <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEEs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.EMPLOYEE">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="EmployeeAddress" ColumnName="EmployeeAddress" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+                <ScalarProperty Name="Manager_ID" ColumnName="Manager_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVENTORY_ACTION">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.INVENTORY_ACTION">
+              <MappingFragment StoreEntitySet="INVENTORY_ACTION">
+                <ScalarProperty Name="Action_ID" ColumnName="Action_ID" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MESSAGEs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.MESSAGE">
+              <MappingFragment StoreEntitySet="MESSAGE">
+                <ScalarProperty Name="Message_ID" ColumnName="Message_ID" />
+                <ScalarProperty Name="Caption" ColumnName="Caption" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.PRODUCT">
+              <MappingFragment StoreEntitySet="PRODUCT">
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Product_Type_ID" ColumnName="Product_Type_ID" />
+                <ScalarProperty Name="Product_Group_ID" ColumnName="Product_Group_ID" />
+                <ScalarProperty Name="Prorvider_ID" ColumnName="Prorvider_ID" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Org_Price" ColumnName="Org_Price" />
+                <ScalarProperty Name="Sale_Price" ColumnName="Sale_Price" />
+                <ScalarProperty Name="Retail_Price" ColumnName="Retail_Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="MinStock" ColumnName="MinStock" />
+                <ScalarProperty Name="MaxStock" ColumnName="MaxStock" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Currency_ID" ColumnName="Currency_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Stock_ID" ColumnName="Stock_ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCT_GROUP">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.PRODUCT_GROUP">
+              <MappingFragment StoreEntitySet="PRODUCT_GROUP">
+                <ScalarProperty Name="Product_Group_ID" ColumnName="Product_Group_ID" />
+                <ScalarProperty Name="Product_Group_Name" ColumnName="Product_Group_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROVIDERs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.PROVIDER">
+              <MappingFragment StoreEntitySet="PROVIDER">
+                <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+                <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+                <ScalarProperty Name="Customer_Group_ID" ColumnName="Customer_Group_ID" />
+                <ScalarProperty Name="ProviderAddress" ColumnName="ProviderAddress" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REPORTs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.REPORT">
+              <MappingFragment StoreEntitySet="REPORT">
+                <ScalarProperty Name="Report_ID" ColumnName="Report_ID" />
+                <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STOCKs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.STOCK">
+              <MappingFragment StoreEntitySet="STOCK">
+                <ScalarProperty Name="Stock_ID" ColumnName="Stock_ID" />
+                <ScalarProperty Name="StockName" ColumnName="StockName" />
+                <ScalarProperty Name="StockAddress" ColumnName="StockAddress" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_COMPANY">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_COMPANY">
+              <MappingFragment StoreEntitySet="SYS_COMPANY">
+                <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_GROUP">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_GROUP">
+              <MappingFragment StoreEntitySet="SYS_GROUP">
+                <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_LOG">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_LOG">
+              <MappingFragment StoreEntitySet="SYS_LOG">
+                <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="Action_Name" ColumnName="Action_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_OBJECT">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_OBJECT">
+              <MappingFragment StoreEntitySet="SYS_OBJECT">
+                <ScalarProperty Name="Object_ID" ColumnName="Object_ID" />
+                <ScalarProperty Name="ObjectName" ColumnName="ObjectName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_RULE">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_RULE">
+              <MappingFragment StoreEntitySet="SYS_RULE">
+                <ScalarProperty Name="Rule_ID" ColumnName="Rule_ID" />
+                <ScalarProperty Name="RuleName" ColumnName="RuleName" />
+                <ScalarProperty Name="Descrition" ColumnName="Descrition" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_USER">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_USER">
+              <MappingFragment StoreEntitySet="SYS_USER">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_USER_RULE">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SYS_USER_RULE">
+              <MappingFragment StoreEntitySet="SYS_USER_RULE">
+                <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+                <ScalarProperty Name="Object_ID" ColumnName="Object_ID" />
+                <ScalarProperty Name="Rule_ID" ColumnName="Rule_ID" />
+                <ScalarProperty Name="AllowAdd" ColumnName="AllowAdd" />
+                <ScalarProperty Name="AllowDelete" ColumnName="AllowDelete" />
+                <ScalarProperty Name="AllowEdit" ColumnName="AllowEdit" />
+                <ScalarProperty Name="AllowAccess" ColumnName="AllowAccess" />
+                <ScalarProperty Name="AllowPrint" ColumnName="AllowPrint" />
+                <ScalarProperty Name="AllowExport" ColumnName="AllowExport" />
+                <ScalarProperty Name="AllowImport" ColumnName="AllowImport" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UNITs">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.UNIT">
+              <MappingFragment StoreEntitySet="UNIT">
+                <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
