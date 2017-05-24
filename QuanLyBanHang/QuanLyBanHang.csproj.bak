@@ -33,17 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v17.1" />
-    <Reference Include="DevExpress.Data.v17.1" />
-    <Reference Include="DevExpress.RichEdit.v17.1.Export" />
-    <Reference Include="DevExpress.Printing.v17.1.Core" />
-    <Reference Include="DevExpress.Utils.v17.1" />
-    <Reference Include="DevExpress.XtraBars.v17.1" />
-    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
-    <Reference Include="DevExpress.XtraEditors.v17.1" />
-    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.XtraBars.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -55,7 +51,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -161,69 +156,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhachHang.Designer.cs">
-      <DependentUpon>FormKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKhohang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhohang.Designer.cs">
-      <DependentUpon>FormKhohang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhaCungCap.Designer.cs">
-      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDonViTinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDonViTinh.Designer.cs">
-      <DependentUpon>FormDonViTinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKhuVuc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhuVuc.Designer.cs">
-      <DependentUpon>FormKhuVuc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNhapExcel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhapExcel.Designer.cs">
-      <DependentUpon>FormNhapExcel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyBanHangDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhachHang.resx">
-      <DependentUpon>FormKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhohang.resx">
-      <DependentUpon>FormKhohang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNhaCungCap.resx">
-      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDonViTinh.resx">
-      <DependentUpon>FormDonViTinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhuVuc.resx">
-      <DependentUpon>FormKhuVuc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNhapExcel.resx">
-      <DependentUpon>FormNhapExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -234,7 +170,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="AppData\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -266,25 +201,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="QuanLyBanHangDataSet.xsc">
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyBanHangDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyBanHangDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyBanHangDataSet.xss">
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Resources\MS-Office-2003-Excel-icon.png" />
-    <None Include="Resources\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
-    <None Include="Resources\Export-To-File-icon1.png" />
-    <None Include="Resources\hp-customization-control-panel-icon.png" />
-    <None Include="Resources\Export-To-File-icon.png" />
-    <None Include="Resources\Button-Refresh-icon.png" />
-    <None Include="Resources\Actions-edit-delete-icon.png" />
-    <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
