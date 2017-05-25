@@ -136,6 +136,7 @@
             this.barButtonItem4,
             this.bbtnCapNhat});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 39;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -144,7 +145,7 @@
             this.rpChucNang,
             this.rpTroGiup});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(963, 145);
+            this.ribbonControl1.Size = new System.Drawing.Size(1123, 179);
             // 
             // bbtnKetThuc
             // 
@@ -279,6 +280,7 @@
             this.bbtnNhomHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnNhomHang.ImageOptions.Image")));
             this.bbtnNhomHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnNhomHang.ImageOptions.LargeImage")));
             this.bbtnNhomHang.Name = "bbtnNhomHang";
+            this.bbtnNhomHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnNhomHang_ItemClick);
             // 
             // bbtnHangHoa
             // 
@@ -287,6 +289,7 @@
             this.bbtnHangHoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnHangHoa.ImageOptions.Image")));
             this.bbtnHangHoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnHangHoa.ImageOptions.LargeImage")));
             this.bbtnHangHoa.Name = "bbtnHangHoa";
+            this.bbtnHangHoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnHangHoa_ItemClick);
             // 
             // bbtnInMaVach
             // 
@@ -295,6 +298,7 @@
             this.bbtnInMaVach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnInMaVach.ImageOptions.Image")));
             this.bbtnInMaVach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnInMaVach.ImageOptions.LargeImage")));
             this.bbtnInMaVach.Name = "bbtnInMaVach";
+            this.bbtnInMaVach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnInMaVach_ItemClick);
             // 
             // bbtnTyGia
             // 
@@ -303,6 +307,7 @@
             this.bbtnTyGia.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnTyGia.ImageOptions.Image")));
             this.bbtnTyGia.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnTyGia.ImageOptions.LargeImage")));
             this.bbtnTyGia.Name = "bbtnTyGia";
+            this.bbtnTyGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTyGia_ItemClick);
             // 
             // bbtnBoPhan
             // 
@@ -311,6 +316,7 @@
             this.bbtnBoPhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnBoPhan.ImageOptions.Image")));
             this.bbtnBoPhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnBoPhan.ImageOptions.LargeImage")));
             this.bbtnBoPhan.Name = "bbtnBoPhan";
+            this.bbtnBoPhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBoPhan_ItemClick);
             // 
             // bbtnNhanVien
             // 
@@ -319,6 +325,7 @@
             this.bbtnNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnNhanVien.ImageOptions.Image")));
             this.bbtnNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnNhanVien.ImageOptions.LargeImage")));
             this.bbtnNhanVien.Name = "bbtnNhanVien";
+            this.bbtnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnNhanVien_ItemClick);
             // 
             // bbtnMuaHang
             // 
@@ -605,12 +612,13 @@
             this.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseBorderColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 474);
+            this.ClientSize = new System.Drawing.Size(1123, 583);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Phần Mềm Quản Lý Bán Hàng";

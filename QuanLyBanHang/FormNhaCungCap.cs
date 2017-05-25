@@ -35,11 +35,11 @@ namespace QuanLyBanHang
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.PRODUCT' table. You can move, or remove it, as needed.
-            this.pRODUCTTableAdapter.Fill(this.quanLyBanHangDataSet.PRODUCT);
+            //this.pRODUCTTableAdapter.Fill(this.quanLyBanHangDataSet.PRODUCT);
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.PROVIDER' table. You can move, or remove it, as needed.
-            this.pROVIDERTableAdapter.Fill(this.quanLyBanHangDataSet.PROVIDER);
+            //this.pROVIDERTableAdapter.Fill(this.quanLyBanHangDataSet.PROVIDER);
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-            this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
+            //this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
             this.gridView2.ExpandAllGroups();
         }
 

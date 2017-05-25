@@ -35,7 +35,7 @@ namespace QuanLyBanHang
         private void FormKhoHang_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.STOCK' table. You can move, or remove it, as needed.
-            this.sTOCKTableAdapter.Fill(this.quanLyBanHangDataSet.STOCK);
+            //this.sTOCKTableAdapter.Fill(this.quanLyBanHangDataSet.STOCK);
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
             this.gridView1.ExpandAllGroups();
         }

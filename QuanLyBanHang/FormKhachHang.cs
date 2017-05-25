@@ -35,7 +35,7 @@ namespace QuanLyBanHang
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-            this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
+            //this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
             this.gridView1.ExpandAllGroups();
         }
 

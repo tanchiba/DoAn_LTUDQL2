@@ -19,7 +19,7 @@ namespace QuanLyBanHang
         private void bbtnNhapDanhMucExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FormNhapExcel();
-            if (ExistForm1(f)) return;
+            if (ExistForm(f)) return;
             f.Show();
         }
 
@@ -33,7 +33,7 @@ namespace QuanLyBanHang
 
         private void bbtnKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FormDonViTinh();
+            var frm = new FormKhachHang();
             if (ExistForm(frm)) return;
             frm.MdiParent = this;
             frm.Show();
@@ -76,18 +76,69 @@ namespace QuanLyBanHang
             }
             return false;
         }
-        private bool ExistForm1(Form f)
-        {
-            foreach (var item in MdiChildren)
-            {
-                if (item.GetType() == f.GetType())
-                {
-                    item.Activate();
-                    return true;
-                }
 
-            }
-            return false;
+        private void bbtnNhomHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmNhomHang();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
         }
+
+        private void bbtnHangHoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmHangHoa();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void bbtnInMaVach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmInMaVach();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void bbtnTyGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmTyGia();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void bbtnBoPhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmBoPhan();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void bbtnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frmNhanVien();
+            if (ExistForm(frm)) return;
+            frm.MdiParent = this;
+            frm.Show();
+
+
+        }
+        //private bool ExistForm1(Form f)
+        //{
+        //    foreach (var item in MdiChildren)
+        //    {
+        //        if (item.GetType() == f.GetType())
+        //        {
+        //            item.Activate();
+        //            return true;
+        //        }
+
+        //    }
+        //    return false;
+        //}
     }
 }

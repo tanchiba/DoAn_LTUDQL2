@@ -32,16 +32,21 @@ namespace QuanLyBanHang
 
         }
 
-        private void FormKhachHang_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.UNIT' table. You can move, or remove it, as needed.
-            this.uNITTableAdapter.Fill(this.quanLyBanHangDataSet.UNIT);
-            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-            this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
-            this.gridView1.ExpandAllGroups();
-        }
+        //private void FormKhachHang_Load(object sender, EventArgs e)
+        //{
+        //    // TODO: This line of code loads data into the 'quanLyBanHangDataSet.UNIT' table. You can move, or remove it, as needed.
+        //    this.uNITTableAdapter.Fill(this.quanLyBanHangDataSet.UNIT);
+        //    // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
+        //    this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
+        //    this.gridView1.ExpandAllGroups();
+        //}
 
         private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }
