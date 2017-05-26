@@ -333,6 +333,7 @@
             this.bbtnMuaHang.Id = 22;
             this.bbtnMuaHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnMuaHang.LargeGlyph")));
             this.bbtnMuaHang.Name = "bbtnMuaHang";
+            this.bbtnMuaHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnMuaHang_ItemClick);
             // 
             // bbtnBanHang
             // 
@@ -341,6 +342,7 @@
             this.bbtnBanHang.Id = 23;
             this.bbtnBanHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnBanHang.LargeGlyph")));
             this.bbtnBanHang.Name = "bbtnBanHang";
+            this.bbtnBanHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBanHang_ItemClick);
             // 
             // bbtnTonKho
             // 

@@ -405,6 +405,12 @@
     <Compile Include="FormNhapExcel.Designer.cs">
       <DependentUpon>FormNhapExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBoPhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -428,6 +434,12 @@
     </Compile>
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhomHang.cs">
       <SubType>Form</SubType>
@@ -481,6 +493,9 @@
     <EmbeddedResource Include="FormNhapExcel.resx">
       <DependentUpon>FormNhapExcel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -492,6 +507,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhomHang.resx">
       <DependentUpon>frmNhomHang.cs</DependentUpon>
@@ -534,6 +552,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Actions-edit-delete-icon.png" />
+    <None Include="Resources\add-icon.png" />
+    <None Include="Resources\Button-Refresh-icon.png" />
+    <None Include="Resources\Export-To-File-icon.png" />
+    <None Include="Resources\Export-To-File-icon1.png" />
+    <None Include="Resources\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
+    <None Include="Resources\hp-customization-control-panel-icon.png" />
+    <None Include="Resources\MS-Office-2003-Excel-icon.png" />
+    <None Include="Resources\stop_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppData\Model1.Context.tt">
@@ -546,9 +573,22 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\Apps-session-logout-icon.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\information-icon.png" />
+    <Content Include="Resources\key.png" />
+    <Content Include="Resources\new.png" />
     <Content Include="Resources\Print-icon.png" />
+    <Content Include="Resources\print.png" />
+    <Content Include="Resources\save.png" />
     <Content Include="Resources\Search-icon.png" />
-    <None Include="Resources\stop_32x32.png" />
+    <Content Include="Resources\tg2.png" />
+    <Content Include="Resources\tg3.png" />
+    <Content Include="Resources\tg4.png" />
+    <Content Include="Resources\trangle.png" />
+    <Content Include="Resources\triangle2.png" />
+    <Content Include="Resources\YNAB-icon.png" />
     <None Include="QuanLyBanHangDataSet.xsc">
       <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
     </None>
@@ -560,14 +600,6 @@
     <None Include="QuanLyBanHangDataSet.xss">
       <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Resources\MS-Office-2003-Excel-icon.png" />
-    <None Include="Resources\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
-    <None Include="Resources\Export-To-File-icon1.png" />
-    <None Include="Resources\hp-customization-control-panel-icon.png" />
-    <None Include="Resources\Export-To-File-icon.png" />
-    <None Include="Resources\Button-Refresh-icon.png" />
-    <None Include="Resources\Actions-edit-delete-icon.png" />
-    <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

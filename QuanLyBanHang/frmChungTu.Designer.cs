@@ -30,17 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChungTu));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.edtChungTuDen = new DevExpress.XtraEditors.TextEdit();
-            this.edtChungTuTu = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbtnChungTuThoiGian = new System.Windows.Forms.RadioButton();
-            this.rbtnChungTuTatCa = new System.Windows.Forms.RadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnChungTuXem = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rbtnChungTuThoiGian = new System.Windows.Forms.RadioButton();
+            this.rbtnChungTuTatCa = new System.Windows.Forms.RadioButton();
             this.grcChungTu = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.stt = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,25 +47,29 @@
             this.LoaiChungTu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DienGiai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dedtNgayTu = new DevExpress.XtraEditors.DateEdit();
+            this.dedtNgayDen = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edtChungTuDen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtChungTuTu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcChungTu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayTu.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayTu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayDen.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayDen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.dedtNgayDen);
+            this.panelControl1.Controls.Add(this.dedtNgayTu);
             this.panelControl1.Controls.Add(this.button5);
             this.panelControl1.Controls.Add(this.button4);
             this.panelControl1.Controls.Add(this.button3);
             this.panelControl1.Controls.Add(this.button2);
             this.panelControl1.Controls.Add(this.btnChungTuXem);
-            this.panelControl1.Controls.Add(this.edtChungTuDen);
-            this.panelControl1.Controls.Add(this.edtChungTuTu);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.rbtnChungTuThoiGian);
@@ -77,64 +79,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(978, 43);
             this.panelControl1.TabIndex = 3;
-            // 
-            // edtChungTuDen
-            // 
-            this.edtChungTuDen.Location = new System.Drawing.Point(356, 10);
-            this.edtChungTuDen.Name = "edtChungTuDen";
-            this.edtChungTuDen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtChungTuDen.Properties.Appearance.Options.UseFont = true;
-            this.edtChungTuDen.Size = new System.Drawing.Size(100, 22);
-            this.edtChungTuDen.TabIndex = 2;
-            // 
-            // edtChungTuTu
-            // 
-            this.edtChungTuTu.Location = new System.Drawing.Point(202, 10);
-            this.edtChungTuTu.Name = "edtChungTuTu";
-            this.edtChungTuTu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtChungTuTu.Properties.Appearance.Options.UseFont = true;
-            this.edtChungTuTu.Size = new System.Drawing.Size(100, 22);
-            this.edtChungTuTu.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Đến";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Từ";
-            // 
-            // rbtnChungTuThoiGian
-            // 
-            this.rbtnChungTuThoiGian.AutoSize = true;
-            this.rbtnChungTuThoiGian.Location = new System.Drawing.Point(81, 12);
-            this.rbtnChungTuThoiGian.Name = "rbtnChungTuThoiGian";
-            this.rbtnChungTuThoiGian.Size = new System.Drawing.Size(68, 17);
-            this.rbtnChungTuThoiGian.TabIndex = 0;
-            this.rbtnChungTuThoiGian.TabStop = true;
-            this.rbtnChungTuThoiGian.Text = "Thời gian";
-            this.rbtnChungTuThoiGian.UseVisualStyleBackColor = true;
-            // 
-            // rbtnChungTuTatCa
-            // 
-            this.rbtnChungTuTatCa.AutoSize = true;
-            this.rbtnChungTuTatCa.Location = new System.Drawing.Point(6, 12);
-            this.rbtnChungTuTatCa.Name = "rbtnChungTuTatCa";
-            this.rbtnChungTuTatCa.Size = new System.Drawing.Size(55, 17);
-            this.rbtnChungTuTatCa.TabIndex = 0;
-            this.rbtnChungTuTatCa.TabStop = true;
-            this.rbtnChungTuTatCa.Text = "Tất cả";
-            this.rbtnChungTuTatCa.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -192,6 +136,46 @@
             this.btnChungTuXem.Text = "Xem";
             this.btnChungTuXem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChungTuXem.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(321, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Đến";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(166, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Từ";
+            // 
+            // rbtnChungTuThoiGian
+            // 
+            this.rbtnChungTuThoiGian.AutoSize = true;
+            this.rbtnChungTuThoiGian.Location = new System.Drawing.Point(81, 12);
+            this.rbtnChungTuThoiGian.Name = "rbtnChungTuThoiGian";
+            this.rbtnChungTuThoiGian.Size = new System.Drawing.Size(68, 17);
+            this.rbtnChungTuThoiGian.TabIndex = 0;
+            this.rbtnChungTuThoiGian.TabStop = true;
+            this.rbtnChungTuThoiGian.Text = "Thời gian";
+            this.rbtnChungTuThoiGian.UseVisualStyleBackColor = true;
+            // 
+            // rbtnChungTuTatCa
+            // 
+            this.rbtnChungTuTatCa.AutoSize = true;
+            this.rbtnChungTuTatCa.Location = new System.Drawing.Point(6, 12);
+            this.rbtnChungTuTatCa.Name = "rbtnChungTuTatCa";
+            this.rbtnChungTuTatCa.Size = new System.Drawing.Size(55, 17);
+            this.rbtnChungTuTatCa.TabIndex = 0;
+            this.rbtnChungTuTatCa.TabStop = true;
+            this.rbtnChungTuTatCa.Text = "Tất cả";
+            this.rbtnChungTuTatCa.UseVisualStyleBackColor = true;
             // 
             // grcChungTu
             // 
@@ -265,6 +249,30 @@
             this.DienGiai.VisibleIndex = 5;
             this.DienGiai.Width = 202;
             // 
+            // dedtNgayTu
+            // 
+            this.dedtNgayTu.EditValue = null;
+            this.dedtNgayTu.Location = new System.Drawing.Point(193, 12);
+            this.dedtNgayTu.Name = "dedtNgayTu";
+            this.dedtNgayTu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedtNgayTu.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedtNgayTu.Size = new System.Drawing.Size(100, 20);
+            this.dedtNgayTu.TabIndex = 4;
+            // 
+            // dedtNgayDen
+            // 
+            this.dedtNgayDen.EditValue = null;
+            this.dedtNgayDen.Location = new System.Drawing.Point(354, 12);
+            this.dedtNgayDen.Name = "dedtNgayDen";
+            this.dedtNgayDen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedtNgayDen.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedtNgayDen.Size = new System.Drawing.Size(100, 20);
+            this.dedtNgayDen.TabIndex = 4;
+            // 
             // frmChungTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,14 +281,16 @@
             this.Controls.Add(this.grcChungTu);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmChungTu";
-            this.Text = "Chứng Từ";
+            this.Text = "Quản Lý  Chứng Từ";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edtChungTuDen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtChungTuTu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcChungTu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayTu.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayTu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayDen.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedtNgayDen.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,8 +303,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnChungTuXem;
-        private DevExpress.XtraEditors.TextEdit edtChungTuDen;
-        private DevExpress.XtraEditors.TextEdit edtChungTuTu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbtnChungTuThoiGian;
@@ -307,5 +315,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn LoaiChungTu;
         private DevExpress.XtraGrid.Columns.GridColumn ThanhTien;
         private DevExpress.XtraGrid.Columns.GridColumn DienGiai;
+        private DevExpress.XtraEditors.DateEdit dedtNgayDen;
+        private DevExpress.XtraEditors.DateEdit dedtNgayTu;
     }
 }
