@@ -16,6 +16,21 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
+        private bool ExistForm(XtraForm f)
+        {
+            foreach (var item in MdiChildren)
+            {
+                if (item.GetType() == f.GetType())
+                {
+                    item.Activate();
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+
         private void bbtnNhapDanhMucExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var f = new FormNhapExcel();
@@ -63,20 +78,7 @@ namespace QuanLyBanHang
             frm.Show();
         }
 
-        private bool ExistForm(XtraForm f)
-        {
-            foreach (var item in MdiChildren)
-            {
-                if (item.GetType() == f.GetType())
-                {
-                    item.Activate();
-                    return true;
-                }
-               
-            }
-            return false;
-        }
-
+       
         private void bbtnNhomHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new frmNhomHang();
@@ -127,18 +129,21 @@ namespace QuanLyBanHang
 
 
         }
-        //private bool ExistForm1(Form f)
-        //{
-        //    foreach (var item in MdiChildren)
-        //    {
-        //        if (item.GetType() == f.GetType())
-        //        {
-        //            item.Activate();
-        //            return true;
-        //        }
 
-        //    }
-        //    return false;
-        //}
+        private void bbtnTonKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmTonKho = new frmTonKho();
+            if (ExistForm(frmTonKho)) return;
+            frmTonKho.MdiParent = this;
+            frmTonKho.Show();
+        }
+
+        private void bbtnChungTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmChungTu = new frmChungTu();
+            if (ExistForm(frmChungTu)) return;
+            frmChungTu.MdiParent = this;
+            frmChungTu.Show();
+        }
     }
 }

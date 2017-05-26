@@ -46,7 +46,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cUSTOMERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            //this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.pROVIDERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PROVIDERTableAdapter();
             this.fKPRODUCTPROVIDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUCTTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PRODUCTTableAdapter();
@@ -78,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
@@ -437,7 +437,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
@@ -467,7 +467,7 @@
         private QuanLyBanHangDataSet quanLyBanHangDataSet;
         private System.Windows.Forms.BindingSource cUSTOMERBindingSource;
         private QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter cUSTOMERTableAdapter;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        //private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.BindingSource pROVIDERBindingSource;
         private QuanLyBanHangDataSetTableAdapters.PROVIDERTableAdapter pROVIDERTableAdapter;
         private System.Windows.Forms.BindingSource fKPRODUCTPROVIDERBindingSource;
