@@ -52,23 +52,23 @@
             this.mniBHNaplai = new System.Windows.Forms.ToolStripMenuItem();
             this.mniBHDong = new System.Windows.Forms.ToolStripMenuItem();
             this.lycThongTinChuyenKho = new DevExpress.XtraLayout.LayoutControl();
-            this.pcedtKhoXuatHang = new DevExpress.XtraEditors.PopupContainerEdit();
-            this.pcedtNguoiChuyen = new DevExpress.XtraEditors.PopupContainerEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.pcedtKhoNhanHang = new DevExpress.XtraEditors.PopupContainerEdit();
-            this.bedtNguoiNhan = new DevExpress.XtraEditors.ButtonEdit();
-            this.edtPhieuChuyenTay = new DevExpress.XtraEditors.TextEdit();
-            this.edtGhiChu = new DevExpress.XtraEditors.TextEdit();
             this.edtNgay = new DevExpress.XtraEditors.DateEdit();
+            this.edtGhiChu = new DevExpress.XtraEditors.TextEdit();
+            this.edtPhieuChuyenTay = new DevExpress.XtraEditors.TextEdit();
+            this.bedtNguoiNhan = new DevExpress.XtraEditors.ButtonEdit();
+            this.pcedtKhoNhanHang = new DevExpress.XtraEditors.PopupContainerEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.pcedtNguoiChuyen = new DevExpress.XtraEditors.PopupContainerEdit();
+            this.pcedtKhoXuatHang = new DevExpress.XtraEditors.PopupContainerEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lycNgay = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycNguoiNhan = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycNguoiChuyen = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycGhiChu = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycPhieuChuyenTay = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycKhoNhanHang = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lycPhieuCK = new DevExpress.XtraLayout.LayoutControlItem();
             this.lycKhoXuatHang = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycPhieuCK = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycKhoNhanHang = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycPhieuChuyenTay = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycGhiChu = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycNguoiChuyen = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycNguoiNhan = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lycNgay = new DevExpress.XtraLayout.LayoutControlItem();
             this.grcCKChuyenKho = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaHang = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,24 +86,24 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lycThongTinChuyenKho)).BeginInit();
             this.lycThongTinChuyenKho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoXuatHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtNguoiChuyen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoNhanHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedtNguoiNhan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtPhieuChuyenTay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtGhiChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtPhieuChuyenTay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedtNguoiNhan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoNhanHang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtNguoiChuyen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoXuatHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNgay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiNhan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiChuyen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycGhiChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuChuyenTay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycKhoNhanHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuCK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycKhoXuatHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuCK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycKhoNhanHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuChuyenTay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycGhiChu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiChuyen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiNhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNgay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCKChuyenKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcChuyenKho)).BeginInit();
@@ -175,7 +175,6 @@
             this.nbgrCKChuyenKho.Appearance.Options.UseFont = true;
             this.nbgrCKChuyenKho.Appearance.Options.UseForeColor = true;
             this.nbgrCKChuyenKho.Caption = "Chuyển Kho";
-            this.nbgrCKChuyenKho.Expanded = true;
             this.nbgrCKChuyenKho.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsList;
             this.nbgrCKChuyenKho.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbiChuyenKho)});
@@ -335,70 +334,6 @@
             this.lycThongTinChuyenKho.Size = new System.Drawing.Size(1181, 96);
             this.lycThongTinChuyenKho.TabIndex = 3;
             // 
-            // pcedtKhoXuatHang
-            // 
-            this.pcedtKhoXuatHang.Location = new System.Drawing.Point(102, 12);
-            this.pcedtKhoXuatHang.Name = "pcedtKhoXuatHang";
-            this.pcedtKhoXuatHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pcedtKhoXuatHang.Size = new System.Drawing.Size(196, 20);
-            this.pcedtKhoXuatHang.StyleController = this.lycThongTinChuyenKho;
-            this.pcedtKhoXuatHang.TabIndex = 4;
-            // 
-            // pcedtNguoiChuyen
-            // 
-            this.pcedtNguoiChuyen.Location = new System.Drawing.Point(392, 12);
-            this.pcedtNguoiChuyen.Name = "pcedtNguoiChuyen";
-            this.pcedtNguoiChuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pcedtNguoiChuyen.Size = new System.Drawing.Size(196, 20);
-            this.pcedtNguoiChuyen.StyleController = this.lycThongTinChuyenKho;
-            this.pcedtNguoiChuyen.TabIndex = 5;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(682, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(487, 20);
-            this.textEdit1.StyleController = this.lycThongTinChuyenKho;
-            this.textEdit1.TabIndex = 6;
-            // 
-            // pcedtKhoNhanHang
-            // 
-            this.pcedtKhoNhanHang.Location = new System.Drawing.Point(102, 36);
-            this.pcedtKhoNhanHang.Name = "pcedtKhoNhanHang";
-            this.pcedtKhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pcedtKhoNhanHang.Size = new System.Drawing.Size(196, 20);
-            this.pcedtKhoNhanHang.StyleController = this.lycThongTinChuyenKho;
-            this.pcedtKhoNhanHang.TabIndex = 7;
-            // 
-            // bedtNguoiNhan
-            // 
-            this.bedtNguoiNhan.Location = new System.Drawing.Point(392, 36);
-            this.bedtNguoiNhan.Name = "bedtNguoiNhan";
-            this.bedtNguoiNhan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.bedtNguoiNhan.Size = new System.Drawing.Size(196, 20);
-            this.bedtNguoiNhan.StyleController = this.lycThongTinChuyenKho;
-            this.bedtNguoiNhan.TabIndex = 8;
-            // 
-            // edtPhieuChuyenTay
-            // 
-            this.edtPhieuChuyenTay.Location = new System.Drawing.Point(682, 36);
-            this.edtPhieuChuyenTay.Name = "edtPhieuChuyenTay";
-            this.edtPhieuChuyenTay.Size = new System.Drawing.Size(487, 20);
-            this.edtPhieuChuyenTay.StyleController = this.lycThongTinChuyenKho;
-            this.edtPhieuChuyenTay.TabIndex = 9;
-            // 
-            // edtGhiChu
-            // 
-            this.edtGhiChu.Location = new System.Drawing.Point(102, 60);
-            this.edtGhiChu.Name = "edtGhiChu";
-            this.edtGhiChu.Size = new System.Drawing.Size(486, 20);
-            this.edtGhiChu.StyleController = this.lycThongTinChuyenKho;
-            this.edtGhiChu.TabIndex = 10;
-            // 
             // edtNgay
             // 
             this.edtNgay.EditValue = null;
@@ -411,6 +346,70 @@
             this.edtNgay.Size = new System.Drawing.Size(487, 20);
             this.edtNgay.StyleController = this.lycThongTinChuyenKho;
             this.edtNgay.TabIndex = 11;
+            // 
+            // edtGhiChu
+            // 
+            this.edtGhiChu.Location = new System.Drawing.Point(102, 60);
+            this.edtGhiChu.Name = "edtGhiChu";
+            this.edtGhiChu.Size = new System.Drawing.Size(486, 20);
+            this.edtGhiChu.StyleController = this.lycThongTinChuyenKho;
+            this.edtGhiChu.TabIndex = 10;
+            // 
+            // edtPhieuChuyenTay
+            // 
+            this.edtPhieuChuyenTay.Location = new System.Drawing.Point(682, 36);
+            this.edtPhieuChuyenTay.Name = "edtPhieuChuyenTay";
+            this.edtPhieuChuyenTay.Size = new System.Drawing.Size(487, 20);
+            this.edtPhieuChuyenTay.StyleController = this.lycThongTinChuyenKho;
+            this.edtPhieuChuyenTay.TabIndex = 9;
+            // 
+            // bedtNguoiNhan
+            // 
+            this.bedtNguoiNhan.Location = new System.Drawing.Point(392, 36);
+            this.bedtNguoiNhan.Name = "bedtNguoiNhan";
+            this.bedtNguoiNhan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.bedtNguoiNhan.Size = new System.Drawing.Size(196, 20);
+            this.bedtNguoiNhan.StyleController = this.lycThongTinChuyenKho;
+            this.bedtNguoiNhan.TabIndex = 8;
+            // 
+            // pcedtKhoNhanHang
+            // 
+            this.pcedtKhoNhanHang.Location = new System.Drawing.Point(102, 36);
+            this.pcedtKhoNhanHang.Name = "pcedtKhoNhanHang";
+            this.pcedtKhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.pcedtKhoNhanHang.Size = new System.Drawing.Size(196, 20);
+            this.pcedtKhoNhanHang.StyleController = this.lycThongTinChuyenKho;
+            this.pcedtKhoNhanHang.TabIndex = 7;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(682, 12);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(487, 20);
+            this.textEdit1.StyleController = this.lycThongTinChuyenKho;
+            this.textEdit1.TabIndex = 6;
+            // 
+            // pcedtNguoiChuyen
+            // 
+            this.pcedtNguoiChuyen.Location = new System.Drawing.Point(392, 12);
+            this.pcedtNguoiChuyen.Name = "pcedtNguoiChuyen";
+            this.pcedtNguoiChuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.pcedtNguoiChuyen.Size = new System.Drawing.Size(196, 20);
+            this.pcedtNguoiChuyen.StyleController = this.lycThongTinChuyenKho;
+            this.pcedtNguoiChuyen.TabIndex = 5;
+            // 
+            // pcedtKhoXuatHang
+            // 
+            this.pcedtKhoXuatHang.Location = new System.Drawing.Point(102, 12);
+            this.pcedtKhoXuatHang.Name = "pcedtKhoXuatHang";
+            this.pcedtKhoXuatHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.pcedtKhoXuatHang.Size = new System.Drawing.Size(196, 20);
+            this.pcedtKhoXuatHang.StyleController = this.lycThongTinChuyenKho;
+            this.pcedtKhoXuatHang.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -430,59 +429,14 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(1181, 96);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // lycNgay
+            // lycKhoXuatHang
             // 
-            this.lycNgay.Control = this.edtNgay;
-            this.lycNgay.Location = new System.Drawing.Point(580, 48);
-            this.lycNgay.Name = "lycNgay";
-            this.lycNgay.Size = new System.Drawing.Size(581, 28);
-            this.lycNgay.Text = "Ngày";
-            this.lycNgay.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lycNguoiNhan
-            // 
-            this.lycNguoiNhan.Control = this.bedtNguoiNhan;
-            this.lycNguoiNhan.Location = new System.Drawing.Point(290, 24);
-            this.lycNguoiNhan.Name = "lycNguoiNhan";
-            this.lycNguoiNhan.Size = new System.Drawing.Size(290, 24);
-            this.lycNguoiNhan.Text = "Người Nhận";
-            this.lycNguoiNhan.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lycNguoiChuyen
-            // 
-            this.lycNguoiChuyen.Control = this.pcedtNguoiChuyen;
-            this.lycNguoiChuyen.Location = new System.Drawing.Point(290, 0);
-            this.lycNguoiChuyen.Name = "lycNguoiChuyen";
-            this.lycNguoiChuyen.Size = new System.Drawing.Size(290, 24);
-            this.lycNguoiChuyen.Text = "Người Chuyển";
-            this.lycNguoiChuyen.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lycGhiChu
-            // 
-            this.lycGhiChu.Control = this.edtGhiChu;
-            this.lycGhiChu.Location = new System.Drawing.Point(0, 48);
-            this.lycGhiChu.Name = "lycGhiChu";
-            this.lycGhiChu.Size = new System.Drawing.Size(580, 28);
-            this.lycGhiChu.Text = "Ghi Chú";
-            this.lycGhiChu.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lycPhieuChuyenTay
-            // 
-            this.lycPhieuChuyenTay.Control = this.edtPhieuChuyenTay;
-            this.lycPhieuChuyenTay.Location = new System.Drawing.Point(580, 24);
-            this.lycPhieuChuyenTay.Name = "lycPhieuChuyenTay";
-            this.lycPhieuChuyenTay.Size = new System.Drawing.Size(581, 24);
-            this.lycPhieuChuyenTay.Text = "Phiếu Chuyển Tay";
-            this.lycPhieuChuyenTay.TextSize = new System.Drawing.Size(87, 13);
-            // 
-            // lycKhoNhanHang
-            // 
-            this.lycKhoNhanHang.Control = this.pcedtKhoNhanHang;
-            this.lycKhoNhanHang.Location = new System.Drawing.Point(0, 24);
-            this.lycKhoNhanHang.Name = "lycKhoNhanHang";
-            this.lycKhoNhanHang.Size = new System.Drawing.Size(290, 24);
-            this.lycKhoNhanHang.Text = "Kho Nhận Hàng";
-            this.lycKhoNhanHang.TextSize = new System.Drawing.Size(87, 13);
+            this.lycKhoXuatHang.Control = this.pcedtKhoXuatHang;
+            this.lycKhoXuatHang.Location = new System.Drawing.Point(0, 0);
+            this.lycKhoXuatHang.Name = "lycKhoXuatHang";
+            this.lycKhoXuatHang.Size = new System.Drawing.Size(290, 24);
+            this.lycKhoXuatHang.Text = "Kho Xuất Hàng";
+            this.lycKhoXuatHang.TextSize = new System.Drawing.Size(87, 13);
             // 
             // lycPhieuCK
             // 
@@ -493,14 +447,59 @@
             this.lycPhieuCK.Text = "Phiếu CK";
             this.lycPhieuCK.TextSize = new System.Drawing.Size(87, 13);
             // 
-            // lycKhoXuatHang
+            // lycKhoNhanHang
             // 
-            this.lycKhoXuatHang.Control = this.pcedtKhoXuatHang;
-            this.lycKhoXuatHang.Location = new System.Drawing.Point(0, 0);
-            this.lycKhoXuatHang.Name = "lycKhoXuatHang";
-            this.lycKhoXuatHang.Size = new System.Drawing.Size(290, 24);
-            this.lycKhoXuatHang.Text = "Kho Xuất Hàng";
-            this.lycKhoXuatHang.TextSize = new System.Drawing.Size(87, 13);
+            this.lycKhoNhanHang.Control = this.pcedtKhoNhanHang;
+            this.lycKhoNhanHang.Location = new System.Drawing.Point(0, 24);
+            this.lycKhoNhanHang.Name = "lycKhoNhanHang";
+            this.lycKhoNhanHang.Size = new System.Drawing.Size(290, 24);
+            this.lycKhoNhanHang.Text = "Kho Nhận Hàng";
+            this.lycKhoNhanHang.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lycPhieuChuyenTay
+            // 
+            this.lycPhieuChuyenTay.Control = this.edtPhieuChuyenTay;
+            this.lycPhieuChuyenTay.Location = new System.Drawing.Point(580, 24);
+            this.lycPhieuChuyenTay.Name = "lycPhieuChuyenTay";
+            this.lycPhieuChuyenTay.Size = new System.Drawing.Size(581, 24);
+            this.lycPhieuChuyenTay.Text = "Phiếu Chuyển Tay";
+            this.lycPhieuChuyenTay.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lycGhiChu
+            // 
+            this.lycGhiChu.Control = this.edtGhiChu;
+            this.lycGhiChu.Location = new System.Drawing.Point(0, 48);
+            this.lycGhiChu.Name = "lycGhiChu";
+            this.lycGhiChu.Size = new System.Drawing.Size(580, 28);
+            this.lycGhiChu.Text = "Ghi Chú";
+            this.lycGhiChu.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lycNguoiChuyen
+            // 
+            this.lycNguoiChuyen.Control = this.pcedtNguoiChuyen;
+            this.lycNguoiChuyen.Location = new System.Drawing.Point(290, 0);
+            this.lycNguoiChuyen.Name = "lycNguoiChuyen";
+            this.lycNguoiChuyen.Size = new System.Drawing.Size(290, 24);
+            this.lycNguoiChuyen.Text = "Người Chuyển";
+            this.lycNguoiChuyen.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lycNguoiNhan
+            // 
+            this.lycNguoiNhan.Control = this.bedtNguoiNhan;
+            this.lycNguoiNhan.Location = new System.Drawing.Point(290, 24);
+            this.lycNguoiNhan.Name = "lycNguoiNhan";
+            this.lycNguoiNhan.Size = new System.Drawing.Size(290, 24);
+            this.lycNguoiNhan.Text = "Người Nhận";
+            this.lycNguoiNhan.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // lycNgay
+            // 
+            this.lycNgay.Control = this.edtNgay;
+            this.lycNgay.Location = new System.Drawing.Point(580, 48);
+            this.lycNgay.Name = "lycNgay";
+            this.lycNgay.Size = new System.Drawing.Size(581, 28);
+            this.lycNgay.Text = "Ngày";
+            this.lycNgay.TextSize = new System.Drawing.Size(87, 13);
             // 
             // grcCKChuyenKho
             // 
@@ -612,24 +611,24 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lycThongTinChuyenKho)).EndInit();
             this.lycThongTinChuyenKho.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoXuatHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtNguoiChuyen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoNhanHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedtNguoiNhan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtPhieuChuyenTay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtNgay.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtGhiChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtPhieuChuyenTay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedtNguoiNhan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoNhanHang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtNguoiChuyen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcedtKhoXuatHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNgay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiNhan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiChuyen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycGhiChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuChuyenTay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycKhoNhanHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuCK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycKhoXuatHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuCK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycKhoNhanHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycPhieuChuyenTay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycGhiChu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiChuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNguoiNhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lycNgay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCKChuyenKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcChuyenKho)).EndInit();

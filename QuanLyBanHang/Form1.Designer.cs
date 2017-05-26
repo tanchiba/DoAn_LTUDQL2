@@ -378,6 +378,7 @@
             this.bbtnThuTien.Id = 27;
             this.bbtnThuTien.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnThuTien.LargeGlyph")));
             this.bbtnThuTien.Name = "bbtnThuTien";
+            this.bbtnThuTien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThuTien_ItemClick);
             // 
             // bbtnTraTien
             // 
@@ -386,6 +387,7 @@
             this.bbtnTraTien.Id = 28;
             this.bbtnTraTien.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnTraTien.LargeGlyph")));
             this.bbtnTraTien.Name = "bbtnTraTien";
+            this.bbtnTraTien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTraTien_ItemClick);
             // 
             // bbtnBaoCaoKhoHang
             // 
