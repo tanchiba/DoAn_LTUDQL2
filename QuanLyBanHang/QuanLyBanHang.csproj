@@ -423,6 +423,12 @@
     <Compile Include="frmChungTu.Designer.cs">
       <DependentUpon>frmChungTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChuyenKho.Designer.cs">
+      <DependentUpon>frmChuyenKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +446,12 @@
     </Compile>
     <Compile Include="frmNhapHang.Designer.cs">
       <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapSoDuDauKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapSoDuDauKy.Designer.cs">
+      <DependentUpon>frmNhapSoDuDauKy.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhomHang.cs">
       <SubType>Form</SubType>
@@ -502,6 +514,9 @@
     <EmbeddedResource Include="frmChungTu.resx">
       <DependentUpon>frmChungTu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChuyenKho.resx">
+      <DependentUpon>frmChuyenKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHangHoa.resx">
       <DependentUpon>frmHangHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapHang.resx">
       <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapSoDuDauKy.resx">
+      <DependentUpon>frmNhapSoDuDauKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhomHang.resx">
       <DependentUpon>frmNhomHang.cs</DependentUpon>

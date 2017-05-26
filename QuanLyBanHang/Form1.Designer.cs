@@ -55,8 +55,8 @@
             this.bbtnMuaHang = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnBanHang = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnTonKho = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnChuyenKho = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnSoDuDauKy = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnThuTien = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnTraTien = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnBaoCaoKhoHang = new DevExpress.XtraBars.BarButtonItem();
@@ -121,8 +121,8 @@
             this.bbtnMuaHang,
             this.bbtnBanHang,
             this.bbtnTonKho,
-            this.barButtonItem1,
-            this.barButtonItem2,
+            this.bbtnChuyenKho,
+            this.bbtnSoDuDauKy,
             this.bbtnThuTien,
             this.bbtnTraTien,
             this.bbtnBaoCaoKhoHang,
@@ -353,21 +353,23 @@
             this.bbtnTonKho.Name = "bbtnTonKho";
             this.bbtnTonKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTonKho_ItemClick);
             // 
-            // barButtonItem1
+            // bbtnChuyenKho
             // 
-            this.barButtonItem1.Caption = "Chuyển Kho";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 25;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.bbtnChuyenKho.Caption = "Chuyển Kho";
+            this.bbtnChuyenKho.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnChuyenKho.Glyph")));
+            this.bbtnChuyenKho.Id = 25;
+            this.bbtnChuyenKho.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnChuyenKho.LargeGlyph")));
+            this.bbtnChuyenKho.Name = "bbtnChuyenKho";
+            this.bbtnChuyenKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnChuyenKho_ItemClick);
             // 
-            // barButtonItem2
+            // bbtnSoDuDauKy
             // 
-            this.barButtonItem2.Caption = "Nhập Số Dư Đầu Kỳ";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
-            this.barButtonItem2.Id = 26;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.bbtnSoDuDauKy.Caption = "Nhập Số Dư Đầu Kỳ";
+            this.bbtnSoDuDauKy.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnSoDuDauKy.Glyph")));
+            this.bbtnSoDuDauKy.Id = 26;
+            this.bbtnSoDuDauKy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnSoDuDauKy.LargeGlyph")));
+            this.bbtnSoDuDauKy.Name = "bbtnSoDuDauKy";
+            this.bbtnSoDuDauKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnSoDuDauKy_ItemClick);
             // 
             // bbtnThuTien
             // 
@@ -559,8 +561,8 @@
             // rpgrKhoHang
             // 
             this.rpgrKhoHang.ItemLinks.Add(this.bbtnTonKho);
-            this.rpgrKhoHang.ItemLinks.Add(this.barButtonItem1);
-            this.rpgrKhoHang.ItemLinks.Add(this.barButtonItem2);
+            this.rpgrKhoHang.ItemLinks.Add(this.bbtnChuyenKho);
+            this.rpgrKhoHang.ItemLinks.Add(this.bbtnSoDuDauKy);
             this.rpgrKhoHang.Name = "rpgrKhoHang";
             this.rpgrKhoHang.Text = "Kho Hàng";
             // 
@@ -676,8 +678,8 @@
         private DevExpress.XtraBars.BarButtonItem bbtnMuaHang;
         private DevExpress.XtraBars.BarButtonItem bbtnBanHang;
         private DevExpress.XtraBars.BarButtonItem bbtnTonKho;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem bbtnChuyenKho;
+        private DevExpress.XtraBars.BarButtonItem bbtnSoDuDauKy;
         private DevExpress.XtraBars.BarButtonItem bbtnThuTien;
         private DevExpress.XtraBars.BarButtonItem bbtnTraTien;
         private DevExpress.XtraBars.BarButtonItem bbtnBaoCaoKhoHang;

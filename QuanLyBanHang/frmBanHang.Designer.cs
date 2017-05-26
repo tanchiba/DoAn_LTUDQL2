@@ -56,7 +56,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bedtTenKhachHang = new DevExpress.XtraEditors.ButtonEdit();
             this.lycTenKhachHang = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcPhieuBanHang = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pcedtMaKH = new DevExpress.XtraEditors.PopupContainerEdit();
             this.lycMaKH = new DevExpress.XtraLayout.LayoutControlItem();
@@ -108,7 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedtTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycTenKhachHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcPhieuBanHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcedtMaKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycMaKH)).BeginInit();
@@ -287,7 +287,7 @@
             // 
             // grcBanHang
             // 
-            this.grcBanHang.Controls.Add(this.gridControl1);
+            this.grcBanHang.Controls.Add(this.grcPhieuBanHang);
             this.grcBanHang.Controls.Add(this.lycThongTinPhieuBanHang);
             this.grcBanHang.Controls.Add(this.menuStrip1);
             this.grcBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -431,15 +431,15 @@
             this.lycTenKhachHang.Text = "Khách Hàng";
             this.lycTenKhachHang.TextSize = new System.Drawing.Size(90, 13);
             // 
-            // gridControl1
+            // grcPhieuBanHang
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 187);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1218, 342);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcPhieuBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcPhieuBanHang.Location = new System.Drawing.Point(2, 187);
+            this.grcPhieuBanHang.MainView = this.gridView1;
+            this.grcPhieuBanHang.Name = "grcPhieuBanHang";
+            this.grcPhieuBanHang.Size = new System.Drawing.Size(1218, 342);
+            this.grcPhieuBanHang.TabIndex = 4;
+            this.grcPhieuBanHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -455,7 +455,7 @@
             this.CK,
             this.ChietKhau,
             this.ThanhToan});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcPhieuBanHang;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             // 
@@ -829,7 +829,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedtTenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycTenKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcPhieuBanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcedtMaKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lycMaKH)).EndInit();
@@ -892,7 +892,7 @@
         private System.Windows.Forms.ToolStripMenuItem mniBHDong;
         private DevExpress.XtraLayout.LayoutControl lycThongTinPhieuBanHang;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcPhieuBanHang;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.ButtonEdit bedtTenKhachHang;
         private DevExpress.XtraLayout.LayoutControlItem lycTenKhachHang;

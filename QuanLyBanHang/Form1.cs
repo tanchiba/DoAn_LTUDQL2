@@ -161,5 +161,22 @@ namespace QuanLyBanHang
             frmBanHang.MdiParent = this;
             frmBanHang.Show();
         }
+
+     
+        private void bbtnChuyenKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmChuyenKho = new frmChuyenKho();
+            if (ExistForm(frmChuyenKho)) return;
+            frmChuyenKho.MdiParent = this;
+            frmChuyenKho.Show();
+        }
+
+        private void bbtnSoDuDauKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmSoDu = new frmNhapSoDuDauKy();
+            if (ExistForm(frmSoDu)) return;
+            frmSoDu.MdiParent = this;
+            frmSoDu.Show();
+        }
     }
 }
