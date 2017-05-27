@@ -67,7 +67,7 @@
             this.bbtnHuongDanSuDung = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnLienHe = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnDangKy = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnTGThongTin = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnCapNhat = new DevExpress.XtraBars.BarButtonItem();
             this.rpHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pgrHeThong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -133,7 +133,7 @@
             this.bbtnHuongDanSuDung,
             this.bbtnLienHe,
             this.bbtnDangKy,
-            this.barButtonItem4,
+            this.bbtnTGThongTin,
             this.bbtnCapNhat});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 39;
@@ -396,6 +396,7 @@
             this.bbtnBaoCaoKhoHang.Id = 29;
             this.bbtnBaoCaoKhoHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnBaoCaoKhoHang.LargeGlyph")));
             this.bbtnBaoCaoKhoHang.Name = "bbtnBaoCaoKhoHang";
+            this.bbtnBaoCaoKhoHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBaoCaoKhoHang_ItemClick);
             // 
             // bbtnBaoCaoBanHang
             // 
@@ -404,6 +405,7 @@
             this.bbtnBaoCaoBanHang.Id = 30;
             this.bbtnBaoCaoBanHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnBaoCaoBanHang.LargeGlyph")));
             this.bbtnBaoCaoBanHang.Name = "bbtnBaoCaoBanHang";
+            this.bbtnBaoCaoBanHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnBaoCaoBanHang_ItemClick);
             // 
             // bbtnChungTu
             // 
@@ -451,14 +453,16 @@
             this.bbtnDangKy.Id = 36;
             this.bbtnDangKy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnDangKy.LargeGlyph")));
             this.bbtnDangKy.Name = "bbtnDangKy";
+            this.bbtnDangKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnDangKy_ItemClick);
             // 
-            // barButtonItem4
+            // bbtnTGThongTin
             // 
-            this.barButtonItem4.Caption = "Thông Tin";
-            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
-            this.barButtonItem4.Id = 37;
-            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.bbtnTGThongTin.Caption = "Thông Tin";
+            this.bbtnTGThongTin.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnTGThongTin.Glyph")));
+            this.bbtnTGThongTin.Id = 37;
+            this.bbtnTGThongTin.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnTGThongTin.LargeGlyph")));
+            this.bbtnTGThongTin.Name = "bbtnTGThongTin";
+            this.bbtnTGThongTin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTGThongTin_ItemClick);
             // 
             // bbtnCapNhat
             // 
@@ -602,7 +606,7 @@
             // pgrThongTin
             // 
             this.pgrThongTin.ItemLinks.Add(this.bbtnDangKy);
-            this.pgrThongTin.ItemLinks.Add(this.barButtonItem4);
+            this.pgrThongTin.ItemLinks.Add(this.bbtnTGThongTin);
             this.pgrThongTin.ItemLinks.Add(this.bbtnCapNhat);
             this.pgrThongTin.Name = "pgrThongTin";
             this.pgrThongTin.Text = "Thông Tin";
@@ -692,7 +696,7 @@
         private DevExpress.XtraBars.BarButtonItem bbtnHuongDanSuDung;
         private DevExpress.XtraBars.BarButtonItem bbtnLienHe;
         private DevExpress.XtraBars.BarButtonItem bbtnDangKy;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem bbtnTGThongTin;
         private DevExpress.XtraBars.BarButtonItem bbtnCapNhat;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdimanager;
     }

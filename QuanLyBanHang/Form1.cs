@@ -194,5 +194,33 @@ namespace QuanLyBanHang
             frmPhieuChi.MdiParent = this;
             frmPhieuChi.Show();
         }
+
+        private void bbtnBaoCaoKhoHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmBCKhoHang = new frmBaoCaoKhoHang();
+            if (ExistForm(frmBCKhoHang)) return;
+            frmBCKhoHang.MdiParent = this;
+            frmBCKhoHang.Show();
+        }
+
+        private void bbtnBaoCaoBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmBCBanHang = new frmBaoCaoBanHang();
+            if (ExistForm(frmBCBanHang)) return;
+            frmBCBanHang.MdiParent = this;
+            frmBCBanHang.Show();
+        }
+
+        private void bbtnDangKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmTGDangKy = new frmTroGiupDangKy();
+            frmTGDangKy.ShowDialog();
+        }
+
+        private void bbtnTGThongTin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmTGTT = new frmThongTinTroGiup();
+            frmTGTT.ShowDialog();
+        }
     }
 }
