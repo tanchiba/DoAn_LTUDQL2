@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dpnNHChucNang = new DevExpress.XtraBars.Docking.DockPanel();
@@ -155,6 +155,8 @@
             // 
             // dpnNHChucNang
             // 
+            this.dpnNHChucNang.Appearance.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dpnNHChucNang.Appearance.Options.UseBackColor = true;
             this.dpnNHChucNang.Controls.Add(this.controlContainer1);
             this.dpnNHChucNang.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dpnNHChucNang.ID = new System.Guid("597ece1c-00cd-4e29-b83f-7113186e69a9");
@@ -175,6 +177,7 @@
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.nbgrNHNhapHang;
+            this.navBarControl1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.nbgrNHNhapHang,
@@ -280,6 +283,8 @@
             // 
             // grcPhieuNhapHang
             // 
+            this.grcPhieuNhapHang.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grcPhieuNhapHang.Appearance.Options.UseBackColor = true;
             this.grcPhieuNhapHang.Controls.Add(this.grcNhapHang);
             this.grcPhieuNhapHang.Controls.Add(this.lycThongTinNhapHang);
             this.grcPhieuNhapHang.Controls.Add(this.menuStrip1);
@@ -293,9 +298,9 @@
             // grcNhapHang
             // 
             this.grcNhapHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grcNhapHang.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.grcNhapHang.Location = new System.Drawing.Point(2, 188);
             this.grcNhapHang.MainView = this.gridView1;
             this.grcNhapHang.Name = "grcNhapHang";

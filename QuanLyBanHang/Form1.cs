@@ -222,5 +222,11 @@ namespace QuanLyBanHang
             var frmTGTT = new frmThongTinTroGiup();
             frmTGTT.ShowDialog();
         }
+
+        private void bbtnLienHe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmLienHe = new frmLienHe();
+            frmLienHe.ShowDialog();
+        }
     }
 }

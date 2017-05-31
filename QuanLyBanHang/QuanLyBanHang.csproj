@@ -489,6 +489,12 @@
     <Compile Include="frmPhieuChi.Designer.cs">
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongTinTroGiup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -594,6 +600,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuChi.resx">
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongTinTroGiup.resx">
       <DependentUpon>frmThongTinTroGiup.cs</DependentUpon>

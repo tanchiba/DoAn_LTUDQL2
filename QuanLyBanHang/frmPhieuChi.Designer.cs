@@ -519,7 +519,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.menuStrip1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(342, 33);
-            this.splitContainerControl1.SplitterPosition = 2;
+            this.splitContainerControl1.SplitterPosition = 0;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 

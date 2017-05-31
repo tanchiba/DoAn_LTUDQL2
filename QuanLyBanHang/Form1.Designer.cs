@@ -445,6 +445,7 @@
             this.bbtnLienHe.Id = 35;
             this.bbtnLienHe.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtnLienHe.LargeGlyph")));
             this.bbtnLienHe.Name = "bbtnLienHe";
+            this.bbtnLienHe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLienHe_ItemClick);
             // 
             // bbtnDangKy
             // 
@@ -619,7 +620,7 @@
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Appearance.BackColor = System.Drawing.SystemColors.Window;
             this.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseBorderColor = true;
