@@ -187,7 +187,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Actions_document_save_icon;
+            //this.simpleButton1.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Actions_document_save_icon;
             this.simpleButton1.Location = new System.Drawing.Point(251, 284);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
@@ -196,7 +196,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Sign_Delete_icon__1_;
+            //this.simpleButton2.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Sign_Delete_icon__1_;
             this.simpleButton2.Location = new System.Drawing.Point(341, 284);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
