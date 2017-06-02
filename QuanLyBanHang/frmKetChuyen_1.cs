@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace QuanLyBanHang
 {
-    public partial class frmLienHe : DevExpress.XtraEditors.XtraForm
+    public partial class frmKetChuyen_1 : Form
     {
-        public frmLienHe()
+        public frmKetChuyen_1()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
