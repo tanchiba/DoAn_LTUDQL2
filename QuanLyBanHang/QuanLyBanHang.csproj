@@ -552,6 +552,12 @@
     <Compile Include="frmThemDonViTinh.Designer.cs">
       <DependentUpon>frmThemDonViTinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemHangHoaDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHangHoaDichVu.Designer.cs">
+      <DependentUpon>frmThemHangHoaDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemKhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -723,6 +729,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemDonViTinh.resx">
       <DependentUpon>frmThemDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHangHoaDichVu.resx">
+      <DependentUpon>frmThemHangHoaDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKhoHang.resx">
       <DependentUpon>frmThemKhoHang.cs</DependentUpon>

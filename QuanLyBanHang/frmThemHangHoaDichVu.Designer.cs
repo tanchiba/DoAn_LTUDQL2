@@ -74,6 +74,7 @@
             this.lpedtGiaBanSi = new DevExpress.XtraEditors.CalcEdit();
             this.lpedtGiaBanLe = new DevExpress.XtraEditors.CalcEdit();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnLichSuGiaoDich = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTinC)).BeginInit();
             this.grcThongTinC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTinGiaoDich)).BeginInit();
@@ -578,11 +579,21 @@
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
+            // btnLichSuGiaoDich
+            // 
+            this.btnLichSuGiaoDich.Location = new System.Drawing.Point(8, 405);
+            this.btnLichSuGiaoDich.Name = "btnLichSuGiaoDich";
+            this.btnLichSuGiaoDich.Size = new System.Drawing.Size(109, 23);
+            this.btnLichSuGiaoDich.TabIndex = 6;
+            this.btnLichSuGiaoDich.Text = "Lịch Sử Giao Dịch";
+            this.btnLichSuGiaoDich.UseVisualStyleBackColor = true;
+            // 
             // frmThemHangHoaDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 432);
+            this.Controls.Add(this.btnLichSuGiaoDich);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grledtKhoMacDinh);
@@ -692,5 +703,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private System.Windows.Forms.Button btnLichSuGiaoDich;
     }
 }
