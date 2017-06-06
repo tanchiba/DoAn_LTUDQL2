@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcNhanVien = new DevExpress.XtraGrid.GridControl();
+            this.quanLyBanHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyBanHangDataSet = new QuanLyBanHang.QuanLyBanHangDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmployee = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,129 +41,61 @@
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
+            this.btnNapLai = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSuaChua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.eMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eMPLOYEETableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.EMPLOYEETableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gridControl1);
+            this.panel1.Controls.Add(this.grcNhanVien);
             this.panel1.Controls.Add(this.panelControl1);
-            this.panel1.Location = new System.Drawing.Point(50, 24);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1123, 395);
+            this.panel1.Size = new System.Drawing.Size(909, 466);
             this.panel1.TabIndex = 0;
             // 
-            // panelControl1
+            // grcNhanVien
             // 
-            this.panelControl1.Controls.Add(this.button6);
-            this.panelControl1.Controls.Add(this.button5);
-            this.panelControl1.Controls.Add(this.button3);
-            this.panelControl1.Controls.Add(this.button4);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Controls.Add(this.button1);
-            this.panelControl1.Location = new System.Drawing.Point(15, 21);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1064, 71);
-            this.panelControl1.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(359, 6);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(63, 60);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Đóng";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::QuanLyBanHang.Properties.Resources.Export_To_File_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(289, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 60);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Xuất";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::QuanLyBanHang.Properties.Resources.Button_Refresh_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(219, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Nạp lại";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(149, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(77, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(6, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.gridControl1.Location = new System.Drawing.Point(15, 114);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grcNhanVien.DataSource = this.quanLyBanHangDataSetBindingSource;
+            this.grcNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcNhanVien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcNhanVien.Location = new System.Drawing.Point(0, 58);
+            this.grcNhanVien.MainView = this.gridView1;
+            this.grcNhanVien.Name = "grcNhanVien";
+            this.grcNhanVien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1064, 256);
-            this.gridControl1.TabIndex = 6;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcNhanVien.Size = new System.Drawing.Size(909, 408);
+            this.grcNhanVien.TabIndex = 6;
+            this.grcNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // quanLyBanHangDataSetBindingSource
+            // 
+            this.quanLyBanHangDataSetBindingSource.DataSource = this.quanLyBanHangDataSet;
+            this.quanLyBanHangDataSetBindingSource.Position = 0;
+            // 
+            // quanLyBanHangDataSet
+            // 
+            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
+            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -178,11 +106,12 @@
             this.colTel,
             this.colEmail,
             this.colActive});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcNhanVien;
             this.gridView1.Name = "gridView1";
             // 
             // colEmployee
             // 
+            this.colEmployee.Caption = "Mã Nhân Viên";
             this.colEmployee.FieldName = "Employee_ID";
             this.colEmployee.Name = "colEmployee";
             this.colEmployee.Visible = true;
@@ -191,6 +120,7 @@
             // 
             // colEmployeeName
             // 
+            this.colEmployeeName.Caption = "Tên Nhân Viên";
             this.colEmployeeName.FieldName = "EmployeeName";
             this.colEmployeeName.Name = "colEmployeeName";
             this.colEmployeeName.Visible = true;
@@ -199,6 +129,7 @@
             // 
             // colEmployeeAddress
             // 
+            this.colEmployeeAddress.Caption = "Địa chỉ";
             this.colEmployeeAddress.FieldName = "EmployeeAddress";
             this.colEmployeeAddress.Name = "colEmployeeAddress";
             this.colEmployeeAddress.Visible = true;
@@ -207,6 +138,7 @@
             // 
             // colTel
             // 
+            this.colTel.Caption = "Điện thoại";
             this.colTel.FieldName = "Tel";
             this.colTel.Name = "colTel";
             this.colTel.Visible = true;
@@ -215,6 +147,7 @@
             // 
             // colEmail
             // 
+            this.colEmail.Caption = "Email";
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
@@ -223,6 +156,7 @@
             // 
             // colActive
             // 
+            this.colActive.Caption = "Còn Quản Lý";
             this.colActive.ColumnEdit = this.repositoryItemCheckEdit1;
             this.colActive.FieldName = "Active";
             this.colActive.Name = "colActive";
@@ -235,20 +169,122 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnDong);
+            this.panelControl1.Controls.Add(this.btnXuat);
+            this.panelControl1.Controls.Add(this.btnNapLai);
+            this.panelControl1.Controls.Add(this.btnXoa);
+            this.panelControl1.Controls.Add(this.btnSuaChua);
+            this.panelControl1.Controls.Add(this.btnThem);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(909, 58);
+            this.panelControl1.TabIndex = 5;
+            // 
+            // btnDong
+            // 
+            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDong.Location = new System.Drawing.Point(331, 5);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(54, 49);
+            this.btnDong.TabIndex = 6;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDong.UseVisualStyleBackColor = true;
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Image = global::QuanLyBanHang.Properties.Resources.Export_To_File_icon;
+            this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXuat.Location = new System.Drawing.Point(271, 5);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(54, 49);
+            this.btnXuat.TabIndex = 5;
+            this.btnXuat.Text = "Xuất";
+            this.btnXuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXuat.UseVisualStyleBackColor = true;
+            // 
+            // btnNapLai
+            // 
+            this.btnNapLai.Image = global::QuanLyBanHang.Properties.Resources.Button_Refresh_icon;
+            this.btnNapLai.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNapLai.Location = new System.Drawing.Point(211, 5);
+            this.btnNapLai.Name = "btnNapLai";
+            this.btnNapLai.Size = new System.Drawing.Size(54, 49);
+            this.btnNapLai.TabIndex = 4;
+            this.btnNapLai.Text = "Nạp lại";
+            this.btnNapLai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNapLai.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(151, 5);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(54, 49);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaChua
+            // 
+            this.btnSuaChua.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
+            this.btnSuaChua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSuaChua.Location = new System.Drawing.Point(66, 5);
+            this.btnSuaChua.Name = "btnSuaChua";
+            this.btnSuaChua.Size = new System.Drawing.Size(79, 49);
+            this.btnSuaChua.TabIndex = 1;
+            this.btnSuaChua.Text = "Sửa Chữa";
+            this.btnSuaChua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSuaChua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSuaChua.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThem.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(5, 5);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(55, 49);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.UseVisualStyleBackColor = true;
+            // 
+            // eMPLOYEEBindingSource
+            // 
+            this.eMPLOYEEBindingSource.DataMember = "EMPLOYEE";
+            this.eMPLOYEEBindingSource.DataSource = this.quanLyBanHangDataSet;
+            // 
+            // eMPLOYEETableAdapter
+            // 
+            this.eMPLOYEETableAdapter.ClearBeforeFill = true;
+            // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 542);
+            this.ClientSize = new System.Drawing.Size(909, 466);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhanVien";
-            this.Text = "frmNhanVien";
+            this.Text = "Nhân Viên";
+            this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEEBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,13 +293,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.Button btnDong;
+        private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.Button btnNapLai;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSuaChua;
+        private System.Windows.Forms.Button btnThem;
+        private DevExpress.XtraGrid.GridControl grcNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployee;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeName;
@@ -272,5 +308,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colActive;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private QuanLyBanHangDataSet quanLyBanHangDataSet;
+        private System.Windows.Forms.BindingSource eMPLOYEEBindingSource;
+        private QuanLyBanHangDataSetTableAdapters.EMPLOYEETableAdapter eMPLOYEETableAdapter;
+        private System.Windows.Forms.BindingSource quanLyBanHangDataSetBindingSource;
     }
 }
