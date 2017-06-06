@@ -81,7 +81,11 @@ namespace QuanLyBanHang
             p.Sale_Price = decimal.Parse(glGiaSi.Text);
             p.Retail_Price = decimal.Parse(glGiaBanLe.Text);
             p.MinStock = int.Parse(glToiThieu.Text);
-            p.Stock_ID = kho.Stock_ID;
+            if (p.Stock_ID == null)
+            {
+                p.Stock_ID = "K00001";
+            }
+            else p.Stock_ID = kho.Stock_ID;
             p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
             if (cbActive.Checked == true)
                 p.Active = true;

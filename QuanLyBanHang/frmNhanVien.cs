@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QuanLyBanHang.AppData;
 
 namespace QuanLyBanHang
 {
@@ -16,6 +17,17 @@ namespace QuanLyBanHang
         public frmNhanVien()
         {
             InitializeComponent();
+        }
+        QuanLyBanHangEntities data = new QuanLyBanHangEntities();
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            List<EMPLOYEE> nv = data.EMPLOYEEs.ToList();
+            grcNhanVien.DataSource = nv;
         }
     }
 }

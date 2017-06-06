@@ -32,15 +32,16 @@ namespace QuanLyBanHang
             QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             var listhanghoa = from a in db.PRODUCTs
                               from b in db.PRODUCT_GROUP
-                              where a.Product_Group_ID == b.Product_Group_ID
+                              from c in db.UNITs
+                              where a.Product_Group_ID == b.Product_Group_ID && a.Unit == c.Unit_ID
                               select new
                               {
                                   Product_ID = a.Product_ID,
                                   ProductName = a.ProductName,
                                   Product_Group_ID = b.Product_Group_Name,
-                                  Unit = a.Unit,
+                                  Unit = c.UnitName,
                                   Org_Price = a.Org_Price,
-                                  Sale_price = a.Sale_Price,
+                                  Sale_Price = a.Sale_Price,
                                   Retail_Price = a.Retail_Price,
                                   Quantity = a.Quantity,
                                   MinStock = a.MinStock,

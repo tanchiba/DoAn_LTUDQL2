@@ -30,6 +30,19 @@ namespace QuanLyBanHang
             return false;
         }
 
+        private bool ExistFrom1(Form form)
+        {
+            foreach (var child  in MdiChildren)
+            {
+                if (child.Name == form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+
+            }
+            return false;
+        }
 
         private void bbtnNhapDanhMucExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -221,6 +234,66 @@ namespace QuanLyBanHang
         {
             var frmTGTT = new frmThongTinTroGiup();
             frmTGTT.ShowDialog();
+        }
+
+        private void bbtnKetThuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bbtnThongTin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmThongTin frmtt = new frmThongTin();
+            frmtt.ShowDialog();
+        }
+
+        private void bbtnPhanQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmPQ = new frmPhanQuyen();
+            if (ExistFrom1(frmPQ)) return;
+            frmPQ.MdiParent = this;
+            frmPQ.Show(); 
+
+            
+        }
+
+        private void bbtnDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmDoiMatKhau frmdmk = new frmDoiMatKhau();
+            frmdmk.ShowDialog();
+        }
+
+        private void bbtnNhatKyHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmNKHT = new formNhatKyHeThong();
+            if (ExistFrom1(frmNKHT)) return;
+            frmNKHT.MdiParent = this;
+            frmNKHT.Show();
+
+        }
+
+        private void bbtnSaoLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSaoLuu frmsl = new frmSaoLuu();
+            frmsl.ShowDialog();
+        }
+
+        private void bbtnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmPhucHoi frmph = new frmPhucHoi();
+            frmph.ShowDialog();
+        }
+
+        private void bbtnSuaChua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSuaChua frmsc = new frmSuaChua();
+            frmsc.ShowDialog();
+        }
+
+        private void bbtnKetChuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmKetChuyen frmkc = new frmKetChuyen();
+            frmkc.ShowDialog();
         }
     }
 }

@@ -99,6 +99,7 @@
             this.panelControl1.Controls.Add(this.button2);
             this.panelControl1.Controls.Add(this.button1);
             this.panelControl1.Location = new System.Drawing.Point(12, 12);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(996, 61);
             this.panelControl1.TabIndex = 5;
@@ -107,9 +108,10 @@
             // 
             this.button7.Image = global::QuanLyBanHang.Properties.Resources.MS_Office_2003_Excel_icon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(308, 5);
+            this.button7.Location = new System.Drawing.Point(359, 6);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(54, 49);
+            this.button7.Size = new System.Drawing.Size(63, 60);
             this.button7.TabIndex = 7;
             this.button7.Text = "Nhập";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -119,9 +121,10 @@
             // 
             this.button6.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(368, 5);
+            this.button6.Location = new System.Drawing.Point(429, 6);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 49);
+            this.button6.Size = new System.Drawing.Size(63, 60);
             this.button6.TabIndex = 6;
             this.button6.Text = "Đóng";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
