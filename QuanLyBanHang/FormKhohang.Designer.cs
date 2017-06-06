@@ -40,26 +40,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyBanHangDataSet = new QuanLyBanHang.QuanLyBanHangDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyBanHangDataSet = new QuanLyBanHang.QuanLyBanHangDataSet();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cUSTOMERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter();
-            //this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.sTOCKTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.STOCKTableAdapter();
-            this.colStock_ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStockName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStockAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTel = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -67,15 +61,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
             this.gridSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -202,7 +195,6 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.sTOCKBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(12, 72);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -212,26 +204,11 @@
             this.gridView1});
             this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
-            // sTOCKBindingSource
-            // 
-            this.sTOCKBindingSource.DataMember = "STOCK";
-            this.sTOCKBindingSource.DataSource = this.quanLyBanHangDataSet;
-            // 
-            // quanLyBanHangDataSet
-            // 
-            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
-            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colStock_ID,
-            this.colStockName,
-            this.colStockAddress,
-            this.colEmail,
-            this.colTel,
-            this.colDescription,
-            this.colActive});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -275,6 +252,16 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // sTOCKBindingSource
+            // 
+            this.sTOCKBindingSource.DataMember = "STOCK";
+            this.sTOCKBindingSource.DataSource = this.quanLyBanHangDataSet;
+            // 
+            // quanLyBanHangDataSet
+            // 
+            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
+            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cUSTOMERBindingSource
             // 
             this.cUSTOMERBindingSource.DataMember = "CUSTOMER";
@@ -294,54 +281,21 @@
             // 
             this.sTOCKTableAdapter.ClearBeforeFill = true;
             // 
-            // colStock_ID
+            // gridColumn1
             // 
-            this.colStock_ID.FieldName = "Stock_ID";
-            this.colStock_ID.Name = "colStock_ID";
-            this.colStock_ID.Visible = true;
-            this.colStock_ID.VisibleIndex = 0;
+            this.gridColumn1.Caption = "ID";
+            this.gridColumn1.FieldName = "Stock_ID";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
             // 
-            // colStockName
+            // gridColumn2
             // 
-            this.colStockName.FieldName = "StockName";
-            this.colStockName.Name = "colStockName";
-            this.colStockName.Visible = true;
-            this.colStockName.VisibleIndex = 1;
-            // 
-            // colStockAddress
-            // 
-            this.colStockAddress.FieldName = "StockAddress";
-            this.colStockAddress.Name = "colStockAddress";
-            this.colStockAddress.Visible = true;
-            this.colStockAddress.VisibleIndex = 2;
-            // 
-            // colEmail
-            // 
-            this.colEmail.FieldName = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 3;
-            // 
-            // colTel
-            // 
-            this.colTel.FieldName = "Tel";
-            this.colTel.Name = "colTel";
-            this.colTel.Visible = true;
-            this.colTel.VisibleIndex = 4;
-            // 
-            // colDescription
-            // 
-            this.colDescription.FieldName = "Description";
-            this.colDescription.Name = "colDescription";
-            this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 5;
-            // 
-            // colActive
-            // 
-            this.colActive.FieldName = "Active";
-            this.colActive.Name = "colActive";
-            this.colActive.Visible = true;
-            this.colActive.VisibleIndex = 6;
+            this.gridColumn2.Caption = "Tên Kho";
+            this.gridColumn2.FieldName = "StockName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
             // FormKhoHang
             // 
@@ -359,15 +313,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,12 +351,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource sTOCKBindingSource;
         private QuanLyBanHangDataSetTableAdapters.STOCKTableAdapter sTOCKTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colStock_ID;
-        private DevExpress.XtraGrid.Columns.GridColumn colStockName;
-        private DevExpress.XtraGrid.Columns.GridColumn colStockAddress;
-        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn colTel;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

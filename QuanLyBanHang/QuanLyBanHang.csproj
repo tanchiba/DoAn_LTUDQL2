@@ -522,6 +522,43 @@
     <Compile Include="frmPhieuChi.Designer.cs">
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="frmSuaKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaKhuVuc.Designer.cs">
+      <DependentUpon>frmSuaKhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaKhachHang.Designer.cs">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThamKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThamKhachHang.Designer.cs">
+      <DependentUpon>frmThamKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuaHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaHangHoa.Designer.cs">
+      <DependentUpon>frmSuaHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHangHoa.Designer.cs">
+      <DependentUpon>frmThemHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemKhuVuc.Designer.cs">
+      <DependentUpon>frmThemKhuVuc.cs</DependentUpon>
+  </Compile>
     <Compile Include="frmPhucHoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -593,6 +630,7 @@
     </Compile>
     <Compile Include="frmThongTin.Designer.cs">
       <DependentUpon>frmThongTin.cs</DependentUpon>
+
     </Compile>
     <Compile Include="frmThongTinTroGiup.cs">
       <SubType>Form</SubType>
@@ -715,6 +753,24 @@
     <EmbeddedResource Include="frmPhieuChi.resx">
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaKhuVuc.resx">
+      <DependentUpon>frmSuaKhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaKhachHang.resx">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThamKhachHang.resx">
+      <DependentUpon>frmThamKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaHangHoa.resx">
+      <DependentUpon>frmSuaHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHangHoa.resx">
+      <DependentUpon>frmThemHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemKhuVuc.resx">
+      <DependentUpon>frmThemKhuVuc.cs</DependentUpon>
+  </EmbeddedResource>
     <EmbeddedResource Include="frmPhucHoi.resx">
       <DependentUpon>frmPhucHoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -784,7 +840,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="AppData\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
