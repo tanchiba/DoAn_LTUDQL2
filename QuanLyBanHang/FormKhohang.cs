@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using QuanLyBanHang.AppData;
+
 namespace QuanLyBanHang
 {
     public partial class FormKhoHang : DevExpress.XtraEditors.XtraForm
@@ -23,7 +25,7 @@ namespace QuanLyBanHang
             dbContext.CUSTOMERs.LoadAsync().ContinueWith(loadTask =>
             {
     // Bind data to control when loading complete
-    gridControl1.DataSource = dbContext.CUSTOMERs.Local.ToBindingList();
+    gridControl1.DataSource = dbContext.STOCKs.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -38,6 +40,12 @@ namespace QuanLyBanHang
             //this.sTOCKTableAdapter.Fill(this.quanLyBanHangDataSet.STOCK);
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
             this.gridView1.ExpandAllGroups();
+            frmkhohangload();
+        }
+
+        private void frmkhohangload()
+        {
+            
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
