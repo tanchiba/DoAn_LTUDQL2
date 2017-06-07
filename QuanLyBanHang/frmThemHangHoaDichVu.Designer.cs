@@ -32,7 +32,6 @@
             this.grcThongTinC = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.btnAnh = new System.Windows.Forms.Button();
             this.grledtDonVi = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.edtMaVachNSX = new DevExpress.XtraEditors.TextEdit();
@@ -49,7 +48,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -68,14 +66,16 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.cmbLoaiHangHoa = new System.Windows.Forms.ComboBox();
             this.grledtKhoMacDinh = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLichSuGiaoDich = new System.Windows.Forms.Button();
+            this.btnHHDong = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnAnh = new System.Windows.Forms.Button();
+            this.btnHHLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLichSuGiaoDich = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTinC)).BeginInit();
             this.grcThongTinC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -97,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -119,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grledtKhoMacDinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // grcThongTinC
@@ -158,14 +158,6 @@
             this.textEdit4.Size = new System.Drawing.Size(213, 20);
             this.textEdit4.StyleController = this.layoutControl1;
             this.textEdit4.TabIndex = 10;
-            // 
-            // btnAnh
-            // 
-            this.btnAnh.Location = new System.Drawing.Point(317, 84);
-            this.btnAnh.Name = "btnAnh";
-            this.btnAnh.Size = new System.Drawing.Size(208, 92);
-            this.btnAnh.TabIndex = 9;
-            this.btnAnh.UseVisualStyleBackColor = true;
             // 
             // grledtDonVi
             // 
@@ -325,15 +317,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(305, 24);
             this.layoutControlItem5.Text = "Đơn Vị";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.btnAnh;
-            this.layoutControlItem6.Location = new System.Drawing.Point(305, 72);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(212, 96);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
@@ -523,28 +506,6 @@
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
-            // btnDong
-            // 
-            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.Location = new System.Drawing.Point(461, 401);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(86, 34);
-            this.btnDong.TabIndex = 2;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDong.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(369, 401);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(86, 34);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
             // cmbLoaiHangHoa
             // 
             this.cmbLoaiHangHoa.FormattingEnabled = true;
@@ -588,16 +549,49 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Kho Mặc Định ";
             // 
+            // btnHHDong
+            // 
+            this.btnHHDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnHHDong.Location = new System.Drawing.Point(472, 408);
+            this.btnHHDong.Name = "btnHHDong";
+            this.btnHHDong.Size = new System.Drawing.Size(75, 23);
+            this.btnHHDong.TabIndex = 6;
+            this.btnHHDong.Text = "Đóng";
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnAnh;
+            this.layoutControlItem6.Location = new System.Drawing.Point(305, 72);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(212, 96);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // btnAnh
+            // 
+            this.btnAnh.Location = new System.Drawing.Point(317, 84);
+            this.btnAnh.Name = "btnAnh";
+            this.btnAnh.Size = new System.Drawing.Size(208, 92);
+            this.btnAnh.TabIndex = 9;
+            this.btnAnh.UseVisualStyleBackColor = true;
+            // 
+            // btnHHLuu
+            // 
+            this.btnHHLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnHHLuu.Location = new System.Drawing.Point(391, 408);
+            this.btnHHLuu.Name = "btnHHLuu";
+            this.btnHHLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnHHLuu.TabIndex = 6;
+            this.btnHHLuu.Text = "Lưu";
+            // 
             // btnLichSuGiaoDich
             // 
-            this.btnLichSuGiaoDich.Image = ((System.Drawing.Image)(resources.GetObject("btnLichSuGiaoDich.Image")));
-            this.btnLichSuGiaoDich.Location = new System.Drawing.Point(8, 405);
+            this.btnLichSuGiaoDich.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnLichSuGiaoDich.Location = new System.Drawing.Point(7, 408);
             this.btnLichSuGiaoDich.Name = "btnLichSuGiaoDich";
-            this.btnLichSuGiaoDich.Size = new System.Drawing.Size(125, 30);
+            this.btnLichSuGiaoDich.Size = new System.Drawing.Size(116, 23);
             this.btnLichSuGiaoDich.TabIndex = 6;
             this.btnLichSuGiaoDich.Text = "Lịch Sử Giao Dịch";
-            this.btnLichSuGiaoDich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLichSuGiaoDich.UseVisualStyleBackColor = true;
             // 
             // frmThemHangHoaDichVu
             // 
@@ -607,18 +601,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 439);
             this.Controls.Add(this.btnLichSuGiaoDich);
+            this.Controls.Add(this.btnHHLuu);
+            this.Controls.Add(this.btnHHDong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grledtKhoMacDinh);
             this.Controls.Add(this.cmbLoaiHangHoa);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.grcThongTinGiaoDich);
             this.Controls.Add(this.grcThongTinC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemHangHoaDichVu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Hàng Hóa, Dịch Vụ";
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTinC)).EndInit();
             this.grcThongTinC.ResumeLayout(false);
@@ -641,7 +636,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -663,6 +657,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grledtKhoMacDinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,7 +668,6 @@
         private DevExpress.XtraEditors.GroupControl grcThongTinC;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit textEdit4;
-        private System.Windows.Forms.Button btnAnh;
         private DevExpress.XtraEditors.GridLookUpEdit grledtDonVi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit3View;
         private DevExpress.XtraEditors.TextEdit edtMaVachNSX;
@@ -690,7 +684,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
@@ -708,14 +701,16 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private System.Windows.Forms.Button btnDong;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ComboBox cmbLoaiHangHoa;
         private DevExpress.XtraEditors.GridLookUpEdit grledtKhoMacDinh;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private System.Windows.Forms.Button btnLichSuGiaoDich;
+        private System.Windows.Forms.Button btnAnh;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SimpleButton btnHHDong;
+        private DevExpress.XtraEditors.SimpleButton btnHHLuu;
+        private DevExpress.XtraEditors.SimpleButton btnLichSuGiaoDich;
     }
 }

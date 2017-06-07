@@ -522,7 +522,6 @@
     <Compile Include="frmPhieuChi.Designer.cs">
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
     </Compile>
-
     <Compile Include="frmSuaKhuVuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -547,6 +546,12 @@
     <Compile Include="frmSuaHangHoa.Designer.cs">
       <DependentUpon>frmSuaHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemBoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemBoPhan.Designer.cs">
+      <DependentUpon>frmThemBoPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -558,7 +563,7 @@
     </Compile>
     <Compile Include="frmThemKhuVuc.Designer.cs">
       <DependentUpon>frmThemKhuVuc.cs</DependentUpon>
-  </Compile>
+    </Compile>
     <Compile Include="frmPhucHoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -607,6 +612,12 @@
     <Compile Include="frmThemNguoiDung.Designer.cs">
       <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemNhomHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -630,7 +641,6 @@
     </Compile>
     <Compile Include="frmThongTin.Designer.cs">
       <DependentUpon>frmThongTin.cs</DependentUpon>
-
     </Compile>
     <Compile Include="frmThongTinTroGiup.cs">
       <SubType>Form</SubType>
@@ -765,12 +775,15 @@
     <EmbeddedResource Include="frmSuaHangHoa.resx">
       <DependentUpon>frmSuaHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThemBoPhan.resx">
+      <DependentUpon>frmThemBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemHangHoa.resx">
       <DependentUpon>frmThemHangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKhuVuc.resx">
       <DependentUpon>frmThemKhuVuc.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhucHoi.resx">
       <DependentUpon>frmPhucHoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -794,6 +807,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemNguoiDung.resx">
       <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemNhomHangHoa.resx">
       <DependentUpon>frmThemNhomHangHoa.cs</DependentUpon>
@@ -914,6 +930,20 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{cdbecb14-0091-4153-96d4-dd2343e9f8fe}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{753ea5fd-5b77-4805-9d05-150cdec9aa64}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{bf29bc72-b29f-4c38-8c7c-1c29fba6a80b}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
