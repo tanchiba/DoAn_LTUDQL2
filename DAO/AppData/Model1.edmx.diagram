@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20576e61dc88448198ef0a4defc6574d" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CASH_METHOD" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CASH_TERM" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CURRENCY" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CUSTOMER" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CUSTOMER_GROUP" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.CUSTOMER_TYPE" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.DEPARTMENT" Width="1.5" PointX="5.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.EMPLOYEE" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.INVENTORY_ACTION" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.MESSAGE" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.PRODUCT" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.PRODUCT_GROUP" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.PROVIDER" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.REPORT" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.STOCK" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_COMPANY" Width="1.5" PointX="11.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_GROUP" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_LOG" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_OBJECT" Width="1.5" PointX="3.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_RULE" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_USER" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.SYS_USER_RULE" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyBanHangModel.UNIT" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PRODUCT_CURRENCY" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_CUSTOMER_CUSTOMER_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_CUSTOMER_CUSTOMER_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PROVIDER_CUSTOMER_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_EMPLOYEE_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_EMPLOYEE_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PRODUCT_PRODUCT_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PRODUCT_PROVIDER" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PRODUCT_SYS_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_PRODUCT_UNIT" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_SYS_USER_RULE_SYS_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_SYS_USER_SYS_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyBanHangModel.FK_SYS_USER_RULE_SYS_OBJECT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

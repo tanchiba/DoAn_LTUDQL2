@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
-using QuanLyBanHang.AppData;
+
+using DAO.AppData;
+
 namespace QuanLyBanHang
 {
     public partial class FormKhachHang : DevExpress.XtraEditors.XtraForm

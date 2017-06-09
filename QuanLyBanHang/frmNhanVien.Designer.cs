@@ -194,6 +194,7 @@
             this.btnDong.Text = "Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnXuat
             // 
@@ -230,6 +231,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSuaChua
             // 
@@ -243,6 +245,7 @@
             this.btnSuaChua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSuaChua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSuaChua.UseVisualStyleBackColor = true;
+            this.btnSuaChua.Click += new System.EventHandler(this.btnSuaChua_Click);
             // 
             // btnThem
             // 
@@ -256,6 +259,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // eMPLOYEEBindingSource
             // 

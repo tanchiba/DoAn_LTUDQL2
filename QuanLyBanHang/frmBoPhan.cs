@@ -22,5 +22,10 @@ namespace QuanLyBanHang
         {
 
         }
+
+        private void frmBoPhan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

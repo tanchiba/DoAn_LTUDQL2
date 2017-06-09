@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using QuanLyBanHang.AppData;
+using DAO.AppData;
 namespace QuanLyBanHang
 {
     public partial class FormKhuVuc : DevExpress.XtraEditors.XtraForm
