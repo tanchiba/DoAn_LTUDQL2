@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.grcNhanVien = new DevExpress.XtraGrid.GridControl();
             this.quanLyBanHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -42,14 +43,14 @@
             this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnXuat = new System.Windows.Forms.Button();
-            this.btnNapLai = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSuaChua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.eMPLOYEEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eMPLOYEETableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.EMPLOYEETableAdapter();
+            this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnSuaChua = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXuat = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnNapLai = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSetBindingSource)).BeginInit();
@@ -171,95 +172,19 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.btnDong);
-            this.panelControl1.Controls.Add(this.btnXuat);
-            this.panelControl1.Controls.Add(this.btnNapLai);
-            this.panelControl1.Controls.Add(this.btnXoa);
-            this.panelControl1.Controls.Add(this.btnSuaChua);
-            this.panelControl1.Controls.Add(this.btnThem);
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.spbtnSuaChua);
+            this.panelControl1.Controls.Add(this.spbtnNapLai);
+            this.panelControl1.Controls.Add(this.spbtnDong);
+            this.panelControl1.Controls.Add(this.spbtnXuat);
+            this.panelControl1.Controls.Add(this.spbtnXoa);
+            this.panelControl1.Controls.Add(this.spbtnThem);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(909, 58);
             this.panelControl1.TabIndex = 5;
-            // 
-            // btnDong
-            // 
-            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
-            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDong.Location = new System.Drawing.Point(331, 5);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(54, 49);
-            this.btnDong.TabIndex = 6;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.Image = global::QuanLyBanHang.Properties.Resources.Export_To_File_icon;
-            this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXuat.Location = new System.Drawing.Point(271, 5);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(54, 49);
-            this.btnXuat.TabIndex = 5;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXuat.UseVisualStyleBackColor = true;
-            // 
-            // btnNapLai
-            // 
-            this.btnNapLai.Image = global::QuanLyBanHang.Properties.Resources.Button_Refresh_icon;
-            this.btnNapLai.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNapLai.Location = new System.Drawing.Point(211, 5);
-            this.btnNapLai.Name = "btnNapLai";
-            this.btnNapLai.Size = new System.Drawing.Size(54, 49);
-            this.btnNapLai.TabIndex = 4;
-            this.btnNapLai.Text = "Nạp lại";
-            this.btnNapLai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNapLai.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(151, 5);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(54, 49);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSuaChua
-            // 
-            this.btnSuaChua.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
-            this.btnSuaChua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSuaChua.Location = new System.Drawing.Point(66, 5);
-            this.btnSuaChua.Name = "btnSuaChua";
-            this.btnSuaChua.Size = new System.Drawing.Size(79, 49);
-            this.btnSuaChua.TabIndex = 1;
-            this.btnSuaChua.Text = "Sửa Chữa";
-            this.btnSuaChua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSuaChua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSuaChua.UseVisualStyleBackColor = true;
-            this.btnSuaChua.Click += new System.EventHandler(this.btnSuaChua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnThem.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(5, 5);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(55, 49);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // eMPLOYEEBindingSource
             // 
@@ -269,6 +194,72 @@
             // eMPLOYEETableAdapter
             // 
             this.eMPLOYEETableAdapter.ClearBeforeFill = true;
+            // 
+            // spbtnThem
+            // 
+            this.spbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnThem.ImageOptions.Image")));
+            this.spbtnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnThem.Location = new System.Drawing.Point(12, 5);
+            this.spbtnThem.Name = "spbtnThem";
+            this.spbtnThem.Size = new System.Drawing.Size(52, 47);
+            this.spbtnThem.TabIndex = 0;
+            this.spbtnThem.Text = "Thêm";
+            this.spbtnThem.Click += new System.EventHandler(this.spbtnThem_Click);
+            // 
+            // spbtnSuaChua
+            // 
+            this.spbtnSuaChua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnSuaChua.ImageOptions.Image")));
+            this.spbtnSuaChua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnSuaChua.Location = new System.Drawing.Point(69, 5);
+            this.spbtnSuaChua.Name = "spbtnSuaChua";
+            this.spbtnSuaChua.Size = new System.Drawing.Size(72, 47);
+            this.spbtnSuaChua.TabIndex = 0;
+            this.spbtnSuaChua.Text = "Sửa Chữa";
+            this.spbtnSuaChua.Click += new System.EventHandler(this.spbtnSuaChua_Click);
+            // 
+            // spbtnXoa
+            // 
+            this.spbtnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXoa.ImageOptions.Image")));
+            this.spbtnXoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXoa.Location = new System.Drawing.Point(147, 6);
+            this.spbtnXoa.Name = "spbtnXoa";
+            this.spbtnXoa.Size = new System.Drawing.Size(52, 47);
+            this.spbtnXoa.TabIndex = 0;
+            this.spbtnXoa.Text = "Xóa";
+            this.spbtnXoa.Click += new System.EventHandler(this.spbtnXoa_Click);
+            // 
+            // spbtnXuat
+            // 
+            this.spbtnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXuat.ImageOptions.Image")));
+            this.spbtnXuat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXuat.Location = new System.Drawing.Point(263, 6);
+            this.spbtnXuat.Name = "spbtnXuat";
+            this.spbtnXuat.Size = new System.Drawing.Size(52, 47);
+            this.spbtnXuat.TabIndex = 0;
+            this.spbtnXuat.Text = "Xuất";
+            this.spbtnXuat.Click += new System.EventHandler(this.spbtnXuat_Click);
+            // 
+            // spbtnDong
+            // 
+            this.spbtnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnDong.ImageOptions.Image")));
+            this.spbtnDong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnDong.Location = new System.Drawing.Point(321, 6);
+            this.spbtnDong.Name = "spbtnDong";
+            this.spbtnDong.Size = new System.Drawing.Size(52, 47);
+            this.spbtnDong.TabIndex = 0;
+            this.spbtnDong.Text = "Đóng";
+            this.spbtnDong.Click += new System.EventHandler(this.spbtnDong_Click);
+            // 
+            // spbtnNapLai
+            // 
+            this.spbtnNapLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnNapLai.ImageOptions.Image")));
+            this.spbtnNapLai.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnNapLai.Location = new System.Drawing.Point(205, 6);
+            this.spbtnNapLai.Name = "spbtnNapLai";
+            this.spbtnNapLai.Size = new System.Drawing.Size(52, 47);
+            this.spbtnNapLai.TabIndex = 0;
+            this.spbtnNapLai.Text = "Nạp Lại";
+            this.spbtnNapLai.Click += new System.EventHandler(this.spbtnNapLai_Click);
             // 
             // frmNhanVien
             // 
@@ -297,12 +288,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button btnDong;
-        private System.Windows.Forms.Button btnXuat;
-        private System.Windows.Forms.Button btnNapLai;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSuaChua;
-        private System.Windows.Forms.Button btnThem;
         private DevExpress.XtraGrid.GridControl grcNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployee;
@@ -316,5 +301,11 @@
         private System.Windows.Forms.BindingSource eMPLOYEEBindingSource;
         private QuanLyBanHangDataSetTableAdapters.EMPLOYEETableAdapter eMPLOYEETableAdapter;
         private System.Windows.Forms.BindingSource quanLyBanHangDataSetBindingSource;
+        private DevExpress.XtraEditors.SimpleButton spbtnThem;
+        private DevExpress.XtraEditors.SimpleButton spbtnSuaChua;
+        private DevExpress.XtraEditors.SimpleButton spbtnNapLai;
+        private DevExpress.XtraEditors.SimpleButton spbtnDong;
+        private DevExpress.XtraEditors.SimpleButton spbtnXuat;
+        private DevExpress.XtraEditors.SimpleButton spbtnXoa;
     }
 }

@@ -351,6 +351,18 @@
     <Compile Include="frmBoPhan.Designer.cs">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCapNhatBoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhatBoPhan.Designer.cs">
+      <DependentUpon>frmCapNhatBoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhatNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhatNhanVien.Designer.cs">
+      <DependentUpon>frmCapNhatNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChungTu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -633,6 +645,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhatBoPhan.resx">
+      <DependentUpon>frmCapNhatBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhatNhanVien.resx">
+      <DependentUpon>frmCapNhatNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChungTu.resx">
       <DependentUpon>frmChungTu.cs</DependentUpon>

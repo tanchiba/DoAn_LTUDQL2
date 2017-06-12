@@ -71,7 +71,7 @@ namespace QuanLyBanHang
         {
             QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == tbMaHang.Text);
-            p.ProductName = tbTenHang.Text;
+            p.ProductName =tbTenHang.Text;
             p.Product_ID = tbMaHang.Text;
             p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
             p.Product_Group_ID = pg.Product_Group_ID;

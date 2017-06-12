@@ -61,6 +61,7 @@ namespace QuanLyBanHang
         private void button1_Click(object sender, EventArgs e)
         {
             frmThemHangHoa f = new frmThemHangHoa();
+           
             f.Show();
             frmhanghoaload();
             gridView2.ExpandAllGroups();
@@ -72,7 +73,8 @@ namespace QuanLyBanHang
             frmSuaHangHoa f = new frmSuaHangHoa();
             var pid = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "Product_ID").ToString();
             PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == pid);
-
+            
+            
             f.tbTenHang.Text = p.ProductName;
             f.tbMaHang.Text = p.Product_ID;
             if (p.Product_Type_ID == "0")
@@ -141,6 +143,26 @@ namespace QuanLyBanHang
             db.SaveChanges();
             frmhanghoaload();
             gridView2.ExpandAllGroups();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

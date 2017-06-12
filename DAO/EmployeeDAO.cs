@@ -32,5 +32,81 @@ namespace DAO
                 return dsEmpl;
             }
         }
+
+        public static void InsertEmployee(string employee, string employName, string employeeAddress, string tel, string email, DateTime birthday, string position, string department, string manager, bool active)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                EMPLOYEE empl = new EMPLOYEE();
+                empl.Employee_ID = employee;
+                empl.EmployeeName = employName;
+                empl.EmployeeAddress = employeeAddress;
+                empl.Tel = tel;
+                empl.Email = email;
+                empl.Birthday = birthday;
+                empl.Position = position;
+                empl.Department_ID = department;
+                empl.Manager_ID = manager;
+                empl.Active = active;
+
+                
+                db.EMPLOYEEs.Add(empl);
+                db.SaveChanges();
+            }
+        }
+
+
+        public static void UpdateEmployee(string employee, string employName, string employeeAddress, string tel, string email, DateTime birthday, string position, string department, string manager, bool active)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                var query = (from emp in db.EMPLOYEEs
+                             where emp.Employee_ID == employee
+                             select emp).First();
+                query.Employee_ID = employee;
+                query.EmployeeName = employName;
+                query.EmployeeAddress = employeeAddress;
+                query.Tel = tel;
+                query.Email = email;
+                query.Birthday = birthday;
+                query.Position = position;
+                query.Department_ID = department;
+                query.Manager_ID = manager;
+                query.Active = active;
+
+                db.SaveChanges();
+            }
+        }
+
+        public static void GetDataForm(string id_employee)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                //var query = (from emp in db.EMPLOYEEs
+                //             where emp.Employee_ID == id_employee
+                //             select emp).First();
+                var query = db.EMPLOYEEs.Single(a => a.Employee_ID == id_employee);
+                //id_employee = query.Employee_ID;
+                //employName = query.EmployeeName;
+                //employeeAddress = query.EmployeeAddress;
+                //tel = query.Tel;
+                //email = query.Email;
+                ////birthday = Convert.ToDateTime(query.Birthday);
+                //position = query.Position;
+                //department = query.Department_ID;
+                //manager = query.Manager_ID;
+                //active = Convert.ToBoolean(query.Active);
+            }
+        }
+
+        public static void DeleteEmployee(string employee_ID)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                var query = db.EMPLOYEEs.Single(a => a.Employee_ID == employee_ID);
+                db.EMPLOYEEs.Remove(query);
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -116,6 +116,7 @@
             this.button7.Text = "Nhập";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -129,6 +130,7 @@
             this.button6.Text = "Đóng";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -141,6 +143,7 @@
             this.button5.Text = "Xuất";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -153,6 +156,7 @@
             this.button3.Text = "Nạp lại";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
