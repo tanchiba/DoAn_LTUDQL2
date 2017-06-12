@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyBanHang.AppData;
 namespace QuanLyBanHang
 {
     public partial class frmThemVaiTro : Form
     {
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         public frmThemVaiTro()
         {
             InitializeComponent();
