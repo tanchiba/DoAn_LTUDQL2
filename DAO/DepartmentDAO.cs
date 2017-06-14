@@ -31,6 +31,48 @@ namespace DAO
             }
         }
 
-       
+
+        public static void InsertDepartment(string iddepartment, string namedepartment,string  description, bool active)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                DEPARTMENT dp = new DEPARTMENT();
+                dp.Department_ID = iddepartment;
+                dp.DepartmentName = namedepartment;
+                dp.Description = description;
+                dp.Active = active;
+
+                db.DEPARTMENTs.Add(dp);
+                db.SaveChanges();
+            }
+        }
+
+
+        public static void UpdateDepartment(string iddepartment, string namedepartment, string description, bool active)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                var query = (from dp in db.DEPARTMENTs
+                             where dp.Department_ID == iddepartment
+                             select dp).First();
+                query.Department_ID = iddepartment;
+                query.DepartmentName = namedepartment;
+                query.Description = description;
+                query.Active = active;
+
+                db.SaveChanges();
+            }
+        }
+
+        
+        public static void DeleteDepartment(string iddepartment)
+        {
+            using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())
+            {
+                var query = db.DEPARTMENTs.Single(a => a.Department_ID == iddepartment);
+                db.DEPARTMENTs.Remove(query);
+                db.SaveChanges();
+            }
+        }
     }
 }

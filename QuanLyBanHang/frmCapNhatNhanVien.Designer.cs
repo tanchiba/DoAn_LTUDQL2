@@ -41,9 +41,15 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.grcCapNhatQuanLy = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.glpedtBoPhan = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Department_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DepartmentName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.glpedtQuanLy = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.EmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Employee_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.edtDienThoai = new DevExpress.XtraEditors.TextEdit();
             this.edtEmail = new DevExpress.XtraEditors.TextEdit();
             this.edtDiaChi = new DevExpress.XtraEditors.TextEdit();
@@ -56,16 +62,10 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnDong = new DevExpress.XtraEditors.SimpleButton();
-            this.glpedtBoPhan = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Department_ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DepartmentName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Employee_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grcCapNhatCoBan)).BeginInit();
             this.grcCapNhatCoBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -81,6 +81,8 @@
             this.grcCapNhatQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.glpedtBoPhan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glpedtQuanLy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtDienThoai.Properties)).BeginInit();
@@ -95,10 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glpedtBoPhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grcCapNhatCoBan
@@ -227,6 +227,43 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // glpedtBoPhan
+            // 
+            this.glpedtBoPhan.Location = new System.Drawing.Point(66, 132);
+            this.glpedtBoPhan.Name = "glpedtBoPhan";
+            this.glpedtBoPhan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glpedtBoPhan.Properties.View = this.gridView1;
+            this.glpedtBoPhan.Size = new System.Drawing.Size(377, 20);
+            this.glpedtBoPhan.StyleController = this.layoutControl2;
+            this.glpedtBoPhan.TabIndex = 11;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Department_ID,
+            this.DepartmentName});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // Department_ID
+            // 
+            this.Department_ID.Caption = "Mã";
+            this.Department_ID.FieldName = "Department_ID";
+            this.Department_ID.Name = "Department_ID";
+            this.Department_ID.Visible = true;
+            this.Department_ID.VisibleIndex = 0;
+            // 
+            // DepartmentName
+            // 
+            this.DepartmentName.Caption = "Tên ";
+            this.DepartmentName.FieldName = "DepartmentName";
+            this.DepartmentName.Name = "DepartmentName";
+            this.DepartmentName.Visible = true;
+            this.DepartmentName.VisibleIndex = 1;
+            // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -255,6 +292,22 @@
             this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
             this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.Caption = "Tên";
+            this.EmployeeName.FieldName = "EmployeeName";
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Visible = true;
+            this.EmployeeName.VisibleIndex = 0;
+            // 
+            // Employee_ID
+            // 
+            this.Employee_ID.Caption = "Mã";
+            this.Employee_ID.FieldName = "Employee_ID";
+            this.Employee_ID.Name = "Employee_ID";
+            this.Employee_ID.Visible = true;
+            this.Employee_ID.VisibleIndex = 1;
             // 
             // edtDienThoai
             // 
@@ -368,6 +421,15 @@
             this.layoutControlItem2.Text = "Ngày Sinh";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(51, 13);
             // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.glpedtBoPhan;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(435, 24);
+            this.layoutControlItem10.Text = "Bộ Phận";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(51, 13);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLuu);
@@ -398,68 +460,6 @@
             this.btnDong.Text = "Đóng";
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
-            // glpedtBoPhan
-            // 
-            this.glpedtBoPhan.Location = new System.Drawing.Point(66, 132);
-            this.glpedtBoPhan.Name = "glpedtBoPhan";
-            this.glpedtBoPhan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.glpedtBoPhan.Properties.View = this.gridView1;
-            this.glpedtBoPhan.Size = new System.Drawing.Size(377, 20);
-            this.glpedtBoPhan.StyleController = this.layoutControl2;
-            this.glpedtBoPhan.TabIndex = 11;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.glpedtBoPhan;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(435, 24);
-            this.layoutControlItem10.Text = "Bộ Phận";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(51, 13);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.Department_ID,
-            this.DepartmentName});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // Department_ID
-            // 
-            this.Department_ID.Caption = "Mã";
-            this.Department_ID.FieldName = "Department_ID";
-            this.Department_ID.Name = "Department_ID";
-            this.Department_ID.Visible = true;
-            this.Department_ID.VisibleIndex = 0;
-            // 
-            // DepartmentName
-            // 
-            this.DepartmentName.Caption = "Tên ";
-            this.DepartmentName.FieldName = "DepartmentName";
-            this.DepartmentName.Name = "DepartmentName";
-            this.DepartmentName.Visible = true;
-            this.DepartmentName.VisibleIndex = 1;
-            // 
-            // EmployeeName
-            // 
-            this.EmployeeName.Caption = "Tên";
-            this.EmployeeName.FieldName = "EmployeeName";
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Visible = true;
-            this.EmployeeName.VisibleIndex = 0;
-            // 
-            // Employee_ID
-            // 
-            this.Employee_ID.Caption = "Mã";
-            this.Employee_ID.FieldName = "Employee_ID";
-            this.Employee_ID.Name = "Employee_ID";
-            this.Employee_ID.Visible = true;
-            this.Employee_ID.VisibleIndex = 1;
-            // 
             // frmCapNhatNhanVien
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -476,6 +476,7 @@
             this.Name = "frmCapNhatNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập Nhật Nhân Viên";
+            this.Load += new System.EventHandler(this.frmCapNhatNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcCapNhatCoBan)).EndInit();
             this.grcCapNhatCoBan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -491,6 +492,8 @@
             this.grcCapNhatQuanLy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.glpedtBoPhan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glpedtQuanLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtDienThoai.Properties)).EndInit();
@@ -505,10 +508,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.glpedtBoPhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

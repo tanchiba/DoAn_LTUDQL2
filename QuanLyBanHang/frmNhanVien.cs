@@ -113,8 +113,7 @@ namespace QuanLyBanHang
 
         private void DeleteEmployee()
         {
-            int index;
-            string idEmployee;
+            
             //Lấy ra index dòng được chọn -> Từ đó lấy ra id nhân viên muốn xóa
             var idEmpl = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Employee_ID").ToString();
             BUS.EmployeeBUS.DeleteEmployee(idEmpl);

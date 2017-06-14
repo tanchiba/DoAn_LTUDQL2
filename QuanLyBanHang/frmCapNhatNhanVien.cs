@@ -43,5 +43,10 @@ namespace QuanLyBanHang
             BUS.EmployeeBUS.UpdateEmployee(ma, name, address, tel, email, ngaysinh, chucvu, bophan, quanly, active);
             this.Close();
         }
+
+        private void frmCapNhatNhanVien_Load(object sender, EventArgs e)
+        {
+            edtMa.Enabled = false;
+        }
     }
 }
