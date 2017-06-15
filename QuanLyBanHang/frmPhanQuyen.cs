@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyBanHang.AppData;
+using DAO.AppData;
 using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Columns;
@@ -41,8 +41,29 @@ namespace QuanLyBanHang
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSua frm = new frmSua();
-            frm.Show();
+            TreeListMultiSelection selectedNodes = tlVaitro.Selection;
+            var a = selectedNodes[0].GetValue(tlNguoiDung.Columns[0]).ToString();
+            var b = db.SYS_GROUP.ToList();
+            var c = db.SYS_USER.ToList();
+            foreach (var item in b)
+            {
+                if (a == item.GroupName)
+                {
+                    frmSua frm = new frmSua();
+                    frm.Show();
+                    break;
+                }
+            }
+            foreach (var item in c)
+            {
+                if (a== item.UserName)
+                {
+                    frmSuaNguoiDung fm = new frmSuaNguoiDung();
+                    fm.Show();
+                    break;
+                }
+            }
+            
 
         }
         #endregion
@@ -52,34 +73,24 @@ namespace QuanLyBanHang
         }
         private void tlVaiTroLoad(TreeList tl)
         {
-            var sg = from a in db.SYS_GROUP
-                     join b in db.SYS_USER
-                     on a.Group_ID equals b.Group_ID
-                     select new
-                     {
-                         GroupName = a.GroupName,
-                         UserName = b.UserName,
-                         GroupID = a.Group_ID,
-                         Description = b.Description,
-                         Active = b.Active,
-                     };
-            var list = sg.Select(s => new { s.GroupName, s.UserName, s.GroupID }).ToList();
-            var hn = db.SYS_GROUP.ToList();
+            var sg = BUS.VaiTroObject1BUS.getVaiTroObject();
+            var list = sg;
+            var hn = BUS.SYS_GROUPBUS.getGroup();
             TreeListNode[] parentnode = new TreeListNode[hn.Count()];
             TreeListNode[] childnode = new TreeListNode[sg.Count()];
             for (int i = 0; i < hn.Count(); i++)
             {
                 parentnode[i] = tl.AppendNode(null, null);
-                parentnode[i].SetValue("GroupName", hn[i].GroupName);
+                parentnode[i].SetValue("GroupName", hn[i].Groupname);
             }
             for (int j = 0; j < hn.Count(); j++)
             {
                 for (int k = 0; k < sg.Count(); k++)
                 {
-                    if (list[k].GroupID == hn[j].Group_ID)
+                    if (list[k].Group_id == hn[j].Group_id)
                     {
                         childnode[k] = tl.AppendNode(null, parentnode[j]);
-                        childnode[k].SetValue("GroupName", list[k].UserName);
+                        childnode[k].SetValue("GroupName", list[k].Username);
                     }
                 }
             }
@@ -87,45 +98,33 @@ namespace QuanLyBanHang
         }
         private void callNguoiDung(TreeList tl, string str)
         {
-            var sg = from a in db.SYS_GROUP
-                     join b in db.SYS_USER
-                     on a.Group_ID equals b.Group_ID
-                     where a.GroupName == str || b.UserName == str
-                     select new
-                     {
-                         GroupName = a.GroupName,
-                         UserName = b.UserName,
-                         GroupID = a.Group_ID,
-                         Description = b.Description,
-                         Active = b.Active,
-                     };
-            //}
-
-            var list = sg.Select(s => new { s.GroupName, s.UserName, s.GroupID, s.Description, s.Active }).ToList();
-            var hn = db.SYS_GROUP.ToList();
+            var sg = BUS.VaiTroObject1BUS.getNguoiDungByStr(str);
+            var list = sg.Select(s => new { s.Groupname, s.Username, s.Group_id, s.Description, s.Active }).ToList();
+            var hn = BUS.SYS_GROUPBUS.getGroup();
             TreeListNode[] parentnode = new TreeListNode[hn.Count()];
             TreeListNode[] childnode = new TreeListNode[sg.Count()];
             for (int i = 0; i < hn.Count(); i++)
             {
-                if (hn[i].GroupName == str)
+                if (hn[i].Groupname == str)
                 {
                     parentnode[i] = tl.AppendNode(null, null);
-                    parentnode[i].SetValue("Group_ID", hn[i].Group_ID);
-                    parentnode[i].SetValue("GroupName", hn[i].GroupName);
+                    parentnode[i].SetValue("Group_ID", hn[i].Group_id);
+                    parentnode[i].SetValue("GroupName", hn[i].Groupname);
                     parentnode[i].SetValue("Description", hn[i].Description);
                     parentnode[i].SetValue("Active", hn[i].Active);
                 }
 
             }
+
             for (int j = 0; j < hn.Count(); j++)
             {
                 for (int k = 0; k < sg.Count(); k++)
                 {
-                    if (list[k].GroupID == hn[j].Group_ID)
+                    if (list[k].Group_id == hn[j].Group_id)
                     {
                         childnode[k] = tl.AppendNode(null, parentnode[j]);
-                        childnode[k].SetValue("Group_ID", list[k].UserName);
-                        childnode[k].SetValue("GroupName", list[k].GroupName);
+                        childnode[k].SetValue("Group_ID", list[k].Username);
+                        childnode[k].SetValue("GroupName", list[k].Groupname);
                         childnode[k].SetValue("Description", list[k].Description);
                         childnode[k].SetValue("Active", list[k].Active);
                     }
@@ -140,8 +139,8 @@ namespace QuanLyBanHang
             TreeListMultiSelection selectedNodes = tlVaitro.Selection;
             var a = selectedNodes[0].GetValue(tlVaitro.Columns[0]).ToString();
             #region kiemtraGroupNAme
-            var hn = db.SYS_GROUP.ToList();
-            var sg = db.SYS_USER.ToList();
+            var hn = DAO.SYS_GROUPDAO.getGroup();
+            var sg = DAO.SYS_USERDAO.GetUser();
            
             for (int i = 0; i < sg.Count(); i++)
             {
@@ -152,7 +151,7 @@ namespace QuanLyBanHang
             }
             for (int j = 0; j < hn.Count(); j++)
             {
-                if (a == hn[j].GroupName)
+                if (a == hn[j].Groupname)
                 {
                     callNguoiDung(tlNguoiDung, a);
                 }
@@ -191,19 +190,19 @@ namespace QuanLyBanHang
             var a = selectedNodes[0].GetValue(tlNguoiDung.Columns[0]).ToString();
             String query = null;
             #region kiemtra
-            var hn = db.SYS_GROUP.ToList();
-            var tg = db.SYS_USER.ToList();
+            var hn = DAO.SYS_GROUPDAO.getGroup();
+            var tg = DAO.SYS_USERDAO.GetUser();
             for (int i = 0; i < tg.Count(); i++)
             {
                 if (a == tg[i].UserName)
                 {
-                    query = db.SYS_USER.Single(b => b.UserName == a).Group_ID;
+                    query = DAO.SYS_USERDAO.queryByUserName(a).Group_ID;
                     break;
                 }
             }
             for (int j = 0; j < hn.Count(); j++)
             {
-                if (a == hn[j].Group_ID)
+                if (a == hn[j].Group_id)
                 {
                     query = a;
                     break;
@@ -211,28 +210,16 @@ namespace QuanLyBanHang
             }
             #endregion
             #region query db
-            var sg = from obj in db.SYS_OBJECT
-                     from sur in db.SYS_USER_RULE
-                     where sur.Object_ID == obj.Object_ID && sur.Group_ID ==query
-                     select new myobject
-                     {
-                         ObjectName = obj.ObjectName,
-                         Parent_ID = obj.Parent_ID,
-                         Object_ID = obj.Object_ID,
-                         AllowAccess = sur.AllowAccess,
-                         AllowAdd = sur.AllowAdd,
-                         AllowDelete = sur.AllowDelete,
-                         AllowEdit = sur.AllowEdit,
-                         AllowExport = sur.AllowExport,
-                         AllowImport = sur.AllowImport,
-                         AllowPrint = sur.AllowPrint,
-                     };
-
-
+            var sg = DAO.myobjectDAO.getGroup(query);
             tlPhanQuyen.DataSource = sg.ToList();
             tlPhanQuyen.KeyFieldName = "Object_ID";
             tlPhanQuyen.ParentFieldName = "Parent_ID";
             #endregion
+        }
+
+        private void tlVaitro_FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
+        {
+
         }
     }
 }

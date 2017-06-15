@@ -36,7 +36,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.calcEdit1 = new DevExpress.XtraEditors.CalcEdit();
+            this.glToiDa = new DevExpress.XtraEditors.CalcEdit();
             this.gllPhanLoai = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,7 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calcEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glToiDa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gllPhanLoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -157,7 +157,7 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.calcEdit1);
+            this.groupControl1.Controls.Add(this.glToiDa);
             this.groupControl1.Controls.Add(this.gllPhanLoai);
             this.groupControl1.Controls.Add(this.pictureBox1);
             this.groupControl1.Controls.Add(this.label10);
@@ -179,17 +179,17 @@
             this.groupControl1.Text = "Thông Tin Chung";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
-            // calcEdit1
+            // glToiDa
             // 
-            this.calcEdit1.Enabled = false;
-            this.calcEdit1.Location = new System.Drawing.Point(107, 197);
-            this.calcEdit1.Name = "calcEdit1";
-            this.calcEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.glToiDa.Location = new System.Drawing.Point(107, 197);
+            this.glToiDa.Name = "glToiDa";
+            this.glToiDa.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.glToiDa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.calcEdit1.Properties.NullText = "0";
-            this.calcEdit1.Size = new System.Drawing.Size(186, 20);
-            this.calcEdit1.TabIndex = 21;
+            this.glToiDa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.glToiDa.Properties.NullText = "0";
+            this.glToiDa.Size = new System.Drawing.Size(186, 20);
+            this.glToiDa.TabIndex = 21;
             // 
             // gllPhanLoai
             // 
@@ -246,19 +246,19 @@
             this.loadHìnhToolStripMenuItem,
             this.xóaHìnhToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 48);
             // 
             // loadHìnhToolStripMenuItem
             // 
             this.loadHìnhToolStripMenuItem.Name = "loadHìnhToolStripMenuItem";
-            this.loadHìnhToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadHìnhToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.loadHìnhToolStripMenuItem.Text = "Load Hình";
             this.loadHìnhToolStripMenuItem.Click += new System.EventHandler(this.loadHìnhToolStripMenuItem_Click);
             // 
             // xóaHìnhToolStripMenuItem
             // 
             this.xóaHìnhToolStripMenuItem.Name = "xóaHìnhToolStripMenuItem";
-            this.xóaHìnhToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xóaHìnhToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.xóaHìnhToolStripMenuItem.Text = "Xóa Hình";
             this.xóaHìnhToolStripMenuItem.Click += new System.EventHandler(this.xóaHìnhToolStripMenuItem_Click);
             // 
@@ -388,6 +388,7 @@
             // 
             this.glToiThieu.Location = new System.Drawing.Point(107, 171);
             this.glToiThieu.Name = "glToiThieu";
+            this.glToiThieu.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.glToiThieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.glToiThieu.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
@@ -582,7 +583,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calcEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glToiDa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gllPhanLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -643,7 +644,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.CalcEdit glToiThieu;
-        private DevExpress.XtraEditors.CalcEdit calcEdit1;
+        private DevExpress.XtraEditors.CalcEdit glToiDa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraEditors.CalcEdit glGiaBanLe;

@@ -8,13 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using QuanLyBanHang.AppData;
+using BUS;
 namespace QuanLyBanHang
 {
     public partial class frmSuaKhachHang : DevExpress.XtraEditors.XtraForm
     {
-        CUSTOMER_GROUP item;
-        CUSTOMER_TYPE item1;
+        string customer_group_id;
+        string customer_type_id;
         public frmSuaKhachHang()
         {
             InitializeComponent();
@@ -29,11 +29,9 @@ namespace QuanLyBanHang
 
         private void frmThamKhachHang_Load(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            List<CUSTOMER_GROUP> cg = new List<CUSTOMER_GROUP>();
-            cg = db.CUSTOMER_GROUP.ToList();
-            List<CUSTOMER_TYPE> tp = new List<CUSTOMER_TYPE>();
-            tp = db.CUSTOMER_TYPE.ToList();
+
+            var cg = CUSTOMER_GROUPBUS.list();
+            var tp = Customer_TypeBUS.list();
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER_GROUP' table. You can move, or remove it, as needed.
             gvKhuVuc.Properties.DataSource = cg;
             gvKhuVuc.Properties.DisplayMember = "Customer_Group_Name";
@@ -46,24 +44,16 @@ namespace QuanLyBanHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            var khuvuc = db.CUSTOMERs.Single(a => a.Customer_ID == tbMa.Text.ToString());
-            khuvuc.Customer_ID = tbMa.Text;
-            khuvuc.CustomerName = tbTen.Text;
-            khuvuc.Customer_Type_ID = item1.Customer_Type_ID;
-            khuvuc.Customer_Group_ID = item.Customer_Group_ID;
-            khuvuc.CustomerAddress = tbDiaChi.Text;
-            khuvuc.Tel = tbDienThoai.Text;
-            khuvuc.Email = tbEmail.Text;
+            bool a;
             if (!cbActive.Checked)
             {
-                khuvuc.Active = false;
+                a = false;
             }
             else
             {
-                khuvuc.Active = true;
+               a = true;
             }
-            db.SaveChanges();
+            CustomerBUS.editByID(tbMa.Text, customer_group_id, tbTen.Text, tbDiaChi.Text, customer_type_id, tbEmail.Text, tbDienThoai.Text, a);
 
             this.Close();
 
@@ -71,12 +61,12 @@ namespace QuanLyBanHang
         
         public void gvKhuVuc_EditValueChanged(object sender, EventArgs e)
         {
-            item = gvKhuVuc.GetSelectedDataRow() as CUSTOMER_GROUP;
+            customer_group_id = CUSTOMER_GROUPBUS.objectToDTO(gvKhuVuc.GetSelectedDataRow()).Customer_Group_ID;
         }
 
         private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
         {
-            item1 = gridLookUpEdit1.GetSelectedDataRow() as CUSTOMER_TYPE;
+            customer_type_id = Customer_TypeBUS.objectToDTO(gridLookUpEdit1.GetSelectedDataRow()).Customer_Type_ID;
         }
 
         private void btnDong_Click(object sender, EventArgs e)

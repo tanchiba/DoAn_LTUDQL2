@@ -712,9 +712,12 @@
             this.treeListColumn3,
             this.treeListColumn4});
             this.tlNguoiDung.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tlNguoiDung.KeyFieldName = "Object_ID";
             this.tlNguoiDung.Location = new System.Drawing.Point(166, 12);
             this.tlNguoiDung.Name = "tlNguoiDung";
             this.tlNguoiDung.OptionsBehavior.Editable = false;
+            this.tlNguoiDung.OptionsSelection.MultiSelectMode = DevExpress.XtraTreeList.TreeListMultiSelectMode.CellSelect;
+            this.tlNguoiDung.OptionsView.FocusRectStyle = DevExpress.XtraTreeList.DrawFocusRectStyle.RowFocus;
             this.tlNguoiDung.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
             this.tlNguoiDung.Size = new System.Drawing.Size(622, 202);
@@ -765,18 +768,17 @@
             this.tlVaitro.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn5});
             this.tlVaitro.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.tlVaitro.DataMember = "SYS_OBJECT";
             this.tlVaitro.KeyFieldName = "Object_ID";
             this.tlVaitro.Location = new System.Drawing.Point(12, 12);
             this.tlVaitro.Name = "tlVaitro";
             this.tlVaitro.OptionsBehavior.Editable = false;
             this.tlVaitro.OptionsSelection.MultiSelectMode = DevExpress.XtraTreeList.TreeListMultiSelectMode.CellSelect;
-            this.tlVaitro.OptionsView.AutoWidth = false;
             this.tlVaitro.OptionsView.FocusRectStyle = DevExpress.XtraTreeList.DrawFocusRectStyle.RowFocus;
             this.tlVaitro.ParentFieldName = "Parent_ID";
             this.tlVaitro.Size = new System.Drawing.Size(150, 408);
             this.tlVaitro.TabIndex = 4;
             this.tlVaitro.AfterFocusNode += new DevExpress.XtraTreeList.NodeEventHandler(this.tlVaitro_AfterFocusNode);
+            this.tlVaitro.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.tlVaitro_FocusedNodeChanged);
             // 
             // treeListColumn5
             // 

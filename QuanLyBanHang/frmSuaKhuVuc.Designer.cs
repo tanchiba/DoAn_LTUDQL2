@@ -106,6 +106,7 @@
             // 
             // tbMa
             // 
+            this.tbMa.Enabled = false;
             this.tbMa.Location = new System.Drawing.Point(80, 34);
             this.tbMa.Name = "tbMa";
             this.tbMa.Size = new System.Drawing.Size(252, 21);
