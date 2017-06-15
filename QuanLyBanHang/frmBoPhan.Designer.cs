@@ -70,9 +70,9 @@
             // 
             this.spbtnSuaChua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnSuaChua.ImageOptions.Image")));
             this.spbtnSuaChua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnSuaChua.Location = new System.Drawing.Point(69, 8);
+            this.spbtnSuaChua.Location = new System.Drawing.Point(65, 3);
             this.spbtnSuaChua.Name = "spbtnSuaChua";
-            this.spbtnSuaChua.Size = new System.Drawing.Size(72, 38);
+            this.spbtnSuaChua.Size = new System.Drawing.Size(72, 47);
             this.spbtnSuaChua.TabIndex = 0;
             this.spbtnSuaChua.Text = "Sửa Chữa";
             this.spbtnSuaChua.Click += new System.EventHandler(this.spbtnSuaChua_Click);
@@ -81,9 +81,9 @@
             // 
             this.spbtnNapLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnNapLai.ImageOptions.Image")));
             this.spbtnNapLai.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnNapLai.Location = new System.Drawing.Point(205, 9);
+            this.spbtnNapLai.Location = new System.Drawing.Point(201, 4);
             this.spbtnNapLai.Name = "spbtnNapLai";
-            this.spbtnNapLai.Size = new System.Drawing.Size(52, 38);
+            this.spbtnNapLai.Size = new System.Drawing.Size(52, 47);
             this.spbtnNapLai.TabIndex = 0;
             this.spbtnNapLai.Text = "Nạp Lại";
             this.spbtnNapLai.Click += new System.EventHandler(this.spbtnNapLai_Click);
@@ -92,9 +92,9 @@
             // 
             this.spbtnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnDong.ImageOptions.Image")));
             this.spbtnDong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnDong.Location = new System.Drawing.Point(321, 9);
+            this.spbtnDong.Location = new System.Drawing.Point(317, 4);
             this.spbtnDong.Name = "spbtnDong";
-            this.spbtnDong.Size = new System.Drawing.Size(52, 38);
+            this.spbtnDong.Size = new System.Drawing.Size(52, 47);
             this.spbtnDong.TabIndex = 0;
             this.spbtnDong.Text = "Đóng";
             this.spbtnDong.Click += new System.EventHandler(this.spbtnDong_Click);
@@ -103,9 +103,9 @@
             // 
             this.spbtnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXuat.ImageOptions.Image")));
             this.spbtnXuat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnXuat.Location = new System.Drawing.Point(263, 9);
+            this.spbtnXuat.Location = new System.Drawing.Point(259, 4);
             this.spbtnXuat.Name = "spbtnXuat";
-            this.spbtnXuat.Size = new System.Drawing.Size(52, 38);
+            this.spbtnXuat.Size = new System.Drawing.Size(52, 47);
             this.spbtnXuat.TabIndex = 0;
             this.spbtnXuat.Text = "Xuất";
             this.spbtnXuat.Click += new System.EventHandler(this.spbtnXuat_Click);
@@ -114,9 +114,9 @@
             // 
             this.spbtnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXoa.ImageOptions.Image")));
             this.spbtnXoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnXoa.Location = new System.Drawing.Point(147, 9);
+            this.spbtnXoa.Location = new System.Drawing.Point(143, 4);
             this.spbtnXoa.Name = "spbtnXoa";
-            this.spbtnXoa.Size = new System.Drawing.Size(52, 38);
+            this.spbtnXoa.Size = new System.Drawing.Size(52, 47);
             this.spbtnXoa.TabIndex = 0;
             this.spbtnXoa.Text = "Xóa";
             this.spbtnXoa.Click += new System.EventHandler(this.spbtnXoa_Click);
@@ -125,9 +125,9 @@
             // 
             this.spbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnThem.ImageOptions.Image")));
             this.spbtnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.spbtnThem.Location = new System.Drawing.Point(12, 8);
+            this.spbtnThem.Location = new System.Drawing.Point(8, 3);
             this.spbtnThem.Name = "spbtnThem";
-            this.spbtnThem.Size = new System.Drawing.Size(52, 38);
+            this.spbtnThem.Size = new System.Drawing.Size(52, 47);
             this.spbtnThem.TabIndex = 0;
             this.spbtnThem.Text = "Thêm";
             this.spbtnThem.Click += new System.EventHandler(this.spbtnThem_Click);

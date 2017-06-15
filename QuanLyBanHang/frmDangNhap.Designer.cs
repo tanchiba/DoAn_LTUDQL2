@@ -47,15 +47,17 @@
             this.btnDangNhap.TabIndex = 15;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // lblThongBaoLoi
             // 
             this.lblThongBaoLoi.AutoSize = true;
             this.lblThongBaoLoi.BackColor = System.Drawing.Color.Transparent;
+            this.lblThongBaoLoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongBaoLoi.ForeColor = System.Drawing.Color.White;
-            this.lblThongBaoLoi.Location = new System.Drawing.Point(71, 151);
+            this.lblThongBaoLoi.Location = new System.Drawing.Point(152, 149);
             this.lblThongBaoLoi.Name = "lblThongBaoLoi";
-            this.lblThongBaoLoi.Size = new System.Drawing.Size(78, 13);
+            this.lblThongBaoLoi.Size = new System.Drawing.Size(103, 16);
             this.lblThongBaoLoi.TabIndex = 14;
             this.lblThongBaoLoi.Text = "lblThongBaoLoi";
             // 
@@ -77,7 +79,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(144, 15);
+            this.label2.Location = new System.Drawing.Point(144, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 29);
             this.label2.TabIndex = 12;
@@ -122,6 +124,7 @@
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmDangNhap
             // 
