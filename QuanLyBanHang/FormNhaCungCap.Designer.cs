@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHang
 {
-    partial class FormNhaCungCap
+    partial class frmNhaCungCap
     {
         /// <summary>
         /// Required designer variable.
@@ -32,35 +32,17 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSuaChua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.grcNhaCungCap = new DevExpress.XtraGrid.GridControl();
             this.pROVIDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyBanHangDataSet = new QuanLyBanHang.QuanLyBanHangDataSet();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cUSTOMERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter();
-            //this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.pROVIDERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PROVIDERTableAdapter();
-            this.fKPRODUCTPROVIDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PRODUCTTableAdapter();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomerAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTel = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grvNhaCungCap = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colProvider_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProviderName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomer_Group_ID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,51 +51,67 @@
             this.colEmail1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colActive1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.cUSTOMERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter();
+            this.pROVIDERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PROVIDERTableAdapter();
+            this.fKPRODUCTPROVIDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.PRODUCTTableAdapter();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomerAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pROVIDERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
             this.gridSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhaCungCap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROVIDERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvNhaCungCap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Controls.Add(this.gridSplitContainer1);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.grcNhaCungCap);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(690, 134, 450, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(750, 383);
+            this.layoutControl1.Size = new System.Drawing.Size(905, 383);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.button7);
-            this.panelControl1.Controls.Add(this.button6);
+            this.panelControl1.Controls.Add(this.btnDong);
             this.panelControl1.Controls.Add(this.button5);
             this.panelControl1.Controls.Add(this.button3);
-            this.panelControl1.Controls.Add(this.button4);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Controls.Add(this.button1);
+            this.panelControl1.Controls.Add(this.btnXoa);
+            this.panelControl1.Controls.Add(this.btnSuaChua);
+            this.panelControl1.Controls.Add(this.btnThem);
             this.panelControl1.Location = new System.Drawing.Point(12, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(726, 51);
+            this.panelControl1.Size = new System.Drawing.Size(881, 51);
             this.panelControl1.TabIndex = 4;
             // 
             // button7
@@ -128,17 +126,18 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnDong
             // 
-            this.button6.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(368, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 49);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Đóng";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDong.Location = new System.Drawing.Point(368, 5);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(54, 49);
+            this.btnDong.TabIndex = 6;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // button5
             // 
@@ -164,43 +163,64 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnXoa
             // 
-            this.button4.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(128, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXoa.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(128, 5);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(54, 49);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button2
+            // btnSuaChua
             // 
-            this.button2.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(66, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSuaChua.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
+            this.btnSuaChua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSuaChua.Location = new System.Drawing.Point(66, 5);
+            this.btnSuaChua.Name = "btnSuaChua";
+            this.btnSuaChua.Size = new System.Drawing.Size(56, 49);
+            this.btnSuaChua.TabIndex = 1;
+            this.btnSuaChua.Text = "Sửa";
+            this.btnSuaChua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSuaChua.UseVisualStyleBackColor = true;
+            this.btnSuaChua.Click += new System.EventHandler(this.btnSuaChua_Click);
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThem.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(5, 5);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(55, 49);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // gridSplitContainer1
+            // 
+            this.gridSplitContainer1.Grid = this.grcNhaCungCap;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(12, 67);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Size = new System.Drawing.Size(881, 1);
+            this.gridSplitContainer1.TabIndex = 5;
+            // 
+            // grcNhaCungCap
+            // 
+            this.grcNhaCungCap.DataSource = this.pROVIDERBindingSource;
+            this.grcNhaCungCap.Location = new System.Drawing.Point(12, 72);
+            this.grcNhaCungCap.MainView = this.grvNhaCungCap;
+            this.grcNhaCungCap.Name = "grcNhaCungCap";
+            this.grcNhaCungCap.Size = new System.Drawing.Size(881, 299);
+            this.grcNhaCungCap.TabIndex = 2;
+            this.grcNhaCungCap.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvNhaCungCap});
             // 
             // pROVIDERBindingSource
             // 
@@ -212,85 +232,9 @@
             this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
             this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // layoutControlGroup1
+            // grvNhaCungCap
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem4});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(750, 383);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.panelControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(730, 55);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // cUSTOMERBindingSource
-            // 
-            this.cUSTOMERBindingSource.DataMember = "CUSTOMER";
-            this.cUSTOMERBindingSource.DataSource = this.quanLyBanHangDataSet;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // cUSTOMERTableAdapter
-            // 
-            this.cUSTOMERTableAdapter.ClearBeforeFill = true;
-            // 
-            // pROVIDERTableAdapter
-            // 
-            this.pROVIDERTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKPRODUCTPROVIDERBindingSource
-            // 
-            this.fKPRODUCTPROVIDERBindingSource.DataMember = "FK_PRODUCT_PROVIDER";
-            this.fKPRODUCTPROVIDERBindingSource.DataSource = this.pROVIDERBindingSource;
-            // 
-            // pRODUCTTableAdapter
-            // 
-            this.pRODUCTTableAdapter.ClearBeforeFill = true;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.gridSplitContainer1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 55);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(730, 5);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // gridSplitContainer1
-            // 
-            this.gridSplitContainer1.Grid = this.gridControl1;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(12, 67);
-            this.gridSplitContainer1.Name = "gridSplitContainer1";
-            this.gridSplitContainer1.Size = new System.Drawing.Size(726, 1);
-            this.gridSplitContainer1.TabIndex = 5;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.gridControl1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 60);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(730, 303);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvNhaCungCap.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colProvider_ID,
             this.colProviderName,
             this.colCustomer_Group_ID,
@@ -299,69 +243,8 @@
             this.colEmail1,
             this.colDescription,
             this.colActive1});
-            this.gridView2.GridControl = this.gridControl1;
-            this.gridView2.Name = "gridView2";
-            // 
-            // ID
-            // 
-            this.ID.FieldName = "Customer_ID";
-            this.ID.Name = "ID";
-            this.ID.OptionsFilter.AllowFilter = false;
-            this.ID.Visible = true;
-            this.ID.VisibleIndex = 0;
-            this.ID.Width = 88;
-            // 
-            // colCustomerName
-            // 
-            this.colCustomerName.FieldName = "CustomerName";
-            this.colCustomerName.Name = "colCustomerName";
-            this.colCustomerName.Visible = true;
-            this.colCustomerName.VisibleIndex = 1;
-            this.colCustomerName.Width = 88;
-            // 
-            // colCustomerAddress
-            // 
-            this.colCustomerAddress.FieldName = "CustomerAddress";
-            this.colCustomerAddress.Name = "colCustomerAddress";
-            this.colCustomerAddress.Visible = true;
-            this.colCustomerAddress.VisibleIndex = 2;
-            this.colCustomerAddress.Width = 85;
-            // 
-            // colTel
-            // 
-            this.colTel.FieldName = "Tel";
-            this.colTel.Name = "colTel";
-            this.colTel.Visible = true;
-            this.colTel.VisibleIndex = 3;
-            this.colTel.Width = 85;
-            // 
-            // colEmail
-            // 
-            this.colEmail.FieldName = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 4;
-            this.colEmail.Width = 85;
-            // 
-            // colActive
-            // 
-            this.colActive.FieldName = "Active";
-            this.colActive.Name = "colActive";
-            this.colActive.Visible = true;
-            this.colActive.VisibleIndex = 5;
-            this.colActive.Width = 92;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.pROVIDERBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 72);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(726, 299);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.grvNhaCungCap.GridControl = this.grcNhaCungCap;
+            this.grvNhaCungCap.Name = "grvNhaCungCap";
             // 
             // colProvider_ID
             // 
@@ -419,32 +302,148 @@
             this.colActive1.Visible = true;
             this.colActive1.VisibleIndex = 7;
             // 
-            // FormNhaCungCap
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem4});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(905, 383);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridSplitContainer1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(885, 5);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.panelControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(885, 55);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.grcNhaCungCap;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 60);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(885, 303);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // cUSTOMERBindingSource
+            // 
+            this.cUSTOMERBindingSource.DataMember = "CUSTOMER";
+            this.cUSTOMERBindingSource.DataSource = this.quanLyBanHangDataSet;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // cUSTOMERTableAdapter
+            // 
+            this.cUSTOMERTableAdapter.ClearBeforeFill = true;
+            // 
+            // pROVIDERTableAdapter
+            // 
+            this.pROVIDERTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKPRODUCTPROVIDERBindingSource
+            // 
+            this.fKPRODUCTPROVIDERBindingSource.DataMember = "FK_PRODUCT_PROVIDER";
+            this.fKPRODUCTPROVIDERBindingSource.DataSource = this.pROVIDERBindingSource;
+            // 
+            // pRODUCTTableAdapter
+            // 
+            this.pRODUCTTableAdapter.ClearBeforeFill = true;
+            // 
+            // ID
+            // 
+            this.ID.FieldName = "Customer_ID";
+            this.ID.Name = "ID";
+            this.ID.OptionsFilter.AllowFilter = false;
+            this.ID.Visible = true;
+            this.ID.VisibleIndex = 0;
+            this.ID.Width = 88;
+            // 
+            // colCustomerName
+            // 
+            this.colCustomerName.FieldName = "CustomerName";
+            this.colCustomerName.Name = "colCustomerName";
+            this.colCustomerName.Visible = true;
+            this.colCustomerName.VisibleIndex = 1;
+            this.colCustomerName.Width = 88;
+            // 
+            // colCustomerAddress
+            // 
+            this.colCustomerAddress.FieldName = "CustomerAddress";
+            this.colCustomerAddress.Name = "colCustomerAddress";
+            this.colCustomerAddress.Visible = true;
+            this.colCustomerAddress.VisibleIndex = 2;
+            this.colCustomerAddress.Width = 85;
+            // 
+            // colTel
+            // 
+            this.colTel.FieldName = "Tel";
+            this.colTel.Name = "colTel";
+            this.colTel.Visible = true;
+            this.colTel.VisibleIndex = 3;
+            this.colTel.Width = 85;
+            // 
+            // colEmail
+            // 
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 4;
+            this.colEmail.Width = 85;
+            // 
+            // colActive
+            // 
+            this.colActive.FieldName = "Active";
+            this.colActive.Name = "colActive";
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 5;
+            this.colActive.Width = 92;
+            // 
+            // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 383);
+            this.ClientSize = new System.Drawing.Size(905, 383);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "FormNhaCungCap";
-            this.Text = "FormNhaCungCap";
-            this.Load += new System.EventHandler(this.FormKhachHang_Load);
+            this.Name = "frmNhaCungCap";
+            this.Text = "Nhà Cung Cấp";
+            this.Load += new System.EventHandler(this.frmNhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pROVIDERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhaCungCap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROVIDERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvNhaCungCap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPRODUCTPROVIDERBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,14 +454,14 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.ImageList imageList1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSuaChua;
+        private System.Windows.Forms.Button btnThem;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button button7;
         private QuanLyBanHangDataSet quanLyBanHangDataSet;
         private System.Windows.Forms.BindingSource cUSTOMERBindingSource;
@@ -473,8 +472,8 @@
         private System.Windows.Forms.BindingSource fKPRODUCTPROVIDERBindingSource;
         private QuanLyBanHangDataSetTableAdapters.PRODUCTTableAdapter pRODUCTTableAdapter;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl grcNhaCungCap;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvNhaCungCap;
         private DevExpress.XtraGrid.Columns.GridColumn colProvider_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colProviderName;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Group_ID;

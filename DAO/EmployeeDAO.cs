@@ -21,16 +21,29 @@ namespace DAO
                 foreach (var row in query)
                 {
                     EmployeeDTO empl = new EmployeeDTO();
+                    
                     empl.Employee_ID = row.Employee_ID;
                     empl.EmployeeName = row.EmployeeName;
                     empl.EmployeeAddress = row.EmployeeAddress;
                     empl.Tel = row.Tel;
                     empl.Email = row.Email;
-                    //empl.Active = (row.Active);
+                    empl.Active = (Boolean)row.Active;
                     dsEmpl.Add(empl);
                 }
                 return dsEmpl;
             }
+        }
+
+        public static string MaNhanVien()
+        {
+            string MaNhanVien;
+            var db = new QuanLyBanHangEntities();
+            MaNhanVien = db.EMPLOYEEs.OrderByDescending(dv => dv.Employee_ID).FirstOrDefault().Employee_ID;
+            if (MaNhanVien != null)
+            {
+                MaNhanVien = XuLyChuoi.LayChuoi(MaNhanVien);
+            }
+            return MaNhanVien;
         }
 
         public static void InsertEmployee(string employee, string employName, string employeeAddress, string tel, string email, DateTime birthday, string position, string department, string manager, bool active)

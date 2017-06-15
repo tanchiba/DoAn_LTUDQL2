@@ -29,7 +29,7 @@ namespace QuanLyBanHang
 
         private void frmThamKhachHang_Load(object sender, EventArgs e)
         {
-
+            tbMa.Enabled = false;
             var cg = CUSTOMER_GROUPBUS.list();
             var tp = Customer_TypeBUS.list();
             // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER_GROUP' table. You can move, or remove it, as needed.

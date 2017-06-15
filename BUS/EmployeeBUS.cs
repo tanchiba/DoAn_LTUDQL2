@@ -13,6 +13,11 @@ namespace BUS
         {
             return DAO.EmployeeDAO.GetEmployee();
         }
+        public static string MaNhanVien()
+        {
+            return DAO.EmployeeDAO.MaNhanVien();
+        }
+
 
         public static void InsertEmployee(string employee, string employName, string employeeAddress, string tel, string email, DateTime birthday, string position, string department, string manager, bool active)
         {

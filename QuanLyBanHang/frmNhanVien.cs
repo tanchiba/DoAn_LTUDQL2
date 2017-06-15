@@ -32,7 +32,11 @@ namespace QuanLyBanHang
             grcNhanVien.DataSource = nv;
         }
 
-        
+        public List<EmployeeDTO> LayDanhSach()
+        {
+            return BUS.EmployeeBUS.getEmployee();
+        }
+
         private void spbtnDong_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,8 +45,8 @@ namespace QuanLyBanHang
         private void spbtnThem_Click(object sender, EventArgs e)
         {
             frmThemNhanVien frmThem = new frmThemNhanVien();
-            frmThem.Show();
-            LoadData();
+            frmThem.ShowDialog();
+            grcNhanVien.DataSource = LayDanhSach();
         }
 
         private void spbtnSuaChua_Click(object sender, EventArgs e)
@@ -59,16 +63,7 @@ namespace QuanLyBanHang
             frm.dtpNgaySinh.Text = Convert.ToString(em.Birthday);
             frm.edtChucVu.Text = em.Position;
 
-            //string ma = fempl.edtMa.Text;
-            //ma = empl_id;
-            //string name = fempl.edtTen.Text;
-            //string address = fempl.edtDiaChi.Text;
-            //string tel = fempl.edtDienThoai.Text;
-            //string email = fempl.edtEmail.Text;
-            //fempl.dtpNgaySinh.Text = null;
-            //DateTime ngaysinh = DateTime.Parse(fempl.dtpNgaySinh.Text);
-            //string chucvu = fempl.edtChucVu.Text;
-
+           
             #region gridlookupedit
             List<DepartmentDTO> bp = BUS.DepartmentBUS.getDepartment();
             frm.glpedtBoPhan.Properties.DataSource = bp;
@@ -87,11 +82,7 @@ namespace QuanLyBanHang
             if (em.Active == true)
                 frm.cbConQuanLy.Checked = true;
             else frm.cbConQuanLy.Checked = false;
-            //string bophan = fempl.glpedtBoPhan.EditValue.ToString();
-            //string quanly = fempl.glpedtQuanLy.EditValue.ToString();
-            //bool active = fempl.cbConQuanLy.Checked;
-            //BUS.EmployeeBUS.GetFromData(ma, name, address, tel, email,chucvu,bophan,quanly,active );
-
+          
             frm.ShowDialog();
             LoadData();
         }
@@ -113,11 +104,16 @@ namespace QuanLyBanHang
 
         private void DeleteEmployee()
         {
-            
+
             //Lấy ra index dòng được chọn -> Từ đó lấy ra id nhân viên muốn xóa
-            var idEmpl = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Employee_ID").ToString();
-            BUS.EmployeeBUS.DeleteEmployee(idEmpl);
-            LoadData();
+            if (XtraMessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var idEmpl = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Employee_ID").ToString();
+                BUS.EmployeeBUS.DeleteEmployee(idEmpl);
+                LoadData();
+                XtraMessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }

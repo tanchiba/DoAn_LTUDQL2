@@ -20,6 +20,9 @@ namespace DAO.AppData
         public string Email { get; set; }
         public string Tel { get; set; }
         public string Description { get; set; }
+        public string Manager_ID { get; set; }
         public Nullable<bool> Active { get; set; }
+    
+        public virtual EMPLOYEE EMPLOYEE { get; set; }
     }
 }

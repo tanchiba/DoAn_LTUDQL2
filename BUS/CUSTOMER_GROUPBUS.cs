@@ -12,6 +12,12 @@ namespace BUS
         {
             return DAO.CUSTOMER_GROUPDAO.list();
         }
+
+        public static string MaKhuVuc()
+        {
+            return DAO.CUSTOMER_GROUPDAO.MaKhuVuc();
+        }
+
         public static void deleteID(string id)
         {
             DAO.CUSTOMER_GROUPDAO.deleteID(id);

@@ -18,21 +18,9 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             bool a;
@@ -51,6 +39,11 @@ namespace QuanLyBanHang
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmThemKhuVuc_Load(object sender, EventArgs e)
+        {
+            tbMa.Text = BUS.CUSTOMER_GROUPBUS.MaKhuVuc();
         }
     }
 }

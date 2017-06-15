@@ -22,7 +22,38 @@ namespace QuanLyBanHang
        
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private void FormKhachHang_Load(object sender, EventArgs e)
+        {
+           
+            frmkhachhangload();
+            this.gridView1.ExpandAllGroups();
+        }
+
+        private void frmkhachhangload()
+        {
+            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+            var listkh = CustomerAndGroupBUS.list();
+            gridView1.IndicatorWidth = 40;
+            gridControl1.DataSource = listkh;
+        }
+
+        private void gridView1_CustomDrawRowIndicator_1(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.RowHandle >= 0)
+                e.Info.DisplayText = e.RowHandle.ToString();
+        }
+
+        private void spbtnThem_Click(object sender, EventArgs e)
+        {
+            frmThamKhachHang f = new frmThamKhachHang();
+            f.ShowDialog();
+            frmkhachhangload();
+            this.gridView1.ExpandAllGroups();
+        }
+
+        private void spbtnSuaChua_Click(object sender, EventArgs e)
         {
             if (gridView1.FocusedRowHandle >= 0)
             {
@@ -45,41 +76,7 @@ namespace QuanLyBanHang
             else MessageBox.Show("Bạn chưa chọn đối tượng cần sửa", "thông báo", MessageBoxButtons.OK);
         }
 
-        private void FormKhachHang_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-            //this.cUSTOMERTableAdapter.Fill(this.quanLyBanHangDataSet.CUSTOMER);
-            frmkhachhangload();
-            this.gridView1.ExpandAllGroups();
-        }
-    private void frmkhachhangload()
-        {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            var listkh = CustomerAndGroupBUS.list();
-            gridView1.IndicatorWidth = 40;
-            gridControl1.DataSource = listkh;
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gridView1_CustomDrawRowIndicator_1(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.RowHandle >= 0)
-                e.Info.DisplayText = e.RowHandle.ToString();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmThamKhachHang f = new frmThamKhachHang();
-            f.ShowDialog();
-            frmkhachhangload();
-            this.gridView1.ExpandAllGroups();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void spbtnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("bạn có chắc muốn xóa không", "Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -89,6 +86,11 @@ namespace QuanLyBanHang
                 frmkhachhangload();
                 gridView1.ExpandAllGroups();
             }
+        }
+
+        private void spbtnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

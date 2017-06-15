@@ -31,6 +31,8 @@ namespace QuanLyBanHang
 
         private void frmThamKhachHang_Load(object sender, EventArgs e)
         {
+            tbMa.Text = BUS.CustomerBUS.MaKhachHang();
+
             QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             var cg = CUSTOMER_GROUPBUS.list();
             var tp = Customer_TypeBUS.list();

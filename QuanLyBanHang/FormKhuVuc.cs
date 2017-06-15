@@ -63,7 +63,7 @@ namespace QuanLyBanHang
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("bạn có chắc muốn xóa không", "Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xóa không", "Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                var id = dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_ID").ToString();
@@ -78,13 +78,9 @@ namespace QuanLyBanHang
 
         private void dgvKhuVuc_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-           // dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_ID").ToString();
+          
         }
 
-        //public string SendText()
-        //{
-        //    var id = dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_ID").ToString();
-        //    return id;
-        //}
+        
     }
 }

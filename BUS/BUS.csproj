@@ -41,23 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+    <Compile Include="CurrencyBUS.cs" />
     <Compile Include="DepartmentBUS.cs" />
-=======
     <Compile Include="CustomerAndGroupBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="CUSTOMER_GROUPBUS.cs" />
     <Compile Include="Customer_TypeBUS.cs" />
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
     <Compile Include="EmployeeBUS.cs" />
     <Compile Include="myobjectBUS.cs" />
     <Compile Include="ProductBUS.cs" />
     <Compile Include="ProductObjectBUS.cs" />
     <Compile Include="Product_GroupBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+    <Compile Include="SYS_CompanyBUS.cs" />
     <Compile Include="UserBUS.cs" />
-=======
     <Compile Include="ProviderBUS.cs" />
     <Compile Include="StockBUS.cs" />
     <Compile Include="SYS_GROUPBUS.cs" />
@@ -66,7 +63,6 @@
     <Compile Include="SYS_USER_RULEBUS.cs" />
     <Compile Include="UnitBUS.cs" />
     <Compile Include="VaiTroObject1BUS.cs" />
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

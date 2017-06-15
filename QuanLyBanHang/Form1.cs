@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Diagnostics;
+
 namespace QuanLyBanHang
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -69,7 +71,7 @@ namespace QuanLyBanHang
 
         private void bbtnNhaCungCap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FormNhaCungCap();
+            var frm = new frmNhaCungCap();
             if (ExistForm(frm)) return;
             frm.MdiParent = this;
             frm.Show();
@@ -77,7 +79,7 @@ namespace QuanLyBanHang
 
         private void bbtnKhoHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FormKhoHang();
+            var frm = new frmKhoHang();
             if (ExistForm(frm)) return;
             frm.MdiParent = this;
             frm.Show();
@@ -85,7 +87,7 @@ namespace QuanLyBanHang
 
         private void bbtnDonViTinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FormDonViTinh();
+            var frm = new frmDonViTinh();
             if (ExistForm(frm)) return;
             frm.MdiParent = this;
             frm.Show();
@@ -294,6 +296,27 @@ namespace QuanLyBanHang
         {
             frmKetChuyen frmkc = new frmKetChuyen();
             frmkc.ShowDialog();
+        }
+
+        private void bbtnLienHe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmThongTin frmthongtin = new frmThongTin();
+            frmthongtin.ShowDialog();
+        }
+
+        private void bbtnHuongDanSuDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Process.Start("http://www.perfect.com.vn/video-huong-dan-su-dung-phan-mem-quan-ly-ban-hang.html");
+        }
+
+        private void bbtnHoTroTrucTuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Process.Start("http://www.perfect.com.vn/huong-dan-su-dung-phan-mem-quan-ly-ban-hang.html");
+        }
+
+        private void bbtnCapNhat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

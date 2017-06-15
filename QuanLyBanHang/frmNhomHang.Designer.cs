@@ -28,206 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            //this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGhichu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colConQuanLy = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhomHang));
             this.tableAdapterManager1 = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.TableAdapterManager();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.spbtnSuaChua = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnNapLai = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXuat = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.grcNhomHang = new DevExpress.XtraGrid.GridControl();
+            this.grvNhomHang = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colProduct_Group_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProduct_Group_Names = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhomHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvNhomHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.button7);
-            this.panelControl1.Controls.Add(this.button6);
-            this.panelControl1.Controls.Add(this.button5);
-            this.panelControl1.Controls.Add(this.button3);
-            this.panelControl1.Controls.Add(this.button4);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Controls.Add(this.button1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1247, 76);
-            this.panelControl1.TabIndex = 5;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
-            // 
-            // button7
-            // 
-            this.button7.Image = global::QuanLyBanHang.Properties.Resources.MS_Office_2003_Excel_icon;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(359, 6);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(63, 60);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Nhập";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(429, 6);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(63, 60);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Đóng";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::QuanLyBanHang.Properties.Resources.Export_To_File_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(289, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 60);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Xuất";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::QuanLyBanHang.Properties.Resources.Button_Refresh_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(219, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Nạp lại";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(149, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(77, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(6, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.gridControl1.Location = new System.Drawing.Point(12, 84);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1134, 365);
-            this.gridControl1.TabIndex = 6;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMa,
-            this.colTen,
-            this.colGhichu,
-            this.colConQuanLy,
-            this.gridColumn1});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // colMa
-            // 
-            this.colMa.FieldName = "Mã";
-            this.colMa.Name = "colMa";
-            this.colMa.Visible = true;
-            this.colMa.VisibleIndex = 0;
-            // 
-            // colTen
-            // 
-            this.colTen.FieldName = "Tên";
-            this.colTen.Name = "colTen";
-            this.colTen.Visible = true;
-            this.colTen.VisibleIndex = 1;
-            // 
-            // colGhichu
-            // 
-            this.colGhichu.FieldName = "Ghi chú";
-            this.colGhichu.Name = "colGhichu";
-            this.colGhichu.Visible = true;
-            this.colGhichu.VisibleIndex = 2;
-            // 
-            // colConQuanLy
-            // 
-            this.colConQuanLy.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.colConQuanLy.FieldName = "Còn Quản Lý";
-            this.colConQuanLy.Name = "colConQuanLy";
-            this.colConQuanLy.Visible = true;
-            this.colConQuanLy.VisibleIndex = 3;
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
             // 
             // tableAdapterManager1
             // 
@@ -258,45 +80,187 @@
             this.tableAdapterManager1.UNITTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.spbtnSuaChua);
+            this.panelControl1.Controls.Add(this.spbtnNapLai);
+            this.panelControl1.Controls.Add(this.spbtnDong);
+            this.panelControl1.Controls.Add(this.spbtnXuat);
+            this.panelControl1.Controls.Add(this.spbtnXoa);
+            this.panelControl1.Controls.Add(this.spbtnThem);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(818, 50);
+            this.panelControl1.TabIndex = 7;
+            // 
+            // spbtnSuaChua
+            // 
+            this.spbtnSuaChua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnSuaChua.ImageOptions.Image")));
+            this.spbtnSuaChua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnSuaChua.Location = new System.Drawing.Point(67, 3);
+            this.spbtnSuaChua.Name = "spbtnSuaChua";
+            this.spbtnSuaChua.Size = new System.Drawing.Size(72, 42);
+            this.spbtnSuaChua.TabIndex = 0;
+            this.spbtnSuaChua.Text = "Sửa Chữa";
+            this.spbtnSuaChua.Click += new System.EventHandler(this.spbtnSuaChua_Click);
+            // 
+            // spbtnNapLai
+            // 
+            this.spbtnNapLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnNapLai.ImageOptions.Image")));
+            this.spbtnNapLai.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnNapLai.Location = new System.Drawing.Point(203, 4);
+            this.spbtnNapLai.Name = "spbtnNapLai";
+            this.spbtnNapLai.Size = new System.Drawing.Size(52, 42);
+            this.spbtnNapLai.TabIndex = 0;
+            this.spbtnNapLai.Text = "Nạp Lại";
+            // 
+            // spbtnDong
+            // 
+            this.spbtnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnDong.ImageOptions.Image")));
+            this.spbtnDong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnDong.Location = new System.Drawing.Point(319, 4);
+            this.spbtnDong.Name = "spbtnDong";
+            this.spbtnDong.Size = new System.Drawing.Size(52, 42);
+            this.spbtnDong.TabIndex = 0;
+            this.spbtnDong.Text = "Đóng";
+            this.spbtnDong.Click += new System.EventHandler(this.spbtnDong_Click);
+            // 
+            // spbtnXuat
+            // 
+            this.spbtnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXuat.ImageOptions.Image")));
+            this.spbtnXuat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXuat.Location = new System.Drawing.Point(261, 4);
+            this.spbtnXuat.Name = "spbtnXuat";
+            this.spbtnXuat.Size = new System.Drawing.Size(52, 42);
+            this.spbtnXuat.TabIndex = 0;
+            this.spbtnXuat.Text = "Xuất";
+            // 
+            // spbtnXoa
+            // 
+            this.spbtnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXoa.ImageOptions.Image")));
+            this.spbtnXoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXoa.Location = new System.Drawing.Point(145, 4);
+            this.spbtnXoa.Name = "spbtnXoa";
+            this.spbtnXoa.Size = new System.Drawing.Size(52, 42);
+            this.spbtnXoa.TabIndex = 0;
+            this.spbtnXoa.Text = "Xóa";
+            this.spbtnXoa.Click += new System.EventHandler(this.spbtnXoa_Click);
+            // 
+            // spbtnThem
+            // 
+            this.spbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnThem.ImageOptions.Image")));
+            this.spbtnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnThem.Location = new System.Drawing.Point(10, 3);
+            this.spbtnThem.Name = "spbtnThem";
+            this.spbtnThem.Size = new System.Drawing.Size(52, 42);
+            this.spbtnThem.TabIndex = 0;
+            this.spbtnThem.Text = "Thêm";
+            this.spbtnThem.Click += new System.EventHandler(this.spbtnThem_Click);
+            // 
+            // grcNhomHang
+            // 
+            this.grcNhomHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcNhomHang.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcNhomHang.Location = new System.Drawing.Point(0, 50);
+            this.grcNhomHang.MainView = this.grvNhomHang;
+            this.grcNhomHang.Name = "grcNhomHang";
+            this.grcNhomHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit1});
+            this.grcNhomHang.Size = new System.Drawing.Size(818, 317);
+            this.grcNhomHang.TabIndex = 8;
+            this.grcNhomHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvNhomHang});
+            // 
+            // grvNhomHang
+            // 
+            this.grvNhomHang.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colProduct_Group_ID,
+            this.colProduct_Group_Names,
+            this.colDescription,
+            this.colActive});
+            this.grvNhomHang.GridControl = this.grcNhomHang;
+            this.grvNhomHang.Name = "grvNhomHang";
+            // 
+            // colProduct_Group_ID
+            // 
+            this.colProduct_Group_ID.Caption = "Mã Nhóm Hàng";
+            this.colProduct_Group_ID.FieldName = "Product_Group_ID";
+            this.colProduct_Group_ID.Name = "colProduct_Group_ID";
+            this.colProduct_Group_ID.Visible = true;
+            this.colProduct_Group_ID.VisibleIndex = 0;
+            this.colProduct_Group_ID.Width = 159;
+            // 
+            // colProduct_Group_Names
+            // 
+            this.colProduct_Group_Names.Caption = "Tên Nhóm Hàng";
+            this.colProduct_Group_Names.FieldName = "Product_Group_Name";
+            this.colProduct_Group_Names.Name = "colProduct_Group_Names";
+            this.colProduct_Group_Names.Visible = true;
+            this.colProduct_Group_Names.VisibleIndex = 1;
+            this.colProduct_Group_Names.Width = 136;
+            // 
+            // colDescription
+            // 
+            this.colDescription.Caption = "Ghi Chú";
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 2;
+            this.colDescription.Width = 159;
+            // 
+            // colActive
+            // 
+            this.colActive.Caption = "Còn Quản Lý";
+            this.colActive.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.colActive.FieldName = "Active";
+            this.colActive.Name = "colActive";
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 3;
+            this.colActive.Width = 324;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
             // frmNhomHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 452);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(818, 367);
+            this.Controls.Add(this.grcNhomHang);
             this.Controls.Add(this.panelControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhomHang";
             this.Text = "Nhóm Hàng";
             this.Load += new System.EventHandler(this.frmNhomHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            //((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcNhomHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvNhomHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        //private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMa;
-        private DevExpress.XtraGrid.Columns.GridColumn colTen;
-        private DevExpress.XtraGrid.Columns.GridColumn colGhichu;
-        private DevExpress.XtraGrid.Columns.GridColumn colConQuanLy;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private QuanLyBanHangDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton spbtnSuaChua;
+        private DevExpress.XtraEditors.SimpleButton spbtnNapLai;
+        private DevExpress.XtraEditors.SimpleButton spbtnDong;
+        private DevExpress.XtraEditors.SimpleButton spbtnXuat;
+        private DevExpress.XtraEditors.SimpleButton spbtnXoa;
+        private DevExpress.XtraEditors.SimpleButton spbtnThem;
+        private DevExpress.XtraGrid.GridControl grcNhomHang;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvNhomHang;
+        private DevExpress.XtraGrid.Columns.GridColumn colProduct_Group_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn colProduct_Group_Names;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
     }
 }

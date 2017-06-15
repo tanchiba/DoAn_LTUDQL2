@@ -33,11 +33,16 @@ namespace QuanLyBanHang
             grcBoPhan.DataSource = bp;
         }
 
+        public List<DepartmentDTO> LayDanhSach()
+        {
+            return BUS.DepartmentBUS.getDepartment();
+        }
+
         private void spbtnThem_Click(object sender, EventArgs e)
         {
             frmThemBoPhan frmThemBP = new frmThemBoPhan();
-            frmThemBP.Show();
-            LoadData();
+            frmThemBP.ShowDialog();
+            grcBoPhan.DataSource = LayDanhSach();
         }
 
         private void spbtnSuaChua_Click(object sender, EventArgs e)
@@ -61,9 +66,14 @@ namespace QuanLyBanHang
 
         private void DeleteDepartment()
         {
-            var idBP = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Department_ID").ToString();
-            BUS.DepartmentBUS.DeleteEmployee(idBP);
-            LoadData();
+            if (XtraMessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var idBP = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Department_ID").ToString();
+                BUS.DepartmentBUS.DeleteEmployee(idBP);
+                LoadData();
+                XtraMessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
 
         private void spbtnXoa_Click(object sender, EventArgs e)

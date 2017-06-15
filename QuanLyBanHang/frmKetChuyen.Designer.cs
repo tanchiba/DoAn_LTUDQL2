@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label1.Location = new System.Drawing.Point(65, 28);
+            this.label1.Location = new System.Drawing.Point(44, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(282, 29);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 105);
+            this.label2.Location = new System.Drawing.Point(56, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(487, 13);
             this.label2.TabIndex = 1;
@@ -59,10 +59,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(73, 168);
+            this.label3.Location = new System.Drawing.Point(45, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(507, 22);
             this.label3.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(431, 224);
+            this.simpleButton1.Location = new System.Drawing.Point(468, 135);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(339, 371);
+            this.simpleButton2.Location = new System.Drawing.Point(376, 180);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(431, 371);
+            this.simpleButton3.Location = new System.Drawing.Point(468, 180);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 5;
@@ -97,8 +97,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(609, 406);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(574, 217);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);

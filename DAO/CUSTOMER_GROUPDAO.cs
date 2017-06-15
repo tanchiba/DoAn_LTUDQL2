@@ -29,6 +29,19 @@ namespace DAO
                 return dsEmpl;
             }
         }
+
+        public static string MaKhuVuc()
+        {
+            string MaKhuVuc;
+            var db = new QuanLyBanHangEntities();
+            MaKhuVuc = db.CUSTOMER_GROUP.OrderByDescending(dv => dv.Customer_Group_ID).FirstOrDefault().Customer_Group_ID;
+            if (MaKhuVuc != null)
+            {
+                MaKhuVuc = XuLyChuoi.LayChuoi(MaKhuVuc);
+            }
+            return MaKhuVuc;
+        }
+
         public static void deleteID(string id)
         {
             using (QuanLyBanHangEntities db = new QuanLyBanHangEntities())

@@ -51,12 +51,12 @@
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.tbMa);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(358, 153);
+            this.groupControl1.Size = new System.Drawing.Size(382, 153);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "groupControl1";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            this.groupControl1.Text = "Thông Tin";
             // 
             // checkBox1
             // 
@@ -118,11 +118,10 @@
             this.label1.Size = new System.Drawing.Size(28, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(210, 178);
+            this.btnThem.Location = new System.Drawing.Point(210, 165);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 1;
@@ -132,7 +131,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(291, 178);
+            this.btnDong.Location = new System.Drawing.Point(291, 165);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(75, 23);
             this.btnDong.TabIndex = 2;
@@ -142,14 +141,19 @@
             // 
             // frmThemKhuVuc
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 213);
+            this.ClientSize = new System.Drawing.Size(382, 195);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HtmlText = "Thêm Khu Vực";
             this.Name = "frmThemKhuVuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmThemKhuVuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

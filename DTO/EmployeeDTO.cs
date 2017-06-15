@@ -18,7 +18,7 @@ namespace DTO
         private string _Department_ID;
         private string _Manager_ID;
         private string _Description;
-        private Boolean _Active;
+        private bool _Active;
 
         public string Employee_ID
         {

@@ -27,6 +27,18 @@ namespace DAO
             return cm;
         }
 
+        public static string MaKhachHang()
+        {
+            string MaKhachHang;
+            var db = new QuanLyBanHangEntities();
+            MaKhachHang = db.CUSTOMERs.OrderByDescending(dv => dv.Customer_ID).FirstOrDefault().Customer_ID;
+            if (MaKhachHang != null)
+            {
+                MaKhachHang = XuLyChuoi.LayChuoi(MaKhachHang);
+            }
+            return MaKhachHang;
+        }
+
         public static List<CustomerDTO> GetCustomer()
         {
             List<CustomerDTO> dsEmpl = new List<CustomerDTO>();

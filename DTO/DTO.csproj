@@ -43,23 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+    <Compile Include="CurrencyDTO.cs" />
     <Compile Include="DepartmentDTO.cs" />
-=======
     <Compile Include="CustomerAndGroupDTO.cs" />
     <Compile Include="CustomerDTO.cs" />
     <Compile Include="CUSTOMER_GROUPDTO.cs" />
     <Compile Include="Customer_TypeDTO.cs" />
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
     <Compile Include="EmployeeDTO.cs" />
     <Compile Include="myobjectDTO.cs" />
     <Compile Include="ProductDTO.cs" />
     <Compile Include="ProductObjectDTO.cs" />
     <Compile Include="Product_GroupDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+    <Compile Include="SYS_Company.cs" />
     <Compile Include="UserDTO.cs" />
-=======
     <Compile Include="ProviderDTO.cs" />
     <Compile Include="StockDTO.cs" />
     <Compile Include="SYS_GROUPDTO.cs" />
@@ -68,7 +65,6 @@
     <Compile Include="SYS_USER_RULEDTO.cs" />
     <Compile Include="UnitDTO.cs" />
     <Compile Include="VaiTroObject1DTO.cs" />
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

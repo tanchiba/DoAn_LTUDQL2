@@ -136,7 +136,7 @@
             this.bbtnTGThongTin,
             this.bbtnCapNhat});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 39;
+            this.ribbonControl1.MaxItemId = 40;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHeThong,
@@ -438,6 +438,7 @@
             this.bbtnHoTroTrucTuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnHoTroTrucTuyen.ImageOptions.Image")));
             this.bbtnHoTroTrucTuyen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnHoTroTrucTuyen.ImageOptions.LargeImage")));
             this.bbtnHoTroTrucTuyen.Name = "bbtnHoTroTrucTuyen";
+            this.bbtnHoTroTrucTuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnHoTroTrucTuyen_ItemClick);
             // 
             // bbtnHuongDanSuDung
             // 
@@ -446,6 +447,7 @@
             this.bbtnHuongDanSuDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnHuongDanSuDung.ImageOptions.Image")));
             this.bbtnHuongDanSuDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnHuongDanSuDung.ImageOptions.LargeImage")));
             this.bbtnHuongDanSuDung.Name = "bbtnHuongDanSuDung";
+            this.bbtnHuongDanSuDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnHuongDanSuDung_ItemClick);
             // 
             // bbtnLienHe
             // 
@@ -454,6 +456,7 @@
             this.bbtnLienHe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnLienHe.ImageOptions.Image")));
             this.bbtnLienHe.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnLienHe.ImageOptions.LargeImage")));
             this.bbtnLienHe.Name = "bbtnLienHe";
+            this.bbtnLienHe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLienHe_ItemClick);
             // 
             // bbtnDangKy
             // 
@@ -480,6 +483,7 @@
             this.bbtnCapNhat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnCapNhat.ImageOptions.Image")));
             this.bbtnCapNhat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnCapNhat.ImageOptions.LargeImage")));
             this.bbtnCapNhat.Name = "bbtnCapNhat";
+            this.bbtnCapNhat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnCapNhat_ItemClick);
             // 
             // rpHeThong
             // 

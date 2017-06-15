@@ -32,42 +32,44 @@
             this.grcThongTin = new DevExpress.XtraEditors.GroupControl();
             this.checkBConQuanLy = new System.Windows.Forms.CheckBox();
             this.lblTyGiaQuyDoi = new System.Windows.Forms.Label();
-            this.lblTenTienTe = new System.Windows.Forms.Label();
-            this.lblMaTienTe = new System.Windows.Forms.Label();
-            this.btnLuuTienTe = new System.Windows.Forms.Button();
-            this.btnDongTienTe = new System.Windows.Forms.Button();
-            this.txtMaTienTe = new DevExpress.XtraEditors.TextEdit();
-            this.txtTenTienTe = new DevExpress.XtraEditors.TextEdit();
-            this.cmbTyGiaQuyDoi = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtTenTyGia = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaTyGia = new DevExpress.XtraEditors.TextEdit();
+            this.lblTenTyGia = new System.Windows.Forms.Label();
+            this.lblMaTyGia = new System.Windows.Forms.Label();
+            this.spbtnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.calTyGiaQuyDoi = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTin)).BeginInit();
             this.grcThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTienTe.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTienTe.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTyGiaQuyDoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenTyGia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTyGia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calTyGiaQuyDoi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grcThongTin
             // 
-            this.grcThongTin.Controls.Add(this.cmbTyGiaQuyDoi);
-            this.grcThongTin.Controls.Add(this.txtTenTienTe);
-            this.grcThongTin.Controls.Add(this.txtMaTienTe);
+            this.grcThongTin.Controls.Add(this.txtTenTyGia);
+            this.grcThongTin.Controls.Add(this.txtMaTyGia);
+            this.grcThongTin.Controls.Add(this.lblTenTyGia);
+            this.grcThongTin.Controls.Add(this.lblMaTyGia);
             this.grcThongTin.Controls.Add(this.checkBConQuanLy);
             this.grcThongTin.Controls.Add(this.lblTyGiaQuyDoi);
-            this.grcThongTin.Controls.Add(this.lblTenTienTe);
-            this.grcThongTin.Controls.Add(this.lblMaTienTe);
+            this.grcThongTin.Controls.Add(this.calTyGiaQuyDoi);
             this.grcThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.grcThongTin.Location = new System.Drawing.Point(0, 0);
+            this.grcThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcThongTin.Name = "grcThongTin";
-            this.grcThongTin.Size = new System.Drawing.Size(446, 217);
+            this.grcThongTin.Size = new System.Drawing.Size(485, 176);
             this.grcThongTin.TabIndex = 1;
             this.grcThongTin.Text = "Thông tin";
             // 
             // checkBConQuanLy
             // 
             this.checkBConQuanLy.AutoSize = true;
-            this.checkBConQuanLy.Location = new System.Drawing.Point(137, 181);
+            this.checkBConQuanLy.Location = new System.Drawing.Point(117, 147);
+            this.checkBConQuanLy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBConQuanLy.Name = "checkBConQuanLy";
-            this.checkBConQuanLy.Size = new System.Drawing.Size(104, 21);
+            this.checkBConQuanLy.Size = new System.Drawing.Size(83, 17);
             this.checkBConQuanLy.TabIndex = 6;
             this.checkBConQuanLy.Text = "Còn quản lý";
             this.checkBConQuanLy.UseVisualStyleBackColor = true;
@@ -75,97 +77,103 @@
             // lblTyGiaQuyDoi
             // 
             this.lblTyGiaQuyDoi.AutoSize = true;
-            this.lblTyGiaQuyDoi.Location = new System.Drawing.Point(13, 133);
+            this.lblTyGiaQuyDoi.Location = new System.Drawing.Point(17, 108);
             this.lblTyGiaQuyDoi.Name = "lblTyGiaQuyDoi";
-            this.lblTyGiaQuyDoi.Size = new System.Drawing.Size(95, 17);
+            this.lblTyGiaQuyDoi.Size = new System.Drawing.Size(74, 13);
             this.lblTyGiaQuyDoi.TabIndex = 2;
             this.lblTyGiaQuyDoi.Text = "Tỷ giá quy đổi";
             // 
-            // lblTenTienTe
+            // txtTenTyGia
             // 
-            this.lblTenTienTe.AutoSize = true;
-            this.lblTenTienTe.Location = new System.Drawing.Point(16, 84);
-            this.lblTenTienTe.Name = "lblTenTienTe";
-            this.lblTenTienTe.Size = new System.Drawing.Size(31, 17);
-            this.lblTenTienTe.TabIndex = 1;
-            this.lblTenTienTe.Text = "Tên";
+            this.txtTenTyGia.Location = new System.Drawing.Point(118, 71);
+            this.txtTenTyGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenTyGia.Name = "txtTenTyGia";
+            this.txtTenTyGia.Size = new System.Drawing.Size(330, 20);
+            this.txtTenTyGia.TabIndex = 13;
             // 
-            // lblMaTienTe
+            // txtMaTyGia
             // 
-            this.lblMaTienTe.AutoSize = true;
-            this.lblMaTienTe.Location = new System.Drawing.Point(13, 40);
-            this.lblMaTienTe.Name = "lblMaTienTe";
-            this.lblMaTienTe.Size = new System.Drawing.Size(25, 17);
-            this.lblMaTienTe.TabIndex = 0;
-            this.lblMaTienTe.Text = "Mã";
+            this.txtMaTyGia.Location = new System.Drawing.Point(118, 38);
+            this.txtMaTyGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaTyGia.Name = "txtMaTyGia";
+            this.txtMaTyGia.Size = new System.Drawing.Size(330, 20);
+            this.txtMaTyGia.TabIndex = 12;
             // 
-            // btnLuuTienTe
+            // lblTenTyGia
             // 
-            this.btnLuuTienTe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLuuTienTe.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuTienTe.Image")));
-            this.btnLuuTienTe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuuTienTe.Location = new System.Drawing.Point(19, 247);
-            this.btnLuuTienTe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLuuTienTe.Name = "btnLuuTienTe";
-            this.btnLuuTienTe.Size = new System.Drawing.Size(136, 56);
-            this.btnLuuTienTe.TabIndex = 4;
-            this.btnLuuTienTe.Text = "Lưu";
-            this.btnLuuTienTe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLuuTienTe.UseVisualStyleBackColor = true;
+            this.lblTenTyGia.AutoSize = true;
+            this.lblTenTyGia.Location = new System.Drawing.Point(16, 75);
+            this.lblTenTyGia.Name = "lblTenTyGia";
+            this.lblTenTyGia.Size = new System.Drawing.Size(58, 13);
+            this.lblTenTyGia.TabIndex = 11;
+            this.lblTenTyGia.Text = "Tên Tỷ Giá";
             // 
-            // btnDongTienTe
+            // lblMaTyGia
             // 
-            this.btnDongTienTe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDongTienTe.Image = ((System.Drawing.Image)(resources.GetObject("btnDongTienTe.Image")));
-            this.btnDongTienTe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDongTienTe.Location = new System.Drawing.Point(188, 243);
-            this.btnDongTienTe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDongTienTe.Name = "btnDongTienTe";
-            this.btnDongTienTe.Size = new System.Drawing.Size(143, 60);
-            this.btnDongTienTe.TabIndex = 5;
-            this.btnDongTienTe.Text = "Đóng";
-            this.btnDongTienTe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDongTienTe.UseVisualStyleBackColor = true;
+            this.lblMaTyGia.AutoSize = true;
+            this.lblMaTyGia.Location = new System.Drawing.Point(17, 42);
+            this.lblMaTyGia.Name = "lblMaTyGia";
+            this.lblMaTyGia.Size = new System.Drawing.Size(54, 13);
+            this.lblMaTyGia.TabIndex = 10;
+            this.lblMaTyGia.Text = "Mã Tỷ Giá";
             // 
-            // txtMaTienTe
+            // spbtnDong
             // 
-            this.txtMaTienTe.Location = new System.Drawing.Point(137, 37);
-            this.txtMaTienTe.Name = "txtMaTienTe";
-            this.txtMaTienTe.Size = new System.Drawing.Size(256, 22);
-            this.txtMaTienTe.TabIndex = 7;
+            this.spbtnDong.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spbtnDong.Appearance.Options.UseFont = true;
+            this.spbtnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnDong.ImageOptions.Image")));
+            this.spbtnDong.Location = new System.Drawing.Point(339, 188);
+            this.spbtnDong.Name = "spbtnDong";
+            this.spbtnDong.Size = new System.Drawing.Size(109, 32);
+            this.spbtnDong.TabIndex = 14;
+            this.spbtnDong.Text = "Đóng";
+            this.spbtnDong.Click += new System.EventHandler(this.spbtnDong_Click);
             // 
-            // txtTenTienTe
+            // spbtnLuu
             // 
-            this.txtTenTienTe.Location = new System.Drawing.Point(137, 81);
-            this.txtTenTienTe.Name = "txtTenTienTe";
-            this.txtTenTienTe.Size = new System.Drawing.Size(256, 22);
-            this.txtTenTienTe.TabIndex = 8;
+            this.spbtnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spbtnLuu.Appearance.Options.UseFont = true;
+            this.spbtnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnLuu.ImageOptions.Image")));
+            this.spbtnLuu.Location = new System.Drawing.Point(224, 188);
+            this.spbtnLuu.Name = "spbtnLuu";
+            this.spbtnLuu.Size = new System.Drawing.Size(109, 32);
+            this.spbtnLuu.TabIndex = 15;
+            this.spbtnLuu.Text = "Lưu";
+            this.spbtnLuu.Click += new System.EventHandler(this.spbtnLuu_Click);
             // 
-            // cmbTyGiaQuyDoi
+            // calTyGiaQuyDoi
             // 
-            this.cmbTyGiaQuyDoi.Location = new System.Drawing.Point(137, 128);
-            this.cmbTyGiaQuyDoi.Name = "cmbTyGiaQuyDoi";
-            this.cmbTyGiaQuyDoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.calTyGiaQuyDoi.Location = new System.Drawing.Point(117, 104);
+            this.calTyGiaQuyDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.calTyGiaQuyDoi.Name = "calTyGiaQuyDoi";
+            this.calTyGiaQuyDoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTyGiaQuyDoi.Size = new System.Drawing.Size(256, 22);
-            this.cmbTyGiaQuyDoi.TabIndex = 9;
+            this.calTyGiaQuyDoi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.calTyGiaQuyDoi.Size = new System.Drawing.Size(331, 20);
+            this.calTyGiaQuyDoi.TabIndex = 9;
             // 
             // frmThemTienTe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Appearance.Options.UseBackColor = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 354);
-            this.Controls.Add(this.btnDongTienTe);
-            this.Controls.Add(this.btnLuuTienTe);
+            this.ClientSize = new System.Drawing.Size(485, 225);
+            this.Controls.Add(this.spbtnDong);
+            this.Controls.Add(this.spbtnLuu);
             this.Controls.Add(this.grcThongTin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThemTienTe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Tiền Tệ";
+            this.Load += new System.EventHandler(this.frmThemTienTe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcThongTin)).EndInit();
             this.grcThongTin.ResumeLayout(false);
             this.grcThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTienTe.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTienTe.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTyGiaQuyDoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenTyGia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTyGia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calTyGiaQuyDoi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,12 +183,12 @@
         private DevExpress.XtraEditors.GroupControl grcThongTin;
         private System.Windows.Forms.CheckBox checkBConQuanLy;
         private System.Windows.Forms.Label lblTyGiaQuyDoi;
-        private System.Windows.Forms.Label lblTenTienTe;
-        private System.Windows.Forms.Label lblMaTienTe;
-        private System.Windows.Forms.Button btnLuuTienTe;
-        private System.Windows.Forms.Button btnDongTienTe;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbTyGiaQuyDoi;
-        private DevExpress.XtraEditors.TextEdit txtTenTienTe;
-        private DevExpress.XtraEditors.TextEdit txtMaTienTe;
+        private DevExpress.XtraEditors.TextEdit txtTenTyGia;
+        private DevExpress.XtraEditors.TextEdit txtMaTyGia;
+        private System.Windows.Forms.Label lblTenTyGia;
+        private System.Windows.Forms.Label lblMaTyGia;
+        private DevExpress.XtraEditors.SimpleButton spbtnDong;
+        private DevExpress.XtraEditors.SimpleButton spbtnLuu;
+        private DevExpress.XtraEditors.CalcEdit calTyGiaQuyDoi;
     }
 }

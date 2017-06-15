@@ -16,5 +16,24 @@ namespace BUS
         {
             return DAO.UnitDao.objectToDTO(a);
         }
+        public static string MaDonVi()
+        {
+            return DAO.UnitDao.MaDonVi();
+        }
+
+        public static void ThemDonVi(string Unit_ID, string UnitName, string Description, bool Active)
+        {
+            DAO.UnitDao.ThemDonVi(Unit_ID, UnitName, Description, Active);
+        }
+
+        public static void XoaDonVi(string Unit_ID)
+        {
+            DAO.UnitDao.XoaDonVi(Unit_ID);
+        }
+
+        public static void Sua(string Unit_ID, string UnitName, string Description, bool Active)
+        {
+            DAO.UnitDao.SuaDonVi(Unit_ID, UnitName, Description, Active);
+        }
     }
 }

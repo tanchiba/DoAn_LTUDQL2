@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using BUS;
+using DAO.AppData;
+
 namespace QuanLyBanHang
 {
     public partial class frmSuaHangHoa : DevExpress.XtraEditors.XtraForm
@@ -38,26 +40,7 @@ namespace QuanLyBanHang
             cbbHangHoa.DataSource = new BindingSource(test, null);
             cbbHangHoa.DisplayMember = "Value";
             cbbHangHoa.ValueMember = "Key";
-            //List<STOCK> kh = db.STOCKs.ToList();
-            //glKhoMacDinh.Properties.DataSource = kh;
-            //glKhoMacDinh.Properties.DisplayMember = "StockName";
-            //glKhoMacDinh.Properties.ValueMember = "Stock_ID";
-
-            //List<PRODUCT_GROUP> pg = db.PRODUCT_GROUP.ToList();
-            //gllPhanLoai.Properties.DataSource = pg;
-            //gllPhanLoai.Properties.DisplayMember = "Product_Group_Name";
-            //gllPhanLoai.Properties.ValueMember = "Product_Group_ID";
-
-            //List<UNIT> unit = db.UNITs.ToList();
-            //glDonVi.Properties.DataSource = unit;
-            //glDonVi.Properties.DisplayMember = "UnitName";
-            //glDonVi.Properties.ValueMember = "Unit_ID";
-
-            //List<PROVIDER> lp = db.PROVIDERs.ToList();
-            //glNCC.Properties.DataSource = lp;
-            //glNCC.Properties.DisplayMember = "ProviderName";
-            //glNCC.Properties.ValueMember = "Provider_ID";
-
+            
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -67,40 +50,40 @@ namespace QuanLyBanHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == tbMaHang.Text);
-            p.ProductName =tbTenHang.Text;
-            p.Product_ID = tbMaHang.Text;
-            p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
-            p.Product_Group_ID = pg.Product_Group_ID;
-            p.Prorvider_ID = providerid.Provider_ID;
-            p.Unit = u.Unit_ID;
-            p.Org_Price = decimal.Parse(glGiaMua.Text);
-            p.Sale_Price = decimal.Parse(glGiaSi.Text);
-            p.Retail_Price = decimal.Parse(glGiaBanLe.Text);
-            p.MinStock = int.Parse(glToiThieu.Text);
-            if (p.Stock_ID == null)
-            {
-                p.Stock_ID = "K00001";
-            }
-            else p.Stock_ID = kho.Stock_ID;
-            p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
-=======
-            bool a;
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
-            if (cbActive.Checked == true)
-                a = true;
-            else a = false;
-            byte[] img = null;
-            if (pictureBox1 != null && pictureBox1.Image != null)
-            {
-                FileStream f = new FileStream(pictureBox1.ImageLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader b = new BinaryReader(f);
-                img = b.ReadBytes((int)f.Length);
-            }
-            ProductBUS.edit(tbTenHang.Text, tbMaHang.Text, cbbHangHoa.SelectedIndex.ToString(), pg, providerid, u, double.Parse(glGiaMua.Text), double.Parse(glGiaSi.Text), double.Parse(glGiaBanLe.Text), int.Parse(glToiThieu.Text), int.Parse(glToiDa.Text), kho, img, a);
-            this.Close();
+
+            //QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+            //PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == tbMaHang.Text);
+            //p.ProductName =tbTenHang.Text;
+            //p.Product_ID = tbMaHang.Text;
+            //p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
+            //p.Product_Group_ID = pg.Product_Group_ID;
+            //p.Prorvider_ID = providerid.Provider_ID;
+            //p.Unit = u.Unit_ID;
+            //p.Org_Price = decimal.Parse(glGiaMua.Text);
+            //p.Sale_Price = decimal.Parse(glGiaSi.Text);
+            //p.Retail_Price = decimal.Parse(glGiaBanLe.Text);
+            //p.MinStock = int.Parse(glToiThieu.Text);
+            //if (p.Stock_ID == null)
+            //{
+            //    p.Stock_ID = "K00001";
+            //}
+            //else p.Stock_ID = kho.Stock_ID;
+            //p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
+
+            //bool a;
+
+            //if (cbActive.Checked == true)
+            //    a = true;
+            //else a = false;
+            //byte[] img = null;
+            //if (pictureBox1 != null && pictureBox1.Image != null)
+            //{
+            //    FileStream f = new FileStream(pictureBox1.ImageLocation, FileMode.Open, FileAccess.Read);
+            //    BinaryReader b = new BinaryReader(f);
+            //    img = b.ReadBytes((int)f.Length);
+            //}
+            //ProductBUS.edit(tbTenHang.Text, tbMaHang.Text, cbbHangHoa.SelectedIndex.ToString(), pg, providerid, u, double.Parse(glGiaMua.Text), double.Parse(glGiaSi.Text), double.Parse(glGiaBanLe.Text), int.Parse(glToiThieu.Text), int.Parse(glToiDa.Text), kho, img, a);
+            //this.Close();
 
              
         }

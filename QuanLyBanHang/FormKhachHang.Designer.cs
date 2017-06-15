@@ -29,15 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,9 +41,15 @@
             this.colTel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.spbtnSuaChua = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnNapLai = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXuat = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyBanHangDataSet = new QuanLyBanHang.QuanLyBanHangDataSet();
@@ -59,15 +58,14 @@
             this.cUSTOMERTableAdapter = new QuanLyBanHang.QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
             this.gridSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
@@ -75,7 +73,6 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Controls.Add(this.gridSplitContainer1);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,114 +84,13 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.button7);
-            this.panelControl1.Controls.Add(this.button6);
-            this.panelControl1.Controls.Add(this.button5);
-            this.panelControl1.Controls.Add(this.button3);
-            this.panelControl1.Controls.Add(this.button4);
-            this.panelControl1.Controls.Add(this.button2);
-            this.panelControl1.Controls.Add(this.button1);
-            this.panelControl1.Location = new System.Drawing.Point(12, 12);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(726, 51);
-            this.panelControl1.TabIndex = 4;
-            // 
-            // button7
-            // 
-            this.button7.Image = global::QuanLyBanHang.Properties.Resources.MS_Office_2003_Excel_icon;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(308, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(54, 49);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Nhập";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::QuanLyBanHang.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(368, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 49);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Đóng";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::QuanLyBanHang.Properties.Resources.Export_To_File_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(248, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 49);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Xuất";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::QuanLyBanHang.Properties.Resources.Button_Refresh_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(188, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 49);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Nạp lại";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::QuanLyBanHang.Properties.Resources.Actions_edit_delete_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(128, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::QuanLyBanHang.Properties.Resources.hp_customization_control_panel_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(66, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::QuanLyBanHang.Properties.Resources.add_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // gridSplitContainer1
             // 
             this.gridSplitContainer1.Grid = this.gridControl1;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(12, 67);
+            this.gridSplitContainer1.Location = new System.Drawing.Point(12, 12);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
-            this.gridSplitContainer1.Size = new System.Drawing.Size(726, 2);
+            this.gridSplitContainer1.Panel1.Controls.Add(this.panelControl1);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(726, 57);
             this.gridSplitContainer1.TabIndex = 5;
             // 
             // gridControl1
@@ -206,7 +102,6 @@
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -289,13 +184,92 @@
             this.colActive.VisibleIndex = 5;
             this.colActive.Width = 92;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.spbtnSuaChua);
+            this.panelControl1.Controls.Add(this.spbtnNapLai);
+            this.panelControl1.Controls.Add(this.spbtnDong);
+            this.panelControl1.Controls.Add(this.spbtnXuat);
+            this.panelControl1.Controls.Add(this.spbtnXoa);
+            this.panelControl1.Controls.Add(this.spbtnThem);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(726, 50);
+            this.panelControl1.TabIndex = 6;
+            // 
+            // spbtnSuaChua
+            // 
+            this.spbtnSuaChua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnSuaChua.ImageOptions.Image")));
+            this.spbtnSuaChua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnSuaChua.Location = new System.Drawing.Point(67, 3);
+            this.spbtnSuaChua.Name = "spbtnSuaChua";
+            this.spbtnSuaChua.Size = new System.Drawing.Size(72, 42);
+            this.spbtnSuaChua.TabIndex = 0;
+            this.spbtnSuaChua.Text = "Sửa Chữa";
+            this.spbtnSuaChua.Click += new System.EventHandler(this.spbtnSuaChua_Click);
+            // 
+            // spbtnNapLai
+            // 
+            this.spbtnNapLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnNapLai.ImageOptions.Image")));
+            this.spbtnNapLai.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnNapLai.Location = new System.Drawing.Point(203, 4);
+            this.spbtnNapLai.Name = "spbtnNapLai";
+            this.spbtnNapLai.Size = new System.Drawing.Size(52, 42);
+            this.spbtnNapLai.TabIndex = 0;
+            this.spbtnNapLai.Text = "Nạp Lại";
+            // 
+            // spbtnDong
+            // 
+            this.spbtnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnDong.ImageOptions.Image")));
+            this.spbtnDong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnDong.Location = new System.Drawing.Point(319, 4);
+            this.spbtnDong.Name = "spbtnDong";
+            this.spbtnDong.Size = new System.Drawing.Size(52, 42);
+            this.spbtnDong.TabIndex = 0;
+            this.spbtnDong.Text = "Đóng";
+            this.spbtnDong.Click += new System.EventHandler(this.spbtnDong_Click);
+            // 
+            // spbtnXuat
+            // 
+            this.spbtnXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXuat.ImageOptions.Image")));
+            this.spbtnXuat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXuat.Location = new System.Drawing.Point(261, 4);
+            this.spbtnXuat.Name = "spbtnXuat";
+            this.spbtnXuat.Size = new System.Drawing.Size(52, 42);
+            this.spbtnXuat.TabIndex = 0;
+            this.spbtnXuat.Text = "Xuất";
+            // 
+            // spbtnXoa
+            // 
+            this.spbtnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnXoa.ImageOptions.Image")));
+            this.spbtnXoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnXoa.Location = new System.Drawing.Point(145, 4);
+            this.spbtnXoa.Name = "spbtnXoa";
+            this.spbtnXoa.Size = new System.Drawing.Size(52, 42);
+            this.spbtnXoa.TabIndex = 0;
+            this.spbtnXoa.Text = "Xóa";
+            this.spbtnXoa.Click += new System.EventHandler(this.spbtnXoa_Click);
+            // 
+            // spbtnThem
+            // 
+            this.spbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("spbtnThem.ImageOptions.Image")));
+            this.spbtnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.spbtnThem.Location = new System.Drawing.Point(10, 3);
+            this.spbtnThem.Name = "spbtnThem";
+            this.spbtnThem.Size = new System.Drawing.Size(52, 42);
+            this.spbtnThem.TabIndex = 0;
+            this.spbtnThem.Text = "Thêm";
+            this.spbtnThem.Click += new System.EventHandler(this.spbtnThem_Click);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2,
             this.layoutControlItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -305,20 +279,11 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gridSplitContainer1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(730, 6);
+            this.layoutControlItem1.Size = new System.Drawing.Size(730, 61);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.panelControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(730, 55);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
@@ -356,19 +321,18 @@
             this.ClientSize = new System.Drawing.Size(750, 383);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FormKhachHang";
-            this.Text = "FormKhachHang";
+            this.Text = "Khách Hàng";
             this.Load += new System.EventHandler(this.FormKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
@@ -382,16 +346,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.ImageList imageList1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
         private QuanLyBanHangDataSet quanLyBanHangDataSet;
         private System.Windows.Forms.BindingSource cUSTOMERBindingSource;
         private QuanLyBanHangDataSetTableAdapters.CUSTOMERTableAdapter cUSTOMERTableAdapter;
@@ -407,5 +362,12 @@
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton spbtnSuaChua;
+        private DevExpress.XtraEditors.SimpleButton spbtnNapLai;
+        private DevExpress.XtraEditors.SimpleButton spbtnDong;
+        private DevExpress.XtraEditors.SimpleButton spbtnXuat;
+        private DevExpress.XtraEditors.SimpleButton spbtnXoa;
+        private DevExpress.XtraEditors.SimpleButton spbtnThem;
     }
 }

@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTin));
             this.label1 = new System.Windows.Forms.Label();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.btKetThuc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.btKThuc = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -65,8 +66,8 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnDongY = new DevExpress.XtraEditors.SimpleButton();
+            this.spbtnKetThuc = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -120,20 +121,6 @@
             this.barButtonItem5});
             this.barManager1.MaxItemId = 7;
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Đồng ý";
-            this.barButtonItem3.Id = 2;
-            //this.barButtonItem3.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Accept_icon__2_;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Kết thúc";
-            this.barButtonItem5.Id = 6;
-            //this.barButtonItem5.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Button_Close_icon;
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -146,7 +133,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 306);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 293);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(536, 0);
             // 
@@ -156,7 +143,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 306);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 293);
             // 
             // barDockControlRight
             // 
@@ -164,7 +151,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(536, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 306);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 293);
             // 
             // barButtonItem1
             // 
@@ -178,11 +165,16 @@
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Đồng ý";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // btKetThuc
             // 
             this.btKetThuc.Caption = "Kết Thúc";
             this.btKetThuc.Id = 3;
-            //this.btKetThuc.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Actions_window_close_icon;
             this.btKetThuc.Name = "btKetThuc";
             // 
             // barButtonItem4
@@ -196,8 +188,13 @@
             // 
             this.btKThuc.Caption = "Kết Thúc";
             this.btKThuc.Id = 5;
-            //this.btKThuc.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Button_Close_icon;
             this.btKThuc.Name = "btKThuc";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Kết thúc";
+            this.barButtonItem5.Id = 6;
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // layoutControl1
             // 
@@ -426,41 +423,46 @@
             this.layoutControlItem9.TextSize = new System.Drawing.Size(24, 13);
             this.layoutControlItem9.TextToControlDistance = 5;
             // 
-            // simpleButton1
+            // spbtnDongY
             // 
-            //this.simpleButton1.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Accept_icon__2_;
-            this.simpleButton1.Location = new System.Drawing.Point(112, 262);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 24;
-            this.simpleButton1.Text = "Đồng ý";
+            this.spbtnDongY.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.spbtnDongY.Location = new System.Drawing.Point(112, 262);
+            this.spbtnDongY.Name = "spbtnDongY";
+            this.spbtnDongY.Size = new System.Drawing.Size(75, 23);
+            this.spbtnDongY.TabIndex = 24;
+            this.spbtnDongY.Text = "Đồng ý";
+            this.spbtnDongY.Click += new System.EventHandler(this.spbtnDongY_Click);
             // 
-            // simpleButton2
+            // spbtnKetThuc
             // 
-            //this.simpleButton2.ImageOptions.Image = global::QuanLyBanHang.Properties.Resources.Button_Close_icon;
-            this.simpleButton2.Location = new System.Drawing.Point(210, 262);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 25;
-            this.simpleButton2.Text = "Kết Thúc";
+            this.spbtnKetThuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.spbtnKetThuc.Location = new System.Drawing.Point(210, 262);
+            this.spbtnKetThuc.Name = "spbtnKetThuc";
+            this.spbtnKetThuc.Size = new System.Drawing.Size(75, 23);
+            this.spbtnKetThuc.TabIndex = 25;
+            this.spbtnKetThuc.Text = "Kết Thúc";
+            this.spbtnKetThuc.Click += new System.EventHandler(this.spbtnKetThuc_Click);
             // 
             // frmThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(536, 306);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(536, 293);
+            this.Controls.Add(this.spbtnKetThuc);
+            this.Controls.Add(this.spbtnDongY);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmThongTin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin";
+            this.Load += new System.EventHandler(this.frmThongTin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -528,7 +530,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton spbtnKetThuc;
+        private DevExpress.XtraEditors.SimpleButton spbtnDongY;
     }
 }

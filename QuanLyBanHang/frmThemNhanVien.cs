@@ -26,6 +26,7 @@ namespace QuanLyBanHang
         private void frmThemNhanVien_Load(object sender, EventArgs e)
         {
             //String 
+            edtMa.Text = BUS.EmployeeBUS.MaNhanVien();
 
             List<DepartmentDTO> bp = BUS.DepartmentBUS.getDepartment();
             glpedtBoPhan.Properties.DataSource = bp;

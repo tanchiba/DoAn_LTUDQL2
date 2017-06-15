@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using BUS;
+using DAO.AppData;
+
 namespace QuanLyBanHang
 {
     public partial class frmHangHoa : DevExpress.XtraEditors.XtraForm
@@ -44,12 +46,7 @@ namespace QuanLyBanHang
         private void button1_Click(object sender, EventArgs e)
         {
             frmThemHangHoa f = new frmThemHangHoa();
-<<<<<<< HEAD
-           
             f.Show();
-=======
-            f.ShowDialog();
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
             frmhanghoaload();
             gridView2.ExpandAllGroups();
         }
@@ -58,74 +55,74 @@ namespace QuanLyBanHang
         {
             if (gridView2.FocusedRowHandle >= 0)
             {
+               // QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+                frmSuaHangHoa f = new frmSuaHangHoa();
+                var pid = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "Product_ID").ToString();
 
-            frmSuaHangHoa f = new frmSuaHangHoa();
-            var pid = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "Product_ID").ToString();
-<<<<<<< HEAD
-            PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == pid);
-            
-            
-=======
+                //PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == pid);
+
+
+
                 var p = ProductBUS.queryByID(pid);
 
->>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
-            f.tbTenHang.Text = p.ProductName;
-            f.tbMaHang.Text = p.Product_ID;
-            if (p.Product_Type_ID == "0")
-            {
-                f.cbbHangHoa.ValueMember = "0";
-            }
-            else f.cbbHangHoa.ValueMember = "1";
+
+                f.tbTenHang.Text = p.ProductName;
+                f.tbMaHang.Text = p.Product_ID;
+                if (p.Product_Type_ID == "0")
+                {
+                    f.cbbHangHoa.ValueMember = "0";
+                }
+                else f.cbbHangHoa.ValueMember = "1";
                 #region gridlookupedit
                 var kh = StockBUS.list();
-            f.glKhoMacDinh.Properties.DataSource = kh;
-            f.glKhoMacDinh.Properties.DisplayMember = "StockName";
-           f.glKhoMacDinh.Properties.ValueMember = "Stock_ID";
+                f.glKhoMacDinh.Properties.DataSource = kh;
+                f.glKhoMacDinh.Properties.DisplayMember = "StockName";
+                f.glKhoMacDinh.Properties.ValueMember = "Stock_ID";
 
                 var pg = Product_GroupBUS.list();
-            f.gllPhanLoai.Properties.DataSource = pg;
-            f.gllPhanLoai.Properties.DisplayMember = "Product_Group_Name";
-            f.gllPhanLoai.Properties.ValueMember = "Product_Group_ID";
+                f.gllPhanLoai.Properties.DataSource = pg;
+                f.gllPhanLoai.Properties.DisplayMember = "Product_Group_Name";
+                f.gllPhanLoai.Properties.ValueMember = "Product_Group_ID";
 
                 var unit = UnitBUS.list();
-            f.glDonVi.Properties.DataSource = unit;
-            f.glDonVi.Properties.DisplayMember = "UnitName";
-            f.glDonVi.Properties.ValueMember = "Unit_ID";
+                f.glDonVi.Properties.DataSource = unit;
+                f.glDonVi.Properties.DisplayMember = "UnitName";
+                f.glDonVi.Properties.ValueMember = "Unit_ID";
 
                 var lp = BUS.ProviderBUS.list();
-            f.glNCC.Properties.DataSource = lp;
-            f.glNCC.Properties.DisplayMember = "ProviderName";
-            f.glNCC.Properties.ValueMember = "Provider_ID";
-            #endregion
-            f.gllPhanLoai.EditValue = p.Product_Group_ID;
-            f.glNCC.EditValue = p.Provider_ID;
-            f.glDonVi.EditValue = p.Unit;
-            f.glGiaMua.Text = p.Org_Price.ToString();
-            f.glGiaBanLe.Text = p.Retail_Price.ToString();
-            f.glGiaSi.Text = p.Sale_Price.ToString();
-            f.glToiThieu.Text = p.MinStock.ToString();
-            f.glKhoMacDinh.EditValue = p.Stock_ID;
-            
-            if (p.Active == true)
-            {
-                f.cbActive.Checked = true;
-            }
-            else f.cbActive.Checked = false;
+                f.glNCC.Properties.DataSource = lp;
+                f.glNCC.Properties.DisplayMember = "ProviderName";
+                f.glNCC.Properties.ValueMember = "Provider_ID";
+                #endregion
+                f.gllPhanLoai.EditValue = p.Product_Group_ID;
+                f.glNCC.EditValue = p.Provider_ID;
+                f.glDonVi.EditValue = p.Unit;
+                f.glGiaMua.Text = p.Org_Price.ToString();
+                f.glGiaBanLe.Text = p.Retail_Price.ToString();
+                f.glGiaSi.Text = p.Sale_Price.ToString();
+                f.glToiThieu.Text = p.MinStock.ToString();
+                f.glKhoMacDinh.EditValue = p.Stock_ID;
 
-            byte[] img = (byte[])p.image;
-            if(img == null)
-            {
-                f.pictureBox1.Image = null;
-            }
-            else
-            {
-                MemoryStream m = new MemoryStream(img);
-                f.pictureBox1.Image = Image.FromStream(m);
-            }
+                if (p.Active == true)
+                {
+                    f.cbActive.Checked = true;
+                }
+                else f.cbActive.Checked = false;
 
-            f.ShowDialog();
-            frmhanghoaload();
-            gridView2.ExpandAllGroups();
+                //byte[] img = (byte[])p.i;
+                //if (img == null)
+                //{
+                //    f.pictureBox1.Image = null;
+                //}
+                //else
+                //{
+                //    MemoryStream m = new MemoryStream(img);
+                //    f.pictureBox1.Image = Image.FromStream(m);
+                //}
+
+                f.ShowDialog();
+                frmhanghoaload();
+                gridView2.ExpandAllGroups();
             }
             else MessageBox.Show("Bạn chưa chọn đối tượng cần sửa", "thông báo", MessageBoxButtons.OK);
         }

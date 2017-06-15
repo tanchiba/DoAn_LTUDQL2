@@ -12,6 +12,12 @@ namespace BUS
         {
             return DAO.CustomerDAO.queryByID(id);
         }
+
+        public static string MaKhachHang()
+        {
+            return DAO.CustomerDAO.MaKhachHang();
+        }
+
         public static List<CustomerDTO> GetCustomer()
         {
             return DAO.CustomerDAO.GetCustomer();

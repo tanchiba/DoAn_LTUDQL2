@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace QuanLyBanHang
         public frmThongTin()
         {
             InitializeComponent();
+        }
+
+        private void frmThongTin_Load(object sender, EventArgs e)
+        {
+            List<SYS_CompanyDTO> ht = BUS.SYS_CompanyBUS.getDS();
+            
+        }
+
+        private void spbtnDongY_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spbtnKetThuc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

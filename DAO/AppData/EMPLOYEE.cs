@@ -18,6 +18,7 @@ namespace DAO.AppData
         public EMPLOYEE()
         {
             this.EMPLOYEE1 = new HashSet<EMPLOYEE>();
+            this.STOCKs = new HashSet<STOCK>();
         }
     
         public string Employee_ID { get; set; }
@@ -36,5 +37,7 @@ namespace DAO.AppData
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EMPLOYEE> EMPLOYEE1 { get; set; }
         public virtual EMPLOYEE EMPLOYEE2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<STOCK> STOCKs { get; set; }
     }
 }
