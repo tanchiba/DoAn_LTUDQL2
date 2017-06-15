@@ -537,6 +537,12 @@
     <Compile Include="frmThemKhoHang.Designer.cs">
       <DependentUpon>frmThemKhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSuaNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaNguoiDung.Designer.cs">
+      <DependentUpon>frmSuaNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -603,6 +609,7 @@
     <Compile Include="frmTyGia.Designer.cs">
       <DependentUpon>frmTyGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyObject1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyBanHangDataSet.Designer.cs">
@@ -744,6 +751,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKhoHang.resx">
       <DependentUpon>frmThemKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaNguoiDung.resx">
+      <DependentUpon>frmSuaNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemNguoiDung.resx">
       <DependentUpon>frmThemNguoiDung.cs</DependentUpon>

@@ -138,11 +138,33 @@
     <Compile Include="AppData\UNIT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="DepartmentDAO.cs" />
+=======
+    <Compile Include="CustomerAndGroupDAO.cs" />
+    <Compile Include="CustomerDAO.cs" />
+    <Compile Include="CUSTOMER_GROUPDAO.cs" />
+    <Compile Include="Customer_TypeDAO.cs" />
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
     <Compile Include="EmployeeDAO.cs" />
+    <Compile Include="myobjectDAO.cs" />
+    <Compile Include="ProductDAO.cs" />
+    <Compile Include="ProductObjectDAO.cs" />
+    <Compile Include="Product_GroupDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="UserDAO.cs" />
     <Compile Include="XuLyChuoi.cs" />
+=======
+    <Compile Include="ProviderDao.cs" />
+    <Compile Include="StockDAO.cs" />
+    <Compile Include="SYS_GROUPDAO.cs" />
+    <Compile Include="SYS_ObjectDAO.cs" />
+    <Compile Include="SYS_USERDAO.cs" />
+    <Compile Include="SYS_USER_RULEDAO.cs" />
+    <Compile Include="UnitDao.cs" />
+    <Compile Include="VaiTroObject1DAO.cs" />
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

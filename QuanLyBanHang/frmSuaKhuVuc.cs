@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAO.AppData;
+using BUS;
 namespace QuanLyBanHang
 {
     public partial class frmSuaKhuVuc : DevExpress.XtraEditors.XtraForm
@@ -40,21 +41,16 @@ namespace QuanLyBanHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            var khuvuc = db.CUSTOMER_GROUP.Single(a => a.Customer_Group_ID == tbMa.Text.ToString());
-            khuvuc.Customer_Group_ID = tbMa.Text;
-            khuvuc.Customer_Group_Name = tbTen.Text;
-            khuvuc.Description = tbGhiChu.Text;
+            bool a;
             if (!checkBox1.Checked)
             {
-                khuvuc.Active = false;
+                a = false;
             }
             else
             {
-                khuvuc.Active = true;
+                a = true;
             }
-            db.SaveChanges();
-            
+            CUSTOMER_GROUPBUS.EditByID(tbMa.Text, tbTen.Text, tbGhiChu.Text, a);
             this.Close();
            
         }

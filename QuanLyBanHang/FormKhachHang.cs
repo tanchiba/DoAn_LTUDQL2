@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
-
+using BUS;
 using DAO.AppData;
 
 namespace QuanLyBanHang
@@ -29,10 +29,10 @@ namespace QuanLyBanHang
                 frmSuaKhachHang form = new frmSuaKhachHang();
                 QuanLyBanHangEntities db = new QuanLyBanHangEntities();
                 var cmid = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Customer_ID").ToString();
-                var kh = db.CUSTOMERs.Single(a => a.Customer_ID == cmid);
+                var kh = BUS.CustomerBUS.queryByID(cmid);
                 form.tbMa.Text = kh.Customer_ID;
                 form.tbTen.Text = kh.CustomerName;
-                form.tbDiaChi.Text = kh.CustomerAddress;
+                form.tbDiaChi.Text = kh.CustomerAdress;
                 form.tbDienThoai.Text = kh.Tel;
                 form.tbEmail.Text = kh.Email;
                 form.cbActive.Checked = (bool)kh.Active;
@@ -55,17 +55,9 @@ namespace QuanLyBanHang
     private void frmkhachhangload()
         {
             QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            List<CUSTOMER> listkhachhang = db.CUSTOMERs.ToList<CUSTOMER>();
-            var listkh = from a in db.CUSTOMERs
-                         from b in db.CUSTOMER_GROUP
-                         where a.Customer_Group_ID == b.Customer_Group_ID
-                         select new
-                         {
-                             Customer_ID = a.Customer_ID, CustomerName = a.CustomerName, Customer_Group_ID = b.Customer_Group_Name,CustomerAddress = a.CustomerAddress,Email = a.Email,Tel = a.Tel,Active = a.Active,
-                                
-                          };
+            var listkh = CustomerAndGroupBUS.list();
             gridView1.IndicatorWidth = 40;
-            gridControl1.DataSource = listkh.ToList() ;
+            gridControl1.DataSource = listkh;
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
@@ -92,11 +84,8 @@ namespace QuanLyBanHang
             DialogResult dialogResult = MessageBox.Show("bạn có chắc muốn xóa không", "Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                QuanLyBanHangEntities db = new QuanLyBanHangEntities();
                 var cmid = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Customer_ID").ToString();
-                CUSTOMER cm = db.CUSTOMERs.Single(a => a.Customer_ID == cmid);
-                db.CUSTOMERs.Remove(cm);
-                db.SaveChanges();
+                CustomerBUS.deleteByID(cmid);
                 frmkhachhangload();
                 gridView1.ExpandAllGroups();
             }

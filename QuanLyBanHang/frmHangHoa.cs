@@ -8,9 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAO.AppData;
 using System.IO;
-
+using BUS;
 namespace QuanLyBanHang
 {
     public partial class frmHangHoa : DevExpress.XtraEditors.XtraForm
@@ -29,25 +28,9 @@ namespace QuanLyBanHang
 
         private void frmhanghoaload()
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            var listhanghoa = from a in db.PRODUCTs
-                              from b in db.PRODUCT_GROUP
-                              from c in db.UNITs
-                              where a.Product_Group_ID == b.Product_Group_ID && a.Unit == c.Unit_ID
-                              select new
-                              {
-                                  Product_ID = a.Product_ID,
-                                  ProductName = a.ProductName,
-                                  Product_Group_ID = b.Product_Group_Name,
-                                  Unit = c.UnitName,
-                                  Org_Price = a.Org_Price,
-                                  Sale_Price = a.Sale_Price,
-                                  Retail_Price = a.Retail_Price,
-                                  Quantity = a.Quantity,
-                                  MinStock = a.MinStock,
-                                  MaxStock = a.MaxStock,
-                              };
-            gridControl2.DataSource = listhanghoa.ToList();          
+
+            var listhanghoa = BUS.ProductObjectBUS.list();
+            gridControl2.DataSource = listhanghoa;          
         }
 
         private void gridView2_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -61,20 +44,31 @@ namespace QuanLyBanHang
         private void button1_Click(object sender, EventArgs e)
         {
             frmThemHangHoa f = new frmThemHangHoa();
+<<<<<<< HEAD
            
             f.Show();
+=======
+            f.ShowDialog();
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
             frmhanghoaload();
             gridView2.ExpandAllGroups();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
+            if (gridView2.FocusedRowHandle >= 0)
+            {
+
             frmSuaHangHoa f = new frmSuaHangHoa();
             var pid = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "Product_ID").ToString();
+<<<<<<< HEAD
             PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == pid);
             
             
+=======
+                var p = ProductBUS.queryByID(pid);
+
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
             f.tbTenHang.Text = p.ProductName;
             f.tbMaHang.Text = p.Product_ID;
             if (p.Product_Type_ID == "0")
@@ -82,29 +76,29 @@ namespace QuanLyBanHang
                 f.cbbHangHoa.ValueMember = "0";
             }
             else f.cbbHangHoa.ValueMember = "1";
-            #region gridlookupedit
-            List<STOCK> kh = db.STOCKs.ToList();
+                #region gridlookupedit
+                var kh = StockBUS.list();
             f.glKhoMacDinh.Properties.DataSource = kh;
             f.glKhoMacDinh.Properties.DisplayMember = "StockName";
            f.glKhoMacDinh.Properties.ValueMember = "Stock_ID";
 
-            List<PRODUCT_GROUP> pg = db.PRODUCT_GROUP.ToList();
+                var pg = Product_GroupBUS.list();
             f.gllPhanLoai.Properties.DataSource = pg;
             f.gllPhanLoai.Properties.DisplayMember = "Product_Group_Name";
             f.gllPhanLoai.Properties.ValueMember = "Product_Group_ID";
 
-            List<UNIT> unit = db.UNITs.ToList();
+                var unit = UnitBUS.list();
             f.glDonVi.Properties.DataSource = unit;
             f.glDonVi.Properties.DisplayMember = "UnitName";
             f.glDonVi.Properties.ValueMember = "Unit_ID";
 
-            List<PROVIDER> lp = db.PROVIDERs.ToList();
+                var lp = BUS.ProviderBUS.list();
             f.glNCC.Properties.DataSource = lp;
             f.glNCC.Properties.DisplayMember = "ProviderName";
             f.glNCC.Properties.ValueMember = "Provider_ID";
             #endregion
             f.gllPhanLoai.EditValue = p.Product_Group_ID;
-            f.glNCC.EditValue = p.Prorvider_ID;
+            f.glNCC.EditValue = p.Provider_ID;
             f.glDonVi.EditValue = p.Unit;
             f.glGiaMua.Text = p.Org_Price.ToString();
             f.glGiaBanLe.Text = p.Retail_Price.ToString();
@@ -118,7 +112,7 @@ namespace QuanLyBanHang
             }
             else f.cbActive.Checked = false;
 
-            byte[] img = (byte[])p.Photo;
+            byte[] img = (byte[])p.image;
             if(img == null)
             {
                 f.pictureBox1.Image = null;
@@ -132,15 +126,14 @@ namespace QuanLyBanHang
             f.ShowDialog();
             frmhanghoaload();
             gridView2.ExpandAllGroups();
+            }
+            else MessageBox.Show("Bạn chưa chọn đối tượng cần sửa", "thông báo", MessageBoxButtons.OK);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             var pid = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "Product_ID").ToString();
-            var p = db.PRODUCTs.Single(a => a.Product_ID == pid);
-            db.PRODUCTs.Remove(p);
-            db.SaveChanges();
+            ProductBUS.deleteByID(pid);
             frmhanghoaload();
             gridView2.ExpandAllGroups();
         }

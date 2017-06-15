@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAO.AppData;
+using BUS;
 namespace QuanLyBanHang
 {
     public partial class FormKhuVuc : DevExpress.XtraEditors.XtraForm
@@ -20,7 +20,6 @@ namespace QuanLyBanHang
 
         private void button2_Click(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             frmSuaKhuVuc form = new frmSuaKhuVuc();
             form.tbMa.Text = dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_ID").ToString();
             form.tbTen.Text = dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_Name").ToString();
@@ -37,9 +36,7 @@ namespace QuanLyBanHang
         }
         public void frmkhuvucload()
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            List<CUSTOMER_GROUP> listkhuvuc = new List<CUSTOMER_GROUP>();
-            listkhuvuc = db.CUSTOMER_GROUP.ToList<CUSTOMER_GROUP>();
+            var listkhuvuc = CUSTOMER_GROUPBUS.list();
             dgvKhuVuc.IndicatorWidth = 40;
             gridControl1.DataSource = listkhuvuc;
             
@@ -69,11 +66,8 @@ namespace QuanLyBanHang
             DialogResult dialogResult = MessageBox.Show("bạn có chắc muốn xóa không", "Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                QuanLyBanHangEntities db = new QuanLyBanHangEntities();
                var id = dgvKhuVuc.GetRowCellValue(dgvKhuVuc.FocusedRowHandle, "Customer_Group_ID").ToString();
-               var CG= db.CUSTOMER_GROUP.Single(hs => hs.Customer_Group_ID == id);
-                db.CUSTOMER_GROUP.Remove(CG);
-                db.SaveChanges();
+                CUSTOMER_GROUPBUS.deleteID(id);
                 frmkhuvucload();
             }
             else if (dialogResult == DialogResult.No)

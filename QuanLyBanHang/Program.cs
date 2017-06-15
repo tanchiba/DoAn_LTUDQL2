@@ -20,7 +20,11 @@ namespace QuanLyBanHang
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
+<<<<<<< HEAD
             Application.Run(new frmDangNhap());
+=======
+            Application.Run(new frmHangHoa());
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
         }
     }
 }

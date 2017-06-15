@@ -8,17 +8,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAO.AppData;
 using System.IO;
-
+using BUS;
 namespace QuanLyBanHang
 {
     public partial class frmSuaHangHoa : DevExpress.XtraEditors.XtraForm
     {
-        PRODUCT_GROUP pg;
-        PROVIDER providerid;
-        UNIT u;
-        STOCK kho;
+        string pg;
+        string providerid;
+        string u;
+        string kho;
         public frmSuaHangHoa()
         {
             InitializeComponent();
@@ -32,8 +31,7 @@ namespace QuanLyBanHang
 
         private void frmThemHangHoa_Load(object sender, EventArgs e)
         {
-            QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            List<PRODUCT> lpb = db.PRODUCTs.ToList();
+            var lpb = ProductBUS.list();
             Dictionary<string, string> test = new Dictionary<string, string>();
             test.Add("0", "Hàng Hóa");
             test.Add("1", "Dịch Vụ");
@@ -69,6 +67,7 @@ namespace QuanLyBanHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             QuanLyBanHangEntities db = new QuanLyBanHangEntities();
             PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == tbMaHang.Text);
             p.ProductName =tbTenHang.Text;
@@ -87,19 +86,20 @@ namespace QuanLyBanHang
             }
             else p.Stock_ID = kho.Stock_ID;
             p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
+=======
+            bool a;
+>>>>>>> 8c0376828db4b7832a39cd99438dd84d4d831cb9
             if (cbActive.Checked == true)
-                p.Active = true;
-            else p.Active = false;
-            if (pictureBox1 != null && pictureBox1.Image != null && pictureBox1.ImageLocation !=null)
+                a = true;
+            else a = false;
+            byte[] img = null;
+            if (pictureBox1 != null && pictureBox1.Image != null)
             {
-
-                byte[] img = null;
                 FileStream f = new FileStream(pictureBox1.ImageLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader b = new BinaryReader(f);
                 img = b.ReadBytes((int)f.Length);
-                p.Photo = img;
             }
-            db.SaveChanges();
+            ProductBUS.edit(tbTenHang.Text, tbMaHang.Text, cbbHangHoa.SelectedIndex.ToString(), pg, providerid, u, double.Parse(glGiaMua.Text), double.Parse(glGiaSi.Text), double.Parse(glGiaBanLe.Text), int.Parse(glToiThieu.Text), int.Parse(glToiDa.Text), kho, img, a);
             this.Close();
 
              
@@ -107,22 +107,22 @@ namespace QuanLyBanHang
 
         private void gllPhanLoai_EditValueChanged(object sender, EventArgs e)
         {
-            pg = gllPhanLoai.GetSelectedDataRow() as PRODUCT_GROUP;
+            pg = Product_GroupBUS.objectToDTO(gllPhanLoai.GetSelectedDataRow()).Product_Group_ID;
         }
 
         private void glNCC_EditValueChanged(object sender, EventArgs e)
         {
-            providerid = glNCC.GetSelectedDataRow() as PROVIDER;
+            providerid = ProviderBUS.objectToDTO(glNCC.GetSelectedDataRow()).Provider_ID;
         }
 
         private void glDonVi_EditValueChanged(object sender, EventArgs e)
         {
-            u = glDonVi.GetSelectedDataRow() as UNIT;
+            u = UnitBUS.objectToDTO(glDonVi.GetSelectedDataRow()).Unit_ID;
         }
 
         private void glKhoMacDinh_EditValueChanged(object sender, EventArgs e)
         {
-            kho = glKhoMacDinh.GetSelectedDataRow() as STOCK;
+            kho = StockBUS.objectToDTO(glKhoMacDinh.GetSelectedDataRow()).Stock_ID;
         }
         OpenFileDialog odf = new OpenFileDialog();
         
