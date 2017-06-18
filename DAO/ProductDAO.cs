@@ -26,12 +26,10 @@ namespace DAO
                 b.Product_ID = a.Product_ID;
                 b.Product_Type_ID = a.Product_Type_ID;
                 b.Provider_ID = a.Prorvider_ID;
-                b.Quantity = (int)a.Quantity;
                 b.Retail_Price = (double)a.Retail_Price;
                 b.Sale_Price = (double)a.Sale_Price;
                 b.Stock_ID = a.Stock_ID;
                 b.Unit = a.Unit;
-                b.User_ID = (int)a.User_ID;
 
                 return b;
             }

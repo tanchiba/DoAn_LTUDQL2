@@ -18,12 +18,7 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
-        private void frmSaoLuu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        SqlConnection con = new SqlConnection(QuanLyBanHang.Properties.Settings.Default.QuanLyBanHangConnectionString);
+        SqlConnection con = new SqlConnection("Data Source=E6420-PC\\SQLEXPRES;Initial Catalog=QuanLyBanHang;Integrated Security=True");
 
         private void btDuongdan_Click(object sender, EventArgs e)
         {
@@ -31,7 +26,12 @@ namespace QuanLyBanHang
             if (folder.ShowDialog() == DialogResult.OK) { tbDuongDan.Text = folder.SelectedPath; }
         }
 
-        private void spbtnThucHien_Click(object sender, EventArgs e)
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btThucHien_Click(object sender, EventArgs e)
         {
             string database = con.Database.ToString();
             try
@@ -60,13 +60,8 @@ namespace QuanLyBanHang
             }
             catch
             {
-
+                MessageBox.Show("backup failed!");
             }
-        }
-
-        private void spbtnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

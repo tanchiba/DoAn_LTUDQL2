@@ -109,16 +109,16 @@ namespace QuanLyBanHang
                 }
                 else f.cbActive.Checked = false;
 
-                //byte[] img = (byte[])p.i;
-                //if (img == null)
-                //{
-                //    f.pictureBox1.Image = null;
-                //}
-                //else
-                //{
-                //    MemoryStream m = new MemoryStream(img);
-                //    f.pictureBox1.Image = Image.FromStream(m);
-                //}
+                byte[] img = (byte[])p.image;
+                if (img == null)
+                {
+                    f.pictureBox1.Image = null;
+                }
+                else
+                {
+                    MemoryStream m = new MemoryStream(img);
+                    f.pictureBox1.Image = Image.FromStream(m);
+                }
 
                 f.ShowDialog();
                 frmhanghoaload();

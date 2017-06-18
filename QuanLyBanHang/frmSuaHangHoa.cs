@@ -51,41 +51,24 @@ namespace QuanLyBanHang
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            //QuanLyBanHangEntities db = new QuanLyBanHangEntities();
-            //PRODUCT p = db.PRODUCTs.Single(a => a.Product_ID == tbMaHang.Text);
-            //p.ProductName =tbTenHang.Text;
-            //p.Product_ID = tbMaHang.Text;
-            //p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
-            //p.Product_Group_ID = pg.Product_Group_ID;
-            //p.Prorvider_ID = providerid.Provider_ID;
-            //p.Unit = u.Unit_ID;
-            //p.Org_Price = decimal.Parse(glGiaMua.Text);
-            //p.Sale_Price = decimal.Parse(glGiaSi.Text);
-            //p.Retail_Price = decimal.Parse(glGiaBanLe.Text);
-            //p.MinStock = int.Parse(glToiThieu.Text);
-            //if (p.Stock_ID == null)
-            //{
-            //    p.Stock_ID = "K00001";
-            //}
-            //else p.Stock_ID = kho.Stock_ID;
-            //p.Product_Type_ID = cbbHangHoa.SelectedIndex.ToString();
+           
 
-            //bool a;
+            bool a;
 
-            //if (cbActive.Checked == true)
-            //    a = true;
-            //else a = false;
-            //byte[] img = null;
-            //if (pictureBox1 != null && pictureBox1.Image != null)
-            //{
-            //    FileStream f = new FileStream(pictureBox1.ImageLocation, FileMode.Open, FileAccess.Read);
-            //    BinaryReader b = new BinaryReader(f);
-            //    img = b.ReadBytes((int)f.Length);
-            //}
-            //ProductBUS.edit(tbTenHang.Text, tbMaHang.Text, cbbHangHoa.SelectedIndex.ToString(), pg, providerid, u, double.Parse(glGiaMua.Text), double.Parse(glGiaSi.Text), double.Parse(glGiaBanLe.Text), int.Parse(glToiThieu.Text), int.Parse(glToiDa.Text), kho, img, a);
-            //this.Close();
+            if (cbActive.Checked == true)
+                a = true;
+            else a = false;
+            byte[] img = null;
+            if (pictureBox1 != null && pictureBox1.Image != null)
+            {
+                FileStream f = new FileStream(pictureBox1.ImageLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader b = new BinaryReader(f);
+                img = b.ReadBytes((int)f.Length);
+            }
+            ProductBUS.edit(tbTenHang.Text, tbMaHang.Text, cbbHangHoa.SelectedIndex.ToString(), pg, providerid, u, double.Parse(glGiaMua.Text), double.Parse(glGiaSi.Text), double.Parse(glGiaBanLe.Text), int.Parse(glToiThieu.Text), int.Parse(glToiDa.Text), kho, img, a);
+            this.Close();
 
-             
+
         }
 
         private void gllPhanLoai_EditValueChanged(object sender, EventArgs e)
